@@ -1,0 +1,3 @@
+-- SQLBook: Code
+DROP DATABASE IF EXISTS dream_db;
+CREATE DATABASE dream_db;
