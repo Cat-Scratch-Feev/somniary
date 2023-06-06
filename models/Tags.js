@@ -21,7 +21,7 @@ Tags.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'license',
+        modelName: 'tags',
       }
 );
 
