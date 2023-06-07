@@ -18,9 +18,9 @@ var canvas2 = document.createElement('canvas'),
     canvas2.height = 100;
 var half = canvas2.width/2,
     gradient2 = ctx2.createRadialGradient(half, half, 0, half, half, half);
-    gradient2.addColorStop(0.025, '#fff');
-    gradient2.addColorStop(0.1, 'hsl(' + hue + ', 61%, 33%)');
-    gradient2.addColorStop(0.25, 'hsl(' + hue + ', 64%, 6%)');
+    gradient2.addColorStop(0.05, ' #FFC300    ');
+    gradient2.addColorStop(0.1, 'hsl(' + hue + ', 93%, 12%)');
+    gradient2.addColorStop(0.25, 'hsl(' + hue + ', 61%, 16%)');
     gradient2.addColorStop(1, 'transparent');
 
     ctx2.fillStyle = gradient2;
@@ -58,7 +58,7 @@ var Star = function() {
   this.orbitX = w / 2;
   this.orbitY = h / 2;
   this.timePassed = random(0, maxStars);
-  this.speed = random(this.orbitRadius) / 50000;
+  this.speed = random(this.orbitRadius / 15) / 50000;
   this.alpha = random(2, 10) / 10;
 
   count++;
