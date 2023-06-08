@@ -21,7 +21,8 @@ Dream.init(
         },
         date: {
             type: DataTypes.DATE,
-            allowNull: false
+            allowNull: false,
+            defaultValue: DataTypes.NOW,
         },
         is_shared: {
             type: DataTypes.BOOLEAN,

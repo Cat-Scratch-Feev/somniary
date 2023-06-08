@@ -31,17 +31,9 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-// create new product
+// create new dream
 router.post('/', (req, res) => {
-  /* req.body should look like this...
-    {
-      product_name: "Basketball",
-      price: 200.00,
-      stock: 3,
-      tagIds: [1, 2, 3, 4]
-    }
-  */
-  Product.create(req.body)
+  Dream.create(req.body)
     .then((dream) => {
       // if there's dream tags, we need to create pairings to bulk create in the dreamTags model
       if (req.body.tagIds.length) {

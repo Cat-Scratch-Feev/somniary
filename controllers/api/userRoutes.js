@@ -4,7 +4,7 @@ const { User, Dream } = require('../../models');
 // The `/api/users` endpoint
 
 router.get('/', async (req, res) => {
-  // find all categories
+  // find all users
   try {
     const userData = await User.findAll({
       include: [{ model: Dream }],
@@ -44,7 +44,7 @@ router.post('/', async (req, res) => {
 });
 
 router.put('/:id', async (req, res) => {
-  // update a category by its `id` value
+  // update a user by its `id` value
   try {
     const userData = await User.update(req.body, {
       where: {
@@ -62,7 +62,7 @@ router.put('/:id', async (req, res) => {
 });
 
 router.delete('/:id', async (req, res) => {
-  // delete a category by its `id` value
+  // delete a user by its `id` value
   try {
     const userData = await User.destroy({
       where: {
