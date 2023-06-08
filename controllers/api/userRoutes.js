@@ -1,74 +1,85 @@
 const router = require("express").Router();
-const { Op } = require("sequelize");
-const bcrypt = require("bcrypt");
-const { User } = require("../../models");
+const { User, Dream } = require("../../models");
 
-// POST request for logging in
-router.post("/login", async (req, res) => {
+// The `/api/users` endpoint
+
+router.get("/", async (req, res) => {
+  // find all users
   try {
-    // identifier variable to store username and emails together
-    const { identifier, password } = req.body;
-    // Verify login Credentials
-    const userData = await User.findOne({
+    const userData = await User.findAll({
+      include: [{ model: Dream }],
+    });
+    res.status(200).json(userData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get("/:id", async (req, res) => {
+  // find one user by its `id` value
+  try {
+    const userData = await User.findByPk(req.params.id, {
+      include: [{ model: Dream }],
+    });
+    if (!userData) {
+      res.status(404).json({ message: "No user with this id!" });
+      return;
+    }
+    res.status(200).json(userData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.post("/", async (req, res) => {
+  // create a new user
+  try {
+    const userData = await User.create({
+      email: req.body.email,
+      password: req.body.password,
+      username: req.body.username,
+    });
+    res.status(200).json(userData);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
+router.put("/:id", async (req, res) => {
+  // update a user by its `id` value
+  try {
+    const userData = await User.update(req.body, {
       where: {
-        [Op.or]: [{ email: identifier }, { username: identifier }],
+        id: req.params.id,
+      },
+    });
+    if (!userData[0]) {
+      res.status(404).json({ message: "No user with this id!" });
+      return;
+    }
+    res.status(200).json(userData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.delete("/:id", async (req, res) => {
+  // delete a user by its `id` value
+  try {
+    const userData = await User.destroy({
+      where: {
+        id: req.params.id,
       },
     });
 
-    // Incorrect login
     if (!userData) {
-      res.status(400).json({ message: "Incorrect email or password" });
+      res.status(404).json({ message: "No user found with that id!" });
       return;
     }
 
-    // Verify correct password
-    const validPassword = await bcrypt.compare(password, userData.password);
-
-    // Incorrect Password
-    if (!validPassword) {
-      res.status(400).json({ message: "Incorrect email or password" });
-      return;
-    }
-
-    // Creates a session for logged in user
-    req.session.save(() => {
-      req.session.user_id = userData.id;
-      req.session.logged_in = true;
-      res.json({ user: userData, message: "You are logged in" });
-    });
+    res.status(200).json(userData);
   } catch (err) {
-    res.status(400).json(err);
-  }
-});
-
-// Signup routes
-router.post("/register", async (req, res) => {
-  try {
-    const { email, password, username } = req.body;
-
-    // Creates new user
-    const newUser = await User.create({
-      email,
-      password,
-      username,
-    });
-
-    res
-      .status(201)
-      .json({ user: newUser, message: "User created successfully" });
-  } catch (err) {
-    res.status(400).json(err);
-  }
-});
-
-// Logout routes
-router.post("/logout", (req, res) => {
-  if (req.session.logged_in) {
-    req.session.destroy(() => {
-      res.status(204).end();
-    });
-  } else {
-    res.status(404).end();
+    res.status(500).json(err);
   }
 });
 
