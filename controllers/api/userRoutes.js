@@ -1,9 +1,9 @@
-const router = require('express').Router();
-const { User, Dream } = require('../../models');
+const router = require("express").Router();
+const { User, Dream } = require("../../models");
 
 // The `/api/users` endpoint
 
-router.get('/', async (req, res) => {
+router.get("/", async (req, res) => {
   // find all users
   try {
     const userData = await User.findAll({
@@ -15,12 +15,14 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/:id', async (req, res) => {
+router.get("/:id", async (req, res) => {
   // find one user by its `id` value
   try {
-    const userData = await User.findByPk(req.params.id, {include: [{ model: Dream }]});
+    const userData = await User.findByPk(req.params.id, {
+      include: [{ model: Dream }],
+    });
     if (!userData) {
-      res.status(404).json({ message: 'No user with this id!' });
+      res.status(404).json({ message: "No user with this id!" });
       return;
     }
     res.status(200).json(userData);
@@ -29,7 +31,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-router.post('/', async (req, res) => {
+router.post("/", async (req, res) => {
   // create a new user
   try {
     const userData = await User.create({
@@ -43,7 +45,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-router.put('/:id', async (req, res) => {
+router.put("/:id", async (req, res) => {
   // update a user by its `id` value
   try {
     const userData = await User.update(req.body, {
@@ -52,7 +54,7 @@ router.put('/:id', async (req, res) => {
       },
     });
     if (!userData[0]) {
-      res.status(404).json({ message: 'No user with this id!' });
+      res.status(404).json({ message: "No user with this id!" });
       return;
     }
     res.status(200).json(userData);
@@ -61,7 +63,7 @@ router.put('/:id', async (req, res) => {
   }
 });
 
-router.delete('/:id', async (req, res) => {
+router.delete("/:id", async (req, res) => {
   // delete a user by its `id` value
   try {
     const userData = await User.destroy({
@@ -71,7 +73,7 @@ router.delete('/:id', async (req, res) => {
     });
 
     if (!userData) {
-      res.status(404).json({ message: 'No user found with that id!' });
+      res.status(404).json({ message: "No user found with that id!" });
       return;
     }
 
