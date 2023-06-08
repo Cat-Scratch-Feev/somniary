@@ -194,7 +194,7 @@ header {
     border-radius: 60% 60% 0% 0% / 100% 100% 65% 65%;
   }
   .offcanvas-lg.offcanvas-start{
-    width:300px;
+    width:65%;
   }
 }
 @media (max-width:600px){
