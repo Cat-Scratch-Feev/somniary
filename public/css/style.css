@@ -23,6 +23,13 @@ h2 {
   font-size: 2em;
 }
 
+footer {
+  background: #5d38a0;
+  padding: 30px 0px;
+  font-family: "Jost", sans-serif;
+  text-align: center;
+}
+
 .subheading {
   font-size: 32px;
 }
