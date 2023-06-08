@@ -9,34 +9,51 @@
     <title>login</title>
 </head>
 <body>
-    <h1 id="greetings">Welcome to the dreamland !!</h1>
+    <div class="page__container">
+        <!-- Welcome title -->
+        <div class="intro__container">
+          <header>
+            <div class="intro">
+              <h1>welcome to <span class="bold">dreamspace</span></h1>
+              <h2>embrace the night</h2>
+            </div>
+          </header>
+        </div>
+        <!-- empty div to be filled with handlebars templates -->
+        <div class="panel">
+          <!-- {{{body}}} -->
+          <!-- Cedential Links -->
+          <div id="cred-links-container">
+             <ul class="cred-links">
+                 <form id="creds" action="#" method="POST">
+                     
+                     <h4>Log In !</h4>
+      
+                     <label id="username" for="username">Username:</label>
+                     <input class="txt-field" type ="text"name="username" required="required"/>
+                     
+                     <label id="password" for="password">Password:</label>
+                     <input class="txt-field" type="password"name="password"required="required"/>
+      
+                     <button id="login" type="login">log in</button>
+                     
+                 </form>                                                        
+             </ul>
+        </div>
+         
+             
+             
+             <!-- ask user to sign up -->
+             <a href="/moe/signup.html">
+      
+                 <h2 id="reg-request">Need A Dreamspace ?</h2>
+                <h5>Register today !</h5>
 
-     <!-- Cedential Links -->
-     <div id="cred-links-container">
-        <ul class="cred-links">
-            <form id="u-name" action="#" method="POST">
-                
-                <h4>log in !</h4>
-
-                <label id="username" for="username">Username:</label>
-                <input class="txt-field" type ="text"name="username" required="required"/>
-                
-                <label id="password" for="password">Password:</label>
-                <input class="txt-field" type="password"name="password"required="required"/>
-
-                <button type="submit">log in</button>
-                
-            </form>                                                        
-        </ul>
+             </a>
+        </div>
     </div>
     
-        
-        
-        <!-- ask user to sign up -->
-        <a href="/moe/signup.html">
 
-            <h2 id="reg-request">Need A Dreamspace ?</h2>
-        </a>
         
 
 </body>
