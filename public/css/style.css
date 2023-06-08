@@ -101,3 +101,13 @@ footer {
   border-color: transparent;
   margin-top: 2rem;
 }
+
+#psSave {
+  background-color: #5d38a0;
+  color: #877cdc;
+  width: 10rem;
+  height: 3rem;
+  border-radius: 50px;
+  border-color: transparent;
+  margin-top: 2rem;
+}
