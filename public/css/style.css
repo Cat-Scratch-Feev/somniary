@@ -23,6 +23,13 @@ h2 {
   font-size: 2em;
 }
 
+footer {
+  background: #5d38a0;
+  padding: 30px 0px;
+  font-family: "Jost", sans-serif;
+  text-align: center;
+}
+
 .subheading {
   font-size: 32px;
 }
@@ -88,6 +95,16 @@ h2 {
 
 .signup_btn {
   background-color: #877cdc;
+  width: 10rem;
+  height: 3rem;
+  border-radius: 50px;
+  border-color: transparent;
+  margin-top: 2rem;
+}
+
+#ps_Save {
+  background-color: #5d38a0;
+  color: #877cdc;
   width: 10rem;
   height: 3rem;
   border-radius: 50px;
