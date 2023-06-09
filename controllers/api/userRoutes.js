@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Dream } = require("../../models");
+const { User, Dream, Tags, DreamTags } = require("../../models");
 
 // The `/api/users` endpoint
 router.get("/", async (req, res) => {

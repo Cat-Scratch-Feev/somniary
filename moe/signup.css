@@ -1,4 +1,149 @@
-body{
-    height: 100vh;
-    background-color: lavender;
+:root{
+    --my-animation: 1s ease-in-out all 0s ;
 }
+* {
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    height: 100%;
+  }
+  
+  body {
+    margin: 0;
+    height: 100%;
+    font-family: "Jost", sans-serif;
+  }
+  
+  h1 {
+    color: #5d38a0;
+    font-size: 3em;
+    font-weight: 500;
+  }
+  
+  h2 {
+    font-size: 2em;
+  }
+  
+  .subheading {
+    font-size: 32px;
+  }
+  
+  .bold {
+    font-weight: 800;
+  }
+  /* main container */
+  .page__container {
+    background-color: #c4b2e8;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+  }
+  
+  .intro__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+  
+  .intro {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-bottom: 0;
+    justify-content: center;
+    padding-top: 10vh;
+  }
+  /* creds container */
+  .panel__title {
+    padding-top: 10vh;
+  }
+  
+  .panel {
+    width: 100%;
+    min-height: 65vh;
+    background-color: #efe0ff;
+    border-radius: 40% 40% 0% 0% / 100% 100% 65% 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    overflow: hidden;
+    margin-top: 2rem;
+  }
+
+  /* credentials */
+
+  h4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+
+  h5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  #creds{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 4px 4px;
+    font-size: larger;
+    font-weight: 700;
+  }
+  
+
+
+.txt-field{
+    padding: 20px 40px;
+    margin: 20px 5px;
+    border-radius: 50px;
+    
+
+
+}
+
+/* log in btn */
+
+  #reg-btn {
+    color: white;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    padding: 20px;
+  
+    background-color: #877cdc;
+    width: 10rem;
+    /* height: 1rem; */
+    border-radius: 50px;
+    border-color: transparent;
+    font-size: larger;
+    /* margin-top: 2rem; */
+  }
+  
+  #reg-btn:hover{
+    transition: var(--my-animation);
+    background-color: #5d38a0;
+    color: black;
+    cursor: pointer;
+    font-size: medium;
+  }
