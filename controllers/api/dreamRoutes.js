@@ -31,6 +31,20 @@ router.get('/:id', async (req, res) => {
   }
 });
 
+// get all dreams by User id
+router.get('/user/:id', async (req, res) => {
+  try {
+    const dreamData = await Dream.findAll({where: {user_id: req.params.id}, include: [{ model: Tags , through: {attributes: []} }]});
+    if (!dreamData) {
+      res.status(404).json({ message: 'No dream with this id!' });
+      return;
+    }
+    res.status(200).json(dreamData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 // create new dream
 router.post('/', (req, res) => {
   Dream.create(req.body)
