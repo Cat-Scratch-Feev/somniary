@@ -36,7 +36,7 @@ router.get('/user/:id', async (req, res) => {
   try {
     const dreamData = await Dream.findAll({where: {user_id: req.params.id}, include: [{ model: Tags , through: {attributes: []} }]});
     if (!dreamData) {
-      res.status(404).json({ message: 'No dream with this id!' });
+      res.status(404).json({ message: 'No dreams for this user' });
       return;
     }
     res.status(200).json(dreamData);
