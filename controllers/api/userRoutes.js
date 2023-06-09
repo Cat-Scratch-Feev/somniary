@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Dream } = require("../../models");
+const { User, Dream, Tags, DreamTags } = require("../../models");
 
 // The `/api/users` endpoint
 
@@ -19,7 +19,7 @@ router.get("/:id", async (req, res) => {
   // find one user by its `id` value
   try {
     const userData = await User.findByPk(req.params.id, {
-      include: [{ model: Dream }],
+      include: [{ model: Dream, include: [{ model: Tags }]}],
     });
     if (!userData) {
       res.status(404).json({ message: "No user with this id!" });
