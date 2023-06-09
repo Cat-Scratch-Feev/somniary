@@ -7,6 +7,12 @@ class DreamTags extends Model {}
 
 DreamTags.init(
     {
+        id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            primaryKey: true,
+            autoIncrement: true,
+          },
         dream_id: {
             type: DataTypes.INTEGER,
             references: {

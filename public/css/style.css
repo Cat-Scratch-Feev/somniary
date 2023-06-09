@@ -1,3 +1,11 @@
+:root {
+  --light-lavender:#c4b2e8;
+  --dark-purple:#5d38a0;
+  --lightest-lavender:#EFE0FF;
+  --bs-btn-active-border-color: #EFE0FF;
+  --bs-btn-active-bg: #EFE0FF;
+}
+/* BASIC HOMEPAGE TEMPLATE STYLING*/
 * {
   box-sizing: border-box;
 }
@@ -21,6 +29,13 @@ h1 {
 
 h2 {
   font-size: 2em;
+}
+
+footer {
+  background: #5d38a0;
+  padding: 30px 0px;
+  font-family: "Jost", sans-serif;
+  text-align: center;
 }
 
 .subheading {
@@ -88,6 +103,118 @@ h2 {
 
 .signup_btn {
   background-color: #877cdc;
+  width: 10rem;
+  height: 3rem;
+  border-radius: 50px;
+  border-color: transparent;
+  margin-top: 2rem;
+}
+
+
+/* MAIN NAV STYLING*/
+header {
+  width:100%;
+}
+.page__title, .offcanvas-title{
+  font-weight:bolder;
+}
+.main__intro{
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+
+}
+.mobile-nav__button, .btn-secondary{
+  width:3rem;
+  height:3rem;
+  border-radius:50%;
+  border-style:none;
+  background-color:var(--lightest-lavender);
+  margin:2rem;
+}
+.btn.btn-primary{
+  background-color:var(--lightest-lavender);
+}
+.profile__button {
+  align-self:flex-end;
+  margin:2rem;
+}
+.nav__list {
+  list-style:none;
+  display:flex;
+  flex-flow:row wrap;
+  justify-content:center;
+}
+
+.nav__item {
+  margin:2rem;
+  font-weight:bold;
+}
+.nav__icon {
+  margin:0.5rem;
+}
+.btn-secondary{
+  width:3rem;
+  height:3rem;
+  border-radius:50%;
+  border-style:none;
+  background-color:var(--lightest-lavender);
+  margin:2rem;
+}
+.btn-secondary:hover {
+  background-color:var(--lightest-lavender);
+}
+.dropdown-toggle{--bs-offcanvas-width: 300px;
+  color:var(--dark-purple);
+}
+
+.icon__nav{
+  display:flex;
+  width:100%;
+  justify-content:flex-end;
+}
+.offcanvas-title{
+  color:var(--dark-purple);
+
+}
+.offcanvas-lg{
+  background-color: var(--light-lavender);
+  border-radius: 0 7% 7% 0;
+}
+.mnav__list{
+  list-style:none;
+  display:flex;
+  flex-direction:column;
+  align-items:start;
+  padding:0.25rem;
+}
+
+/* MEDIA QUERIES FOR RESPONSIVE DESIGN*/
+@media (max-width: 991.98px) {
+  .icon__nav{
+    justify-content:space-between;
+  }
+  .hidden{
+    display:none;
+  }
+  .panel{
+    border-radius: 60% 60% 0% 0% / 100% 100% 65% 65%;
+  }
+  .offcanvas-lg.offcanvas-start{
+    width:65%;
+  }
+}
+@media (max-width:600px){
+  .panel{
+    border-radius: 70% 70% 0% 0% / 100% 100% 65% 65%;
+  }
+
+
+}
+#ps_Save {
+  background-color: #5d38a0;
+  color: #877cdc;
   width: 10rem;
   height: 3rem;
   border-radius: 50px;
