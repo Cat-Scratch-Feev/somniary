@@ -1,7 +1,8 @@
 const router = require("express").Router();
 const { Op } = require("sequelize");
 const bcrypt = require("bcrypt");
-const { User } = require("../../models");
+const { User } = require("../models");
+const withAuth = require("../utils/auth");
 
 // Get request /login
 router.get("/login", (req, res) => {
