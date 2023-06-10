@@ -1,39 +1,29 @@
-<div class="page__container">
-    <!-- Welcome title -->
-    <div class="intro__container">
-        <header>
-            <div class="intro">
-                <h1>Join The <span class="bold">Dreamteam</span></h1>
-            </div>
-        </header>
-    </div>
-    <!-- empty div to be filled with handlebars templates -->
-    <div class="panel">
-        {{!-- {{body}} --}}
+<h2 class="panel__title">sign up!</h2>
+    <!-- two form fields, one with username, one with pass -->
+    <form action="submit" method="post" class="signup_form">
+      <label for="username">email *</label>
+      <input type="text" name="email" id="email_signup" required />
+      <h6>passwords must be 8-16 characters in length</h6>
+      <label for="password">password *</label>
+      <input
+        type="text"
+        name="password"
+        id="password_signup"
+        placeholder="create password"
+        required
+      />
+      <label for="username">phone number</label>
+      <input
+        type="text"
+        name="username"
+        id="username_signup"
+        placeholder="create username"
+        required
+      />
 
-
-        <!-- "log in! h3?" -->
-        <h2 class="panel__title">sign up!</h2>
-        <!-- two form fields, one with username, one with pass -->
-        <form action="submit" method="post" class="signup">
-            <label for="username">email *</label>
-            <input type="text" name="email" id="username" required />
-            <h6>passwords must be 8-16 characters in length</h6>
-            <label for="password">password *</label>
-            <input type="text" name="password" id="password" placeholder="create password" required />
-            <label for="password">phone number</label>
-            <input type="text" name="password" id="password" placeholder="###-###-####" required />
-
-
-            <button type="submit" formmethod="post" id="submit">
-                <span id="login">log in</span>
-            </button>
-        </form>
-        <!-- sign up link -->
-        <a href="/moe/signup.html">
-
-            <h2 id="reg-request">Need A Dreamspace ?</h2>
-            <h5>Register today !</h5>
-        </a>
-    </div>
-</div>  
+      <button type="submit" formmethod="post" id="submit">
+        <span id="login">log in</span>
+      </button>
+    </form>
+  </div>
+</div>

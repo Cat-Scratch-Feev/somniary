@@ -4,6 +4,7 @@
   --lightest-lavender: #efe0ff;
   --bs-btn-active-border-color: #efe0ff;
   --bs-btn-active-bg: #efe0ff;
+  --my-animation: 1s ease-in-out all 0s;
 }
 /* BASIC HOMEPAGE TEMPLATE STYLING*/
 * {
@@ -210,12 +211,8 @@ header {
   .panel {
     border-radius: 70% 70% 0% 0% / 100% 100% 65% 65%;
   }
-
-
 }
 
-
-}
 #ps_Save {
   background-color: #5d38a0;
   color: #877cdc;
@@ -225,4 +222,3 @@ header {
   border-color: transparent;
   margin-top: 2rem;
 }
-
