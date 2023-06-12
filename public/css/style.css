@@ -194,6 +194,11 @@ header {
 
 /*profile settings styling*/
 
+h3 {
+  color: var(--dark-purple);
+  font-size: 2em;
+}
+
 #username {
 height: 35px;
 width: 250px;
