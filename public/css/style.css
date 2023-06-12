@@ -312,6 +312,100 @@ header {
 .dream-j__card{
   width:100%;
 }
+/* LOG NEW DREAM PAGE STYLING*/
+.log__nav{
+  display:flex;
+  flex-direction:column;
+  width:100%;
+}
+.log_header__title{
+  text-align:center;
+}
+.exit_log__button{
+  background-color:transparent;
+  border-color:transparent;
+  align-self:flex-start;
+  margin:2rem;
+}
+.logpage__container{
+  margin-top:1.5rem;
+  width:60%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-content:center;
+  flex-wrap:wrap;
+}
+.log_form__container{
+  width:100%;
+  
+}
+.log_header__container{
+  display:flex;
+  flex-flow:column wrap;
+  justify-content:center;
+  align-content:center;
+  text-align:center;
+}
+.log_form{
+  display:flex;
+  flex-flow: column wrap;
+  /*align-content:center;*/
+  /*width:80%;*/
+}
+.log_input__container{
+  border-radius:35px;
+  height:2rem;
+  border-color:transparent;
+}
+.log_btn{
+  width:30%;
+  margin:2rem;
+  background-color:var(--dark-purple);
+  border-radius:35px;
+  color:var(--off-white);
+  border-color:transparent;
+  height:2rem;
+  justify-self:center;
+  align-self:center;
+}
+input::placeholder, textarea::placeholder{
+  text-indent: 1rem;
+}
+.hidden {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+}
+.dream_type__button {
+  width:30%;
+  height:2rem;
+  border-radius:35px;
+  background-color:var(--off-white);
+  color:black;
+  text-align:center;
+  margin-bottom:1rem;
+}
+/* edit of checkbox and default styles*/
+input[type=checkbox]+label {
+  color: var(--dark-purple);
+}
+
+input[type=checkbox]:checked+label {
+  color: var(--off-white);
+  background-color:var(--light-lavender);
+  font-weight:bold;
+}
+input[type=radio]+label {
+  color: var(--dark-purple);
+}
+
+input[type=radio]:checked+label {
+  color: var(--off-white);
+  background-color:var(--light-lavender);
+  font-weight:bold;
+}
+
 /* MEDIA QUERIES FOR RESPONSIVE DESIGN*/
 @media (max-width: 991.98px) {
   .icon__nav{
@@ -348,5 +442,11 @@ header {
   .journal-dreams__container{
     width:80%;
     margin:auto;
+  }
+  .log_btn{
+    width:60%;
+  }
+  .dream_type__button{
+    width:45%;
   }
 }
