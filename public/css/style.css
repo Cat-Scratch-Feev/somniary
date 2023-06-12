@@ -200,6 +200,84 @@ header {
   border-color: transparent;
   margin-top: 2rem;
 }
+/* HOME PAGE STYLING*/
+.homepage__container{
+  margin-top:1.5rem;
+  width:90%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-content:center;
+  flex-wrap:wrap;
+}
+.welcome__header{
+  color:var(--dark-purple);
+  margin:auto;
+  text-align:center;
+  margin:1rem;
+}
+
+.dashboard__container, .reflection__container {
+  width:80%;
+  margin:1rem;
+}
+.dashboard__card{
+  background-color:var(--off-white);
+  display:flex;
+  flex-flow: row wrap;
+  justify-content:space-around;
+  align-content:center;
+  height:7rem;
+  border-radius:35px;
+}
+.dashboard__prof{
+  width:4rem;
+  height:4rem;
+  border-radius:50%;
+  background-color:var(--lightest-lavender);
+  border-color:transparent;
+  
+}
+
+.goal__text{
+  margin:auto 0;
+}
+/*cards have styles that can be consolidated*/
+.reflection__title{
+  color:var(--dark-purple);
+}
+.dream__card{
+  border-radius:35px;
+  background-color:var(--off-white);
+  margin-bottom: 1rem;
+  display:flex;
+  flex-grow:inherit;
+}
+.dream__card-body{
+  margin:1rem;
+  width:100%;
+}
+.dream__card-tags{
+  display:flex;
+  flex-flow: row wrap;
+}
+.dream__tag{
+  border-radius:15px;
+  width:20%;
+  background-color:var(--lightest-lavender);
+  margin:1rem;
+  height:2rem;
+  text-align:center;
+}
+.viewall__button{
+  border-radius:35px;
+  height:3rem;
+  background-color:var(--dark-purple);
+  color:var(--off-white);
+  border-color:transparent;
+  margin:auto;
+}
+
 /* MEDIA QUERIES FOR RESPONSIVE DESIGN*/
 @media (max-width: 991.98px) {
   .icon__nav{
@@ -214,9 +292,23 @@ header {
   .offcanvas-lg.offcanvas-start{
     width:65%;
   }
+  .dream__card-tags{
+    align-content:center;
+    justify-content:center;
+  }
 }
 @media (max-width:600px){
   .panel{
     border-radius: 70% 70% 0% 0% / 100% 100% 65% 65%;
+  }
+  .dream__tag{
+    width:60%;
+  }
+  .dream__card-tags{
+    align-content:center;
+    justify-content:center;
+  }
+  .viewall__button{
+    width:40%;
   }
 }
