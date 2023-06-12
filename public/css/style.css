@@ -194,9 +194,22 @@ header {
 
 /*profile settings styling*/
 
+#username {
+height: 35px;
+width: 250px;
+border-radius: 25px;
+}
+
+#email {
+  height: 5px;
+  width: 250px;
+  border-radius: 25px;
+}
+
 #dream {
   height: 150px;
   width: 250px;
+  border-radius: 25px;
 }
 #ps_Save {
   background-color: #5d38a0;
