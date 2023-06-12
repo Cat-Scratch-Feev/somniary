@@ -277,7 +277,41 @@ header {
   border-color:transparent;
   margin:auto;
 }
+/*JOURNAL STYLING*/
+.journal__container{
+  margin-top:1.5rem;
+  width:90%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-content:center;
+  flex-wrap:wrap;
+}
+.journal-header__container{
+  display:flex;
+  flex-flow:column wrap;
+  justify-content:center;
+  align-content:center;
 
+}
+.journal-header{
+  color:var(--dark-purple);
+  margin:auto;
+  text-align: center;
+  margin:1rem;
+  font-weight: bold;
+}
+.journal-subheader{
+  width:75%;
+  text-align:center;
+  color:var(--dark-purple);
+}
+.journal-dreams__container{
+  width:80%;
+}
+.dream-j__card{
+  width:100%;
+}
 /* MEDIA QUERIES FOR RESPONSIVE DESIGN*/
 @media (max-width: 991.98px) {
   .icon__nav{
@@ -310,5 +344,9 @@ header {
   }
   .viewall__button{
     width:40%;
+  }
+  .journal-dreams__container{
+    width:80%;
+    margin:auto;
   }
 }
