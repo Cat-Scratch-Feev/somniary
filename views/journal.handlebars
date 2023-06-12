@@ -54,17 +54,16 @@
           </section>
           <section class="journal-dreams__container">
             <section class="dream__card dream-j__card">
+                {{#each}}
               <div class="dream__card-body">
-                <p>{{06/06/2023}}</p>
-                <p>{{dream title}}</p>
-                <p>{{dream description}}</p>
+                <p>{{dream.date}}</p>
+                <p>{{dream.title}}</p>
+                <p>{{dream.description}}</p>
                 <!--tags, rendered with iteration-->
                 <div class="dream__card-tags">
-                  <p class="dream__tag">daydream</p>
-                  <p class="dream__tag">lucid</p>
-                  <p class="dream__tag">weird</p>
-                  <p class="dream__tag">weird</p>
-                  <p class="dream__tag">weird</p>
+                    {{#each dreamtags.tags}}
+                  <p class="dream__tag">{{tags.name}}</p>
+                  {{/each}}
                 </div>
               </div>
             </section>
