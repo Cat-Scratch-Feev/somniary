@@ -199,22 +199,27 @@ h3 {
   font-size: 2em;
 }
 
+h4 {
+  color: var(--dark-purple);
+  font-size: 1em;
+}
+
 #username {
 height: 35px;
 width: 250px;
-border-radius: 25px;
+border-radius: 33px;
 }
 
 #email {
   height: 5px;
   width: 250px;
-  border-radius: 25px;
+  border-radius: 33px;
 }
 
 #dream {
-  height: 150px;
+  height: 100px;
   width: 250px;
-  border-radius: 25px;
+  border-radius: 33px;
 }
 #ps_Save {
   background-color: #5d38a0;
