@@ -191,6 +191,13 @@ header {
   padding:0.25rem;
 }
 
+
+/*profile settings styling*/
+
+#dream {
+  height: 150px;
+  width: 250px;
+}
 #ps_Save {
   background-color: #5d38a0;
   color: #877cdc;
