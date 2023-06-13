@@ -1,21 +1,36 @@
-<!-- "log in! h3?" -->
-<h2 class="panel__title">log in!</h2>
-<!-- two form fields, one with username, one with pass -->
+<div class="intro__container main__intro">
+        <header>
+          <!--navigation to be rendered in from handlebars templates conditionally based upon login status -->
+          <h1>welcome to
+          <span class="bold">somniary</span>, your dreamspace</h1>
+        </header>
+      </div>
+      <!-- empty div to be filled with handlebars templates -->
+      <div class="panel">
+        <!-- "log in! h3?" -->
+        <h2 class="panel__title">log in!</h2>
+        <!-- two form fields, one with username, one with pass -->
 
-<form action="submit" method="post" class="login_form">
-  <label for="username">username</label>
-  <input type="text" name="username" id="identifier_login" required />
-  <label for="password">password</label>
-  <input type="text" name="password" id="password_login" required />
-  <button type="submit" formmethod="post" class="login_btn">
-    <span class="btn_text">log in</span>
+        <form action="submit" method="post" class="login_form">
+          <label for="username">username</label>
+          <input type="text" name="username" id="identifier_login" required />
+          <label for="password">password</label>
+          <input type="text" name="password" id="password_login" required />
+          <button type="submit" formmethod="post" class="login_btn">
+            <span class="btn_text">log in</span>
 
-  </button>
-</form>
-<!-- sign up link -->
-<a href="/moe/signup.html">
+          </button>
+        </form>
+        <!-- sign up link -->
+        <a href="/moe/signup.html">
+
 
   <h2 id="reg-request">Need A Dreamspace ?</h2>
   <h5>Register today !</h5>
 </a>
+          <h2 id="reg-request">Need A Dreamspace ?</h2>
+          <h5>Register today !</h5>
+        </a>
+      </div>
+      </div>
 <script src="/public/js/login.js"></script>

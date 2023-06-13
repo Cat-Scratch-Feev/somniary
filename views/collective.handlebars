@@ -1,3 +1,4 @@
+<!-- Welcome title -->
       <div class="intro__container main__intro">
         <header>
           <!--navigation to be rendered in from handlebars templates conditionally based upon login status -->
@@ -46,33 +47,30 @@
       </div>
       <!-- empty div to be filled with handlebars templates -->
       <div class="panel">
-        <section class="homepage__container">
-          <section class="dashboard__container">
-            <h2 class="welcome__header">welcome back, {{user}}!</h2>
-            <div class="dashboard__card">
-              <button class="dashboard__prof"><i class="fa-regular fa-user fa-2xl" style="color:5D38A0;"></i></button>
-              <p class="goal__text">what is your goal?</p>
-            </div>
-            
+        <section class="journal__container">
+          <section class="journal-header__container">
+            <h2 class="journal-header">your journal</h2>
+            <h3 class="journal-subheader">view all of your dreams, laid out for you!</h3>
           </section>
-          <section class="reflection__container">
-            <h3 class="reflection__title">a reflection for you today..</h3>
-            <section class="dream__card">
+          <section class="journal-dreams__container">
+            <section class="dream__card dream-j__card">
+              <!--information will change, pull from public dreams -->
+                {{#each}}
               <div class="dream__card-body">
                 <p>{{dream.date}}</p>
                 <p>{{dream.title}}</p>
                 <p>{{dream.description}}</p>
                 <!--tags, rendered with iteration-->
                 <div class="dream__card-tags">
-                    {{#each dream.tags}}
+                    {{#each dreamtags.tags}}
                   <p class="dream__tag">{{tags.name}}</p>
                   {{/each}}
                 </div>
+                <p>from {{dream.user}}</p>
+                {{/each}}
               </div>
-              
             </section>
           </section>
-          <button class="viewall__button col-sm-2 col-lg-2">view all</button>
         </section>
         <div class="footer">
           <footer>
