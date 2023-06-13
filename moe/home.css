@@ -1,9 +1,11 @@
 body {
-    background: #06001b;
+    background: #9161c3;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: "Jost" , sans-serif;
+    
   }
   /* background */
   #background{
@@ -16,7 +18,7 @@ body {
   }
 
   #bgcolor{
-    background-color: rgb(192, 171, 196);
+    background-color: rgb(24, 23, 25);
   }
   /* anime letters */
 
@@ -24,19 +26,36 @@ body {
     text-decoration: none;
   }
   
+  #btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    
+  }
   #enter-btn{
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
-    padding: 15px;
+    border: 3px outset silver;
+    border-radius: 40px;
+    padding: 15px 20px;
     margin: 6px;
-    margin-left: 10rem;
+    /* margin-left: 4.6rem; */
     cursor: pointer;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: medium;
     text-decoration: none;
+    color: black;
+    background-color: #9161c3;
+    
 
+  }
+
+  #enter-btn:hover{
+    transition: .5s all ease-in-out 0s;
+    padding: 20px 40px;
+    
+    
   }
  
   .ml14 {
@@ -44,6 +63,9 @@ body {
     font-size: 3.2em;
     z-index: 2;
     position: absolute;
+    padding-bottom: 8rem;
+    font-weight: bolder;
+
     
   }
   
@@ -69,6 +91,7 @@ body {
   .ml14 .letters {
     display: inline-block;
     line-height: 1em;
-    color: rgb(171, 173, 183);
+    color: rgb(176, 171, 183);
   }
+  
   

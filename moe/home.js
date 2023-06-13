@@ -18,9 +18,9 @@ var canvas2 = document.createElement('canvas'),
     canvas2.height = 100;
 var half = canvas2.width/2,
     gradient2 = ctx2.createRadialGradient(half, half, 0, half, half, half);
-    gradient2.addColorStop(0.05, ' #FFC300    ');
-    gradient2.addColorStop(0.1, 'hsl(' + hue + ', 93%, 12%)');
-    gradient2.addColorStop(0.25, 'hsl(' + hue + ', 61%, 16%)');
+    gradient2.addColorStop(0.05, ' #c4b2e8    ');
+    gradient2.addColorStop(0.1, 'hsl(' + hue + ', 93%, 22%)');
+    gradient2.addColorStop(0.25, 'hsl(' + hue + ', 81%, 56%)');
     gradient2.addColorStop(1, 'transparent');
 
     ctx2.fillStyle = gradient2;
