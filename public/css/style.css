@@ -34,6 +34,7 @@ h2 {
 
 footer {
   background: #5d38a0;
+  color: var(--light-lavender);
   padding: 30px 0px;
   font-family: "Jost", sans-serif;
   text-align: center;
@@ -191,6 +192,35 @@ header {
   padding:0.25rem;
 }
 
+/*profile settings styling*/
+
+h3 {
+  color: var(--dark-purple);
+  font-size: 2em;
+}
+
+h4 {
+  color: var(--dark-purple);
+  font-size: 1em;
+}
+
+#username {
+height: 35px;
+width: 250px;
+border-radius: 33px;
+}
+
+#email {
+  height: 5px;
+  width: 250px;
+  border-radius: 33px;
+}
+
+#dream {
+  height: 100px;
+  width: 250px;
+  border-radius: 33px;
+}
 #ps_Save {
   background-color: #5d38a0;
   color: #877cdc;
@@ -404,6 +434,7 @@ input[type=radio]:checked+label {
   color: var(--off-white);
   background-color:var(--light-lavender);
   font-weight:bold;
+
 }
 
 /* MEDIA QUERIES FOR RESPONSIVE DESIGN*/
@@ -425,6 +456,7 @@ input[type=radio]:checked+label {
     justify-content:center;
   }
 }
+
 @media (max-width:600px){
   .panel{
     border-radius: 70% 70% 0% 0% / 100% 100% 65% 65%;
@@ -450,3 +482,4 @@ input[type=radio]:checked+label {
     width:45%;
   }
 }
+
