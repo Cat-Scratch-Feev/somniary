@@ -2,6 +2,7 @@
   --light-lavender:#c4b2e8;
   --dark-purple:#5d38a0;
   --lightest-lavender:#EFE0FF;
+  --off-white:#FDF8FF;
   --bs-btn-active-border-color: #EFE0FF;
   --bs-btn-active-bg: #EFE0FF;
   --my-animation: 1s ease-in-out all 0s;
@@ -33,13 +34,18 @@ h2 {
 }
 
 footer {
-  background: #5d38a0;
-  color: var(--light-lavender);
   padding: 30px 0px;
   font-family: "Jost", sans-serif;
   text-align: center;
 }
-
+.footer{
+  width:65%;
+  margin-top:3rem;
+}
+.footer__title{
+  color:var(--dark-purple);
+  font-weight:bold;
+}
 .subheading {
   font-size: 32px;
 }
@@ -193,7 +199,7 @@ header {
 }
 
 /*profile settings styling*/
-
+/*
 h3 {
   color: var(--dark-purple);
   font-size: 2em;
@@ -229,7 +235,7 @@ border-radius: 33px;
   border-radius: 50px;
   border-color: transparent;
   margin-top: 2rem;
-}
+}*/
 /* HOME PAGE STYLING*/
 .homepage__container{
   margin-top:1.5rem;
@@ -402,7 +408,7 @@ border-radius: 33px;
 input::placeholder, textarea::placeholder{
   text-indent: 1rem;
 }
-.hidden {
+.loghidden {
   position: absolute;
   visibility: hidden;
   opacity: 0;
