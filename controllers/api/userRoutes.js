@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const { User, Dream, Tags, DreamTags } = require("../../models");
+const bcrypt = require("bcrypt");
 
 // The `/api/users` endpoint
 router.get("/", async (req, res) => {
@@ -32,38 +33,38 @@ router.post("/", async (req, res) => {
 // POST /api/users/login   Logging in
 router.post("/login", async (req, res) => {
   try {
-    // identifier variable to store username and emails together
-    const { identifier, password } = req.body;
-    // Verify login Credentials
     const userData = await User.findOne({
-      where: {
-        [Op.or]: [{ email: identifier }, { username: identifier }],
-      },
+      where: { username: req.body.username },
     });
 
-    // Incorrect login
     if (!userData) {
-      res.status(400).json({ message: "Incorrect email or password" });
+      res
+        .status(400)
+        .json({ message: "Incorrect username or password, please try again" });
       return;
     }
 
     // Verify correct password
-    const validPassword = await bcrypt.compare(password, userData.password);
+    const validPassword = await bcrypt.compare(
+      req.body.password,
+      userData.password
+    );
 
     // Incorrect Password
     if (!validPassword) {
-      res.status(400).json({ message: "Incorrect email or password" });
+      res.status(401).json({ message: "Incorrect username or password" });
       return;
     }
 
     // Creates a session for logged in user
     req.session.save(() => {
-      req.session.user_id = userData.id;
       req.session.logged_in = true;
-      res.json({ user: userData, message: "You are logged in" });
+
+      res.status(200).json({ user: userData, message: "You are logged in" });
     });
   } catch (err) {
-    res.status(400).json(err);
+    console.log(err);
+    res.status(402).json(err);
   }
 });
 
