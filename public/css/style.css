@@ -456,11 +456,11 @@ input[type=radio]:checked+label {
     justify-content:center;
   }
 }
+
 @media (max-width:600px){
   .panel{
     border-radius: 70% 70% 0% 0% / 100% 100% 65% 65%;
   }
-}
   .dream__tag{
     width:60%;
   }
