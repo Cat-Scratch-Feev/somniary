@@ -1,4 +1,9 @@
-<!--Bootstrap dropstart component for user menu button-->
+<!-- Welcome title -->
+      <div class="intro__container main__intro">
+        <header>
+          <!--navigation to be rendered in from handlebars templates conditionally based upon login status -->
+          <div class="intro main__intro">
+            <!--Bootstrap dropstart component for user menu button-->
             <section class="icon__nav">
                 <!--mobile navigation menu-->
                     <button class="btn btn-primary d-lg-none mobile-nav__button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive"><i class="fa-solid fa-bars" style="color:5D38A0;"></i></button>
@@ -23,7 +28,7 @@
                     <ul class="dropdown-menu">
                         <li><button class="dropdown-item" type="button"><i class="fa-solid fa-gear" style="color:5D38A0;"></i></i> settings</button></li>
                         <li><button class="dropdown-item" type="button"><i class="fa-regular fa-moon" style="color:5D38A0;"></i> dark mode</button></li>
-                        <li><button class="dropdown-item" type="button" id="logout_btn"><i class="fa-solid fa-arrow-right-from-bracket" style="color:5D38A0;"></i> sign out</button></li>
+                        <li><button class="dropdown-item" type="button"><i class="fa-solid fa-arrow-right-from-bracket" style="color:5D38A0;"></i> sign out</button></li>
                     <!-- Dropdown menu links -->
                     </ul>
                 </div>
@@ -38,3 +43,16 @@
                 </ul>
             </nav>
           </div>
+        </header>
+      </div>
+      <!-- empty div to be filled with handlebars templates -->
+      <div class="panel">
+        <!-- vanillacalendar implementation-->
+        <div class="footer">
+          <footer>
+                      <hr>
+                      <h5 class="footer__title">somniary</h5>
+                      <small>©2023 cat-scratch feev | © somniary</small>
+                  </footer>
+      </div>
+      </div>

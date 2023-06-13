@@ -4,6 +4,7 @@
   --lightest-lavender:#EFE0FF;
   --bs-btn-active-border-color: #EFE0FF;
   --bs-btn-active-bg: #EFE0FF;
+  --my-animation: 1s ease-in-out all 0s;
 }
 /* BASIC HOMEPAGE TEMPLATE STYLING*/
 * {
@@ -94,7 +95,7 @@ footer {
   color: white;
 }
 
-.signup {
+.signup, .login {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -102,7 +103,7 @@ footer {
   padding-top: 10vh;
 }
 
-.signup_btn {
+.signup_btn, .login_btn {
   background-color: #877cdc;
   width: 10rem;
   height: 3rem;
@@ -191,7 +192,6 @@ header {
   padding:0.25rem;
 }
 
-
 /*profile settings styling*/
 
 h3 {
@@ -230,6 +230,212 @@ border-radius: 33px;
   border-color: transparent;
   margin-top: 2rem;
 }
+/* HOME PAGE STYLING*/
+.homepage__container{
+  margin-top:1.5rem;
+  width:90%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-content:center;
+  flex-wrap:wrap;
+}
+.welcome__header{
+  color:var(--dark-purple);
+  margin:auto;
+  text-align:center;
+  margin:1rem;
+}
+
+.dashboard__container, .reflection__container {
+  width:80%;
+  margin:1rem;
+}
+.dashboard__card{
+  background-color:var(--off-white);
+  display:flex;
+  flex-flow: row wrap;
+  justify-content:space-around;
+  align-content:center;
+  height:7rem;
+  border-radius:35px;
+}
+.dashboard__prof{
+  width:4rem;
+  height:4rem;
+  border-radius:50%;
+  background-color:var(--lightest-lavender);
+  border-color:transparent;
+  
+}
+
+.goal__text{
+  margin:auto 0;
+}
+/*cards have styles that can be consolidated*/
+.reflection__title{
+  color:var(--dark-purple);
+}
+.dream__card{
+  border-radius:35px;
+  background-color:var(--off-white);
+  margin-bottom: 1rem;
+  display:flex;
+  flex-grow:inherit;
+}
+.dream__card-body{
+  margin:1rem;
+  width:100%;
+}
+.dream__card-tags{
+  display:flex;
+  flex-flow: row wrap;
+}
+.dream__tag{
+  border-radius:15px;
+  width:20%;
+  background-color:var(--lightest-lavender);
+  margin:1rem;
+  height:2rem;
+  text-align:center;
+}
+.viewall__button{
+  border-radius:35px;
+  height:3rem;
+  background-color:var(--dark-purple);
+  color:var(--off-white);
+  border-color:transparent;
+  margin:auto;
+}
+/*JOURNAL STYLING*/
+.journal__container{
+  margin-top:1.5rem;
+  width:90%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-content:center;
+  flex-wrap:wrap;
+}
+.journal-header__container{
+  display:flex;
+  flex-flow:column wrap;
+  justify-content:center;
+  align-content:center;
+
+}
+.journal-header{
+  color:var(--dark-purple);
+  margin:auto;
+  text-align: center;
+  margin:1rem;
+  font-weight: bold;
+}
+.journal-subheader{
+  width:75%;
+  text-align:center;
+  color:var(--dark-purple);
+}
+.journal-dreams__container{
+  width:80%;
+}
+.dream-j__card{
+  width:100%;
+}
+/* LOG NEW DREAM PAGE STYLING*/
+.log__nav{
+  display:flex;
+  flex-direction:column;
+  width:100%;
+}
+.log_header__title{
+  text-align:center;
+}
+.exit_log__button{
+  background-color:transparent;
+  border-color:transparent;
+  align-self:flex-start;
+  margin:2rem;
+}
+.logpage__container{
+  margin-top:1.5rem;
+  width:60%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-content:center;
+  flex-wrap:wrap;
+}
+.log_form__container{
+  width:100%;
+  
+}
+.log_header__container{
+  display:flex;
+  flex-flow:column wrap;
+  justify-content:center;
+  align-content:center;
+  text-align:center;
+}
+.log_form{
+  display:flex;
+  flex-flow: column wrap;
+  /*align-content:center;*/
+  /*width:80%;*/
+}
+.log_input__container{
+  border-radius:35px;
+  height:2rem;
+  border-color:transparent;
+}
+.log_btn{
+  width:30%;
+  margin:2rem;
+  background-color:var(--dark-purple);
+  border-radius:35px;
+  color:var(--off-white);
+  border-color:transparent;
+  height:2rem;
+  justify-self:center;
+  align-self:center;
+}
+input::placeholder, textarea::placeholder{
+  text-indent: 1rem;
+}
+.hidden {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+}
+.dream_type__button {
+  width:30%;
+  height:2rem;
+  border-radius:35px;
+  background-color:var(--off-white);
+  color:black;
+  text-align:center;
+  margin-bottom:1rem;
+}
+/* edit of checkbox and default styles*/
+input[type=checkbox]+label {
+  color: var(--dark-purple);
+}
+
+input[type=checkbox]:checked+label {
+  color: var(--off-white);
+  background-color:var(--light-lavender);
+  font-weight:bold;
+}
+input[type=radio]+label {
+  color: var(--dark-purple);
+}
+
+input[type=radio]:checked+label {
+  color: var(--off-white);
+  background-color:var(--light-lavender);
+  font-weight:bold;
+
+}
 
 /* MEDIA QUERIES FOR RESPONSIVE DESIGN*/
 @media (max-width: 991.98px) {
@@ -245,11 +451,35 @@ border-radius: 33px;
   .offcanvas-lg.offcanvas-start{
     width:65%;
   }
+  .dream__card-tags{
+    align-content:center;
+    justify-content:center;
+  }
 }
 @media (max-width:600px){
   .panel{
     border-radius: 70% 70% 0% 0% / 100% 100% 65% 65%;
   }
-
-
 }
+  .dream__tag{
+    width:60%;
+  }
+  .dream__card-tags{
+    align-content:center;
+    justify-content:center;
+  }
+  .viewall__button{
+    width:40%;
+  }
+  .journal-dreams__container{
+    width:80%;
+    margin:auto;
+  }
+  .log_btn{
+    width:60%;
+  }
+  .dream_type__button{
+    width:45%;
+  }
+}
+
