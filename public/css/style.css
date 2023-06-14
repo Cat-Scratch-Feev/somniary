@@ -5,6 +5,8 @@
   --off-white: #fdf8ff;
   --bs-btn-active-border-color: #efe0ff;
   --bs-btn-active-bg: #efe0ff;
+  --bs-btn-active-border-color: #EFE0FF;
+  --bs-btn-active-bg: #EFE0FF;
   --my-animation: 1s ease-in-out all 0s;
 }
 /* BASIC HOMEPAGE TEMPLATE STYLING*/
@@ -24,7 +26,7 @@ body {
 }
 
 h1 {
-  color: #5d38a0;
+  color: var(--primary-purple);
   font-size: 3em;
   font-weight: 500;
 }
@@ -43,9 +45,9 @@ footer {
   width: 65%;
   margin-top: 3rem;
 }
-.footer__title {
-  color: var(--dark-purple);
-  font-weight: bold;
+.footer__title{
+  color:var(--primary-purple);
+  font-weight:bold;
 }
 .subheading {
   font-size: 32px;
@@ -56,7 +58,7 @@ footer {
 }
 
 .page__container {
-  background-color: #c4b2e8;
+  background-color: var(--primary-lav);
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -88,7 +90,7 @@ footer {
 .panel {
   width: 100%;
   min-height: 65vh;
-  background-color: #efe0ff;
+  background-color: var(--primary-lightlav);
   border-radius: 40% 40% 0% 0% / 100% 100% 65% 65%;
   display: flex;
   flex-direction: column;
@@ -111,9 +113,8 @@ footer {
   padding-top: 10vh;
 }
 
-.signup_btn,
-.login_btn {
-  background-color: #877cdc;
+.signup_btn, .login_btn {
+  background-color: var(--primary-purple);
   width: 10rem;
   height: 3rem;
   border-radius: 50px;
@@ -135,17 +136,16 @@ header {
   justify-content: center;
   align-items: center;
 }
-.mobile-nav__button,
-.btn-secondary {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  border-style: none;
-  background-color: var(--lightest-lavender);
-  margin: 2rem;
+.mobile-nav__button, .btn-secondary{
+  width:3rem;
+  height:3rem;
+  border-radius:50%;
+  border-style:none;
+  background-color:var(--primary-lightlav);
+  margin:2rem;
 }
-.btn.btn-primary {
-  background-color: var(--lightest-lavender);
+.btn.btn-primary{
+  background-color:var(--primary-lightlav);
 }
 .profile__button {
   align-self: flex-end;
@@ -166,20 +166,20 @@ header {
 .nav__icon {
   margin: 0.5rem;
 }
-.btn-secondary {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  border-style: none;
-  background-color: var(--lightest-lavender);
-  margin: 2rem;
+
+.btn-secondary{
+  width:3rem;
+  height:3rem;
+  border-radius:50%;
+  border-style:none;
+  background-color:var(--primary-lightlav);
+  margin:2rem;
 }
 .btn-secondary:hover {
-  background-color: var(--lightest-lavender);
+  background-color:var(--primary-lightlav);
 }
-.dropdown-toggle {
-  --bs-offcanvas-width: 300px;
-  color: var(--dark-purple);
+.dropdown-toggle{--bs-offcanvas-width: 300px;
+  color:var(--primary-purple);
 }
 
 .icon__nav {
@@ -187,11 +187,14 @@ header {
   width: 100%;
   justify-content: flex-end;
 }
-.offcanvas-title {
-  color: var(--dark-purple);
+
+.offcanvas-title{
+  color:var(--primary-purple);
+
 }
-.offcanvas-lg {
-  background-color: var(--light-lavender);
+.offcanvas-lg{
+  background-color: var(--primary-lav);
+
   border-radius: 0 7% 7% 0;
 }
 .mnav__list {
@@ -205,12 +208,12 @@ header {
 /*profile settings styling*/
 /*
 h3 {
-  color: var(--dark-purple);
+  color: var(--primary-purple);
   font-size: 2em;
 }
 
 h4 {
-  color: var(--dark-purple);
+  color: var(--primary-purple);
   font-size: 1em;
 }
 
@@ -241,20 +244,21 @@ border-radius: 33px;
   margin-top: 2rem;
 }*/
 /* HOME PAGE STYLING*/
-.homepage__container {
-  margin-top: 1.5rem;
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  flex-wrap: wrap;
+
+.homepage__container{
+  margin-top:1.5rem;
+  width:90%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-content:center;
+  flex-wrap:wrap;
 }
-.welcome__header {
-  color: var(--dark-purple);
-  margin: auto;
-  text-align: center;
-  margin: 1rem;
+.welcome__header{
+  color:var(--primary-purple);
+  margin:auto;
+  text-align:center;
+  margin:1rem;
 }
 
 .dashboard__container,
@@ -262,33 +266,37 @@ border-radius: 33px;
   width: 80%;
   margin: 1rem;
 }
-.dashboard__card {
-  background-color: var(--off-white);
-  display: flex;
+
+.dashboard__card{
+  background-color:var(--primary-light);
+  display:flex;
   flex-flow: row wrap;
-  justify-content: space-around;
-  align-content: center;
-  height: 7rem;
-  border-radius: 35px;
+  justify-content:space-around;
+  align-content:center;
+  height:7rem;
+  border-radius:35px;
 }
-.dashboard__prof {
-  width: 4rem;
-  height: 4rem;
-  border-radius: 50%;
-  background-color: var(--lightest-lavender);
-  border-color: transparent;
+.dashboard__prof{
+  width:4rem;
+  height:4rem;
+  border-radius:50%;
+  background-color:var(--primary-lightlav);
+  border-color:transparent;
+  
 }
 
 .goal__text {
   margin: auto 0;
 }
 /*cards have styles that can be consolidated*/
-.reflection__title {
-  color: var(--dark-purple);
+
+.reflection__title{
+  color:var(--primary-purple);
 }
-.dream__card {
-  border-radius: 35px;
-  background-color: var(--off-white);
+.dream__card{
+  border-radius:35px;
+  background-color:var(--primary-light);
+
   margin-bottom: 1rem;
   display: flex;
   flex-grow: inherit;
@@ -301,21 +309,22 @@ border-radius: 33px;
   display: flex;
   flex-flow: row wrap;
 }
-.dream__tag {
-  border-radius: 15px;
-  width: 20%;
-  background-color: var(--lightest-lavender);
-  margin: 1rem;
-  height: 2rem;
-  text-align: center;
+
+.dream__tag{
+  border-radius:15px;
+  width:20%;
+  background-color:var(--primary-lightlav);
+  margin:1rem;
+  height:2rem;
+  text-align:center;
 }
-.viewall__button {
-  border-radius: 35px;
-  height: 3rem;
-  background-color: var(--dark-purple);
-  color: var(--off-white);
-  border-color: transparent;
-  margin: auto;
+.viewall__button{
+  border-radius:35px;
+  height:3rem;
+  background-color:var(--primary-purple);
+  color:var(--primary-light);
+  border-color:transparent;
+  margin:auto;
 }
 /*JOURNAL STYLING*/
 .journal__container {
@@ -333,17 +342,20 @@ border-radius: 33px;
   justify-content: center;
   align-content: center;
 }
-.journal-header {
-  color: var(--dark-purple);
-  margin: auto;
+
+.journal-header{
+  color:var(--primary-purple);
+  margin:auto;
   text-align: center;
   margin: 1rem;
   font-weight: bold;
 }
-.journal-subheader {
-  width: 75%;
-  text-align: center;
-  color: var(--dark-purple);
+
+.journal-subheader{
+  width:75%;
+  text-align:center;
+  color:var(--primary-purple);
+
 }
 .journal-dreams__container {
   width: 80%;
@@ -391,24 +403,25 @@ border-radius: 33px;
   /*align-content:center;*/
   /*width:80%;*/
 }
-.log_input__container {
-  border-radius: 35px;
-  height: 2rem;
-  border-color: transparent;
+
+.log_input__container{
+  border-radius:35px;
+  height:2rem;
+  border-color:transparent;
 }
-.log_btn {
-  width: 30%;
-  margin: 2rem;
-  background-color: var(--dark-purple);
-  border-radius: 35px;
-  color: var(--off-white);
-  border-color: transparent;
-  height: 2rem;
-  justify-self: center;
-  align-self: center;
+.log_btn{
+  width:30%;
+  margin:2rem;
+  background-color:var(--primary-purple);
+  border-radius:35px;
+  color:var(--primary-light);
+  border-color:transparent;
+  height:2rem;
+  justify-self:center;
+  align-self:center;
 }
-input::placeholder,
-textarea::placeholder {
+input::placeholder, textarea::placeholder{
+
   text-indent: 1rem;
 }
 .loghidden {
@@ -417,32 +430,32 @@ textarea::placeholder {
   opacity: 0;
 }
 .dream_type__button {
-  width: 30%;
-  height: 2rem;
-  border-radius: 35px;
-  background-color: var(--off-white);
-  color: black;
-  text-align: center;
-  margin-bottom: 1rem;
+  width:30%;
+  height:2rem;
+  border-radius:35px;
+  background-color:var(--primary-light);
+  color:black;
+  text-align:center;
+  margin-bottom:1rem;
 }
 /* edit of checkbox and default styles*/
-input[type="checkbox"] + label {
-  color: var(--dark-purple);
+input[type=checkbox]+label {
+  color: var(--primary-purple);
 }
 
-input[type="checkbox"]:checked + label {
-  color: var(--off-white);
-  background-color: var(--light-lavender);
-  font-weight: bold;
+input[type=checkbox]:checked+label {
+  color: var(--primary-light);
+  background-color:var(--primary-lav);
+  font-weight:bold;
 }
-input[type="radio"] + label {
-  color: var(--dark-purple);
+input[type=radio]+label {
+  color: var(--primary-purple);
 }
 
-input[type="radio"]:checked + label {
-  color: var(--off-white);
-  background-color: var(--light-lavender);
-  font-weight: bold;
+input[type=radio]:checked+label {
+  color: var(--primary-light);
+  background-color:var(--primary-lav);
+  font-weight:bold;
 }
 
 /* MEDIA QUERIES FOR RESPONSIVE DESIGN*/
