@@ -1,47 +1,99 @@
 <div class="page__container">
-  <div class="profileSettings">
-    <div clas="profileSettings_body">
-      {{! Profile Settings Title}}
-      <h2>profile settings</h2>
+      <div class="intro__container main__intro">
+        <header>
+          <!--navigation to be rendered in from handlebars templates conditionally based upon login status -->
+          <div class="intro main__intro">
+            <!--Bootstrap dropstart component for user menu button-->
+            <section class="icon__nav">
+                <!--mobile navigation menu-->
+                    <button class="btn btn-primary d-lg-none mobile-nav__button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive"><i class="fa-solid fa-bars" style="color:5D38A0;"></i></button>
+                    <div class="offcanvas-lg offcanvas-start" tabindex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasResponsiveLabel">somniary</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-header">
+                        <ul class="mnav__list">
+                            <li class="mnav__item about_btn"><i class="fa-solid fa-cloud nav__icon" style="color:FDF8FF;"></i>about</li>
+                            <li class="mnav__item journal_btn"><i class="fa-solid fa-book nav__icon" style="color:5D38A0;"></i>journal</li>
+                            <li class="mnav__item dreamlog_btn"><i class="fa-solid fa-plus nav__icon" style="color:5D38A0;"></i>new dream</li>
+                            <li class="mnav__item calendar_btn"><i class="fa-regular fa-calendar-days nav__icon" style="color:5D38A0;"></i>calendar</li>
+                        </ul>
+                    </div>
+                
+                </div>
+                <div class="btn-group dropstart">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-regular fa-user" style="color:5D38A0;"></i>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><button class="dropdown-item" type="button" id="settings_btn"><i class="fa-solid fa-gear" style="color:5D38A0;"></i> settings</button></li>
+                        <li><button class="dropdown-item" type="button" id="darkmode_btn"><i class="fa-regular fa-moon" style="color:5D38A0;"></i> dark mode</button></li>
+                        <li><button class="dropdown-item" type="button" id="logout_btn"><i class="fa-solid fa-arrow-right-from-bracket" style="color:5D38A0;"></i> sign out</button></li>
+                    <!-- Dropdown menu links -->
+                    </ul>
+                </div>
+            </section>
+            <h1 class="page__title">somniary</h1>
+            <nav>
+                <ul class="nav__list hidden">
+                    <li class="nav__item about_btn" id="about_btn"><i class="fa-solid fa-cloud nav__icon" style="color:FDF8FF;"></i> about</li>
+                    <li class="nav__item journal_btn" id="journal_btn"><i class="fa-solid fa-book nav__icon" style="color:5D38A0;"></i> journal</li>
+                    <li class="nav__item dreamlog_btn" id="dreamlog_btn"><i class="fa-solid fa-plus nav__icon" style="color:5D38A0;"></i> new dream</li>
+                    <li class="nav__item calendar_btn" id="calendar_btn"><i class="fa-regular fa-calendar-days nav__icon" style="color:5D38A0;"></i> calendar</li>
+                </ul>
+            </nav>
+          </div>
+        </header>
+      </div>
+      <!-- empty div to be filled with handlebars templates -->
+      <div class="panel">
+          <div class="profileSettings_body">
+            {{! Profile Settings Title}}
+            <h2 class="profileSettings_header">profile settings</h2>
 
-      {{! Username Title with a form underneath}}
-      <h3>username</h3>
-      <form>
-        <input type="text" id="username" placeholder="username" />
-      </form>
-      {{! Email Title with a form underneath}}
-      <h3>email</h3>
-      <form>
-        <input type="text" id="email" placeholder="email" />
-      </form>
-      {{! Dream Tracking Goal Title
-        "your goal will be displayed on your home page"
-        form underneath}}
-      <h3>dream tracking goal</h3>
-      <h4>your goal will be displayed on your home page!</h4>
-      <form>
-        <input
-          type="text"
-          id="dream"
-          placeholder="I am tracking my dreams to..."
-        />
-      </form>
-      {{! Save Button}}
-      <button type="button" id="ps_Save">save</button>
-    </div>
-  </div>
-  <div class="footer>">
-    <footer>
-      <hr />
-      <h5>somniary</h5>
-      <small>©2023 cat-scratch feev | © somniary</small>
-    </footer>
+            {{! Username Title with a form underneath}}
+            <section class="log_form__container">
+
+            <form class="profile_form">
+            <h3 class="profileSettings_label">username</h3>
+
+              <input class="profileSettings_username"type="text" id="username" placeholder="username" />
+            
+            {{! Email Title with a form underneath}}
+            <h3 class="profileSettings_label">email</h3>
+           
+              <input class="profileSettings_email"type="text" id="email" placeholder="email" />
+           
+            {{! Dream Tracking Goal Title
+              "your goal will be displayed on your home page"
+              form underneath}}
+            <h3 class="profileSettings_header">dream tracking goal</h3>
+            <h4 class="profileSettings_label">your goal will be displayed on your home page!</h4>
+            
+              <input
+                type="text"
+                id="dreamgoal"
+                placeholder="I am tracking my dreams to..."
+              />
+            {{! Save Button}}
+            <button type="button" id="ps_Save">save</button>
+
+            </form>
+            </section>
+          </div>
+        <div class="footer">
+          <footer>
+                      <hr>
+                      <h5 class="footer__title">somniary</h5>
+                      <small>©2023 cat-scratch feev | © somniary</small>
+                  </footer>
   </div>
 </div>
-
-<!--fontawesome import-->
-<script
-  src="https://kit.fontawesome.com/d14b0991e4.js"
-  crossorigin="anonymous"
+</div>
+ <!--fontawesome import-->
+ <script
+ src="https://kit.fontawesome.com/d14b0991e4.js"
+ crossorigin="anonymous"
 ></script>
+<script src="./js/home.js"></script>
 <script src="./js/theme.js"></script>
