@@ -408,6 +408,7 @@ border-radius: 33px;
   border-radius:35px;
   height:2rem;
   border-color:transparent;
+  background-color:var(--primary-light);
 }
 .log_btn{
   width:30%;
