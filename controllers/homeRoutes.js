@@ -8,6 +8,7 @@ const withAuth = require("../utils/auth");
 router.get("/login", (req, res) => {
   if (req.session.logged_in) {
     res.redirect("/");
+
     return;
   }
 
@@ -31,6 +32,31 @@ router.get("/", withAuth, async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
+});
+
+// GET request /settings navigates to profile settings page
+router.get("/profilesettings", function (req, res) {
+  res.render("profilesettings");
+});
+
+// GET request /about
+router.get("/about", function (req, res) {
+  res.render("about");
+});
+
+// GET request /journal brings user to all their dreams
+router.get("/journal", function (req, res) {
+  res.render("journal");
+});
+
+// GET request /dreamlog create a new dream
+router.get("/dreamlog", function (req, res) {
+  res.render("dreamlog");
+});
+
+// GET request /calendar shows dreams sorted by date
+router.get("/calendar", function (req, res) {
+  res.render("calendar");
 });
 
 module.exports = router;
