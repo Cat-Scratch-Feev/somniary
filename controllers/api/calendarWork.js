@@ -1,28 +1,14 @@
 const router = require("express").Router();
 
-const calendarEl = document.querySelector('#calendar');
-new VanillaCalendar(calendarEl);
+// JS Script
+import VanillaCalendar from '@uvarov.frontend/vanilla-calendar';
 
-const calendar = new VanillaCalendar(element, params);
+// Basic styles
+import '@uvarov.frontend/vanilla-calendar/build/vanilla-calendar.min.css';
+
+// Additional styles
+import '@uvarov.frontend/vanilla-calendar/build/themes/light.min.css';
+import '@uvarov.frontend/vanilla-calendar/build/themes/dark.min.css';
+
+const calendar = new VanillaCalendar('#calendar');
 calendar.init();
-
-const calendarInput = document.querySelector('#input');
-new VanillaCalendar(calendarInput, {
-  input: true,
-});
-
-new VanillaCalendar('#calendar', {
-    input: true,
-  });
-  
-
-new VanillaCalendar('#calendar', {
-    type: 'default',
-  });  
-
-new VanillaCalendar('#calendar', {
-    date: {
-      today: new Date('2022-01-07'),
-    },
-  });
-  

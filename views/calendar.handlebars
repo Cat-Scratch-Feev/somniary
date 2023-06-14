@@ -46,11 +46,18 @@
         </header>
       </div>
       <!-- empty div to be filled with handlebars templates -->
-      <div class="panel">
-        <!-- vanillacalendar implementation-->
+    <div class="panel">
+   
         <div id="calendar">
-            <input type="text" id="input">
-        </div>
+
+         </div>
+
+         <script>
+         document.addEventListener('DOMContentLoaded', () => {
+         const calendar = new VanillaCalendar('#calendar');
+            calendar.init();
+            });
+        </script>
 
 
         <div class="footer">
@@ -59,5 +66,4 @@
                       <h5 class="footer__title">somniary</h5>
                       <small>©2023 cat-scratch feev | © somniary</small>
                   </footer>
-      </div>
       </div>
