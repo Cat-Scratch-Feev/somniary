@@ -1,8 +1,4 @@
 :root {
-  --light-lavender:#c4b2e8;
-  --dark-purple:#5d38a0;
-  --lightest-lavender:#EFE0FF;
-  --off-white:#FDF8FF;
   --bs-btn-active-border-color: #EFE0FF;
   --bs-btn-active-bg: #EFE0FF;
   --my-animation: 1s ease-in-out all 0s;
@@ -24,7 +20,7 @@ body {
 }
 
 h1 {
-  color: #5d38a0;
+  color: var(--primary-purple);
   font-size: 3em;
   font-weight: 500;
 }
@@ -43,7 +39,7 @@ footer {
   margin-top:3rem;
 }
 .footer__title{
-  color:var(--dark-purple);
+  color:var(--primary-purple);
   font-weight:bold;
 }
 .subheading {
@@ -55,7 +51,7 @@ footer {
 }
 
 .page__container {
-  background-color: #c4b2e8;
+  background-color: var(--primary-lav);
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -87,7 +83,7 @@ footer {
 .panel {
   width: 100%;
   min-height: 65vh;
-  background-color: #efe0ff;
+  background-color: var(--primary-lightlav);
   border-radius: 40% 40% 0% 0% / 100% 100% 65% 65%;
   display: flex;
   flex-direction: column;
@@ -110,7 +106,7 @@ footer {
 }
 
 .signup_btn, .login_btn {
-  background-color: #877cdc;
+  background-color: var(--primary-purple);
   width: 10rem;
   height: 3rem;
   border-radius: 50px;
@@ -138,11 +134,11 @@ header {
   height:3rem;
   border-radius:50%;
   border-style:none;
-  background-color:var(--lightest-lavender);
+  background-color:var(--primary-lightlav);
   margin:2rem;
 }
 .btn.btn-primary{
-  background-color:var(--lightest-lavender);
+  background-color:var(--primary-lightlav);
 }
 .profile__button {
   align-self:flex-end;
@@ -167,14 +163,14 @@ header {
   height:3rem;
   border-radius:50%;
   border-style:none;
-  background-color:var(--lightest-lavender);
+  background-color:var(--primary-lightlav);
   margin:2rem;
 }
 .btn-secondary:hover {
-  background-color:var(--lightest-lavender);
+  background-color:var(--primary-lightlav);
 }
 .dropdown-toggle{--bs-offcanvas-width: 300px;
-  color:var(--dark-purple);
+  color:var(--primary-purple);
 }
 
 .icon__nav{
@@ -183,11 +179,11 @@ header {
   justify-content:flex-end;
 }
 .offcanvas-title{
-  color:var(--dark-purple);
+  color:var(--primary-purple);
 
 }
 .offcanvas-lg{
-  background-color: var(--light-lavender);
+  background-color: var(--primary-lav);
   border-radius: 0 7% 7% 0;
 }
 .mnav__list{
@@ -201,12 +197,12 @@ header {
 /*profile settings styling*/
 /*
 h3 {
-  color: var(--dark-purple);
+  color: var(--primary-purple);
   font-size: 2em;
 }
 
 h4 {
-  color: var(--dark-purple);
+  color: var(--primary-purple);
   font-size: 1em;
 }
 
@@ -247,7 +243,7 @@ border-radius: 33px;
   flex-wrap:wrap;
 }
 .welcome__header{
-  color:var(--dark-purple);
+  color:var(--primary-purple);
   margin:auto;
   text-align:center;
   margin:1rem;
@@ -258,7 +254,7 @@ border-radius: 33px;
   margin:1rem;
 }
 .dashboard__card{
-  background-color:var(--off-white);
+  background-color:var(--primary-light);
   display:flex;
   flex-flow: row wrap;
   justify-content:space-around;
@@ -270,7 +266,7 @@ border-radius: 33px;
   width:4rem;
   height:4rem;
   border-radius:50%;
-  background-color:var(--lightest-lavender);
+  background-color:var(--primary-lightlav);
   border-color:transparent;
   
 }
@@ -280,11 +276,11 @@ border-radius: 33px;
 }
 /*cards have styles that can be consolidated*/
 .reflection__title{
-  color:var(--dark-purple);
+  color:var(--primary-purple);
 }
 .dream__card{
   border-radius:35px;
-  background-color:var(--off-white);
+  background-color:var(--primary-light);
   margin-bottom: 1rem;
   display:flex;
   flex-grow:inherit;
@@ -300,7 +296,7 @@ border-radius: 33px;
 .dream__tag{
   border-radius:15px;
   width:20%;
-  background-color:var(--lightest-lavender);
+  background-color:var(--primary-lightlav);
   margin:1rem;
   height:2rem;
   text-align:center;
@@ -308,8 +304,8 @@ border-radius: 33px;
 .viewall__button{
   border-radius:35px;
   height:3rem;
-  background-color:var(--dark-purple);
-  color:var(--off-white);
+  background-color:var(--primary-purple);
+  color:var(--primary-light);
   border-color:transparent;
   margin:auto;
 }
@@ -331,7 +327,7 @@ border-radius: 33px;
 
 }
 .journal-header{
-  color:var(--dark-purple);
+  color:var(--primary-purple);
   margin:auto;
   text-align: center;
   margin:1rem;
@@ -340,7 +336,7 @@ border-radius: 33px;
 .journal-subheader{
   width:75%;
   text-align:center;
-  color:var(--dark-purple);
+  color:var(--primary-purple);
 }
 .journal-dreams__container{
   width:80%;
@@ -397,9 +393,9 @@ border-radius: 33px;
 .log_btn{
   width:30%;
   margin:2rem;
-  background-color:var(--dark-purple);
+  background-color:var(--primary-purple);
   border-radius:35px;
-  color:var(--off-white);
+  color:var(--primary-light);
   border-color:transparent;
   height:2rem;
   justify-self:center;
@@ -417,28 +413,28 @@ input::placeholder, textarea::placeholder{
   width:30%;
   height:2rem;
   border-radius:35px;
-  background-color:var(--off-white);
+  background-color:var(--primary-light);
   color:black;
   text-align:center;
   margin-bottom:1rem;
 }
 /* edit of checkbox and default styles*/
 input[type=checkbox]+label {
-  color: var(--dark-purple);
+  color: var(--primary-purple);
 }
 
 input[type=checkbox]:checked+label {
-  color: var(--off-white);
-  background-color:var(--light-lavender);
+  color: var(--primary-light);
+  background-color:var(--primary-lav);
   font-weight:bold;
 }
 input[type=radio]+label {
-  color: var(--dark-purple);
+  color: var(--primary-purple);
 }
 
 input[type=radio]:checked+label {
-  color: var(--off-white);
-  background-color:var(--light-lavender);
+  color: var(--primary-light);
+  background-color:var(--primary-lav);
   font-weight:bold;
 
 }
