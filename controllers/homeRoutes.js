@@ -19,12 +19,14 @@ router.get("/login", (req, res) => {
 // GET request /   gets the home page if user is logged in
 router.get("/", withAuth, async (req, res) => {
   try {
+    //Pull user data by username to use in templating
     const userData = await User.findAll({
       attributes: { exclude: ["password"] },
       where:{username: req.session.username},
       // order: [["name", "ASC"]],
     });
-    console.log(req.session.user_id);
+    
+    //Pull all dream data matching a user's id to use in journal feature
     const dreamData = await Dream.findAll({
       where: { user_id: req.session.user_id },
       include: {
@@ -34,16 +36,14 @@ router.get("/", withAuth, async (req, res) => {
       }
     });
     const user = userData.map((project) => project.get({ plain: true }));
-    //const dreams = dreamData.get({ plain: true });
-    console.log(dreamData);
+    
     const dreams = dreamData.map((dream) => dream.toJSON());
+
+    //Get random dream from user dreams to use in reflection feature
     let randomIndex= Math.floor(Math.random() * dreamData.length);
     let randomDream = dreams[randomIndex];
-    console.log(randomIndex);
-    console.log(userData);
-    console.log(user);
-    console.log(dreams);
-    //console.log(dreams.tags);
+   
+    //Pass along essential data for rendering in template
     res.render("home", {
       user,
       dreams,
@@ -74,12 +74,13 @@ router.get("/about", function (req, res) {
 // GET request /journal brings user to all their dreams
 router.get("/journal", async (req, res) => {
   try {
+    //Pull user data to use in templating
     const userData = await User.findAll({
       attributes: { exclude: ["password"] },
       where:{username: req.session.username},
       // order: [["name", "ASC"]],
     });
-    console.log(req.session.user_id);
+    //Pull all dream data matching user id
     const dreamData = await Dream.findAll({
       where: { user_id: req.session.user_id },
       include: {
@@ -89,13 +90,10 @@ router.get("/journal", async (req, res) => {
       }
     });
     const user = userData.map((project) => project.get({ plain: true }));
-    //const dreams = dreamData.get({ plain: true });
-    console.log(dreamData);
+    
     const dreams = dreamData.map((dream) => dream.toJSON());
-    console.log(userData);
-    console.log(user);
-    console.log(dreams);
-    //console.log(dreams.tags);
+    
+    //
     res.render("journal", {
       user,
       dreams,
