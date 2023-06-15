@@ -8,6 +8,7 @@ const withAuth = require("../utils/auth");
 router.get("/login", (req, res) => {
   if (req.session.logged_in) {
     res.redirect("/");
+
     return;
   }
 
@@ -19,18 +20,43 @@ router.get("/", withAuth, async (req, res) => {
   try {
     const userData = await User.findAll({
       attributes: { exclude: ["password"] },
-      order: [["name", "ASC"]],
+      // order: [["name", "ASC"]],
     });
 
     const users = userData.map((project) => project.get({ plain: true }));
 
-    res.render("homepage", {
+    res.render("home", {
       users,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
   }
+});
+
+// GET request /settings navigates to profile settings page
+router.get("/profilesettings", function (req, res) {
+  res.render("profilesettings");
+});
+
+// GET request /about
+router.get("/about", function (req, res) {
+  res.render("about");
+});
+
+// GET request /journal brings user to all their dreams
+router.get("/journal", function (req, res) {
+  res.render("journal");
+});
+
+// GET request /dreamlog create a new dream
+router.get("/dreamlog", function (req, res) {
+  res.render("dreamlog");
+});
+
+// GET request /calendar shows dreams sorted by date
+router.get("/calendar", function (req, res) {
+  res.render("calendar");
 });
 
 module.exports = router;

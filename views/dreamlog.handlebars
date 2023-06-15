@@ -1,59 +1,121 @@
-<div class="intro__container main__intro">
-        <header>
-          <!--navigation to be rendered in from handlebars templates conditionally based upon login status -->
-          <div class="intro main__intro">
-            <!--Bootstrap dropstart component for user menu button-->
+<div class="page__container">
+  <div class="intro__container main__intro">
+    <header>
+      <!--navigation to be rendered in from handlebars templates conditionally based upon login status -->
+      <div class="intro main__intro">
+        <!--Bootstrap dropstart component for user menu button-->
 
-            <section class="log__nav">
-              <!--add route to return to home page OR previous page? discuss-->
-              <button class="exit_log__button"><i class="fa-solid fa-x" style="color:5D38A0;"></i></button>
-              <h1>log new dream</h1>
-            </section>
-          </div>
-        </header>
-      </div>
-      <!-- empty div to be filled with handlebars templates -->
-      <div class="panel">
-        <section class="logpage__container">
-          <section class="log_header__container">
-            <h2 log_header__title>fill in your dream details!</h2>
-          </section>
-          <section class="log_form__container">
-            <form action="submit" method="post" class="log_form">
-              <label for="dream_date"> date</label>
-              <input type="text" name="dream_date" id="dream_date__input" class="log_input__container" required />
-              <label for="dream_title">title</label>
-              <input type="text" name="dream_title" id="dream_title__input" class="log_input__container" required placeholder="title your dream!"/>
-              <label for="dream_description">dream description</label>
-              <textarea type="text" name="dream_description" id="dream_description__input" class="log_input__container" required placeholder="describe your dream!"></textarea>
-              <label for="dream_type">what type of dream did you have?</label>
-              <div class="dream_type__selection">
-                <input type="checkbox" name="dream_type" id="nightmare" value="nightmare" class="hidden">
-                <label class="dream_type__button" for="nightmare">nightmare</label>
-                <input type="checkbox" name="dream_type" id="normal" value="normal" class="hidden">
-                <label class="dream_type__button" for="normal">normal</label>
-                <input type="checkbox" name="dream_type" id="daydream" value="daydream" class="hidden">
-                <label class="dream_type__button" for="daydream">daydream</label>
-              </div>
-              <label for="dream_lucid">was your dream lucid?</label>
-              <div class="dream_lucid__selection">
-                <input type="radio" name="dream_lucid" id="yeslucid" value="normal" class="hidden">
-                <label class="dream_type__button" for="yeslucid">yes</label>
-                <input type="radio" name="dream_lucid" id="nolucid" value="lucid" class="hidden">
-                <label class="dream_type__button" for="nolucid">no</label>
-              </div>
-              <!-- commenting our additional tags header for now, need to find out how to accept user input OR just make premade tags
-              <label for="dream_tags">additional tags</label>-->
-              <button type="submit" formmethod="post" class="log_btn">
-                <span class="log_btn__text">save dream</span>
-              </button>
-            </form>
-          </section>
+        <section class="log__nav">
+          <!--add route to return to home page OR previous page? discuss-->
+          <button class="exit_log__button" id="exit_btn"><i
+              class="fa-solid fa-x"
+              style="color:5D38A0;"
+            ></i></button>
+          <h1>log new dream</h1>
         </section>
-        <div class="footer">
-          <footer>
-                      <hr>
-                      <h5 class="footer__title">somniary</h5>
-                      <small>©2023 cat-scratch feev | © somniary</small>
-                  </footer>
       </div>
+    </header>
+  </div>
+  <!-- empty div to be filled with handlebars templates -->
+  <div class="panel">
+    <section class="logpage__container">
+      <section class="log_header__container">
+        <h2 log_header__title>fill in your dream details!</h2>
+      </section>
+      <section class="log_form__container">
+        <form action="submit" method="post" class="log_form">
+          <label for="dream_date"> date</label>
+          <input
+            type="text"
+            name="dream_date"
+            id="dream_date__input"
+            class="log_input__container"
+            required
+          />
+          <label for="dream_title">title</label>
+          <input
+            type="text"
+            name="dream_title"
+            id="dream_title__input"
+            class="log_input__container"
+            required
+            placeholder="title your dream!"
+          />
+          <label for="dream_description">dream description</label>
+          <textarea
+            type="text"
+            name="dream_description"
+            id="dream_description__input"
+            class="log_input__container"
+            required
+            placeholder="describe your dream!"
+          ></textarea>
+          <label for="dream_type">what type of dream did you have?</label>
+          <div class="dream_type__selection">
+            <input
+              type="checkbox"
+              name="dream_type"
+              id="nightmare"
+              value="nightmare"
+              class="loghidden"
+            />
+            <label class="dream_type__button" for="nightmare">nightmare</label>
+            <input
+              type="checkbox"
+              name="dream_type"
+              id="normal"
+              value="normal"
+              class="loghidden"
+            />
+            <label class="dream_type__button" for="normal">normal</label>
+            <input
+              type="checkbox"
+              name="dream_type"
+              id="daydream"
+              value="daydream"
+              class="loghidden"
+            />
+            <label class="dream_type__button" for="daydream">daydream</label>
+          </div>
+          <label for="dream_lucid">was your dream lucid?</label>
+          <div class="dream_lucid__selection">
+            <input
+              type="radio"
+              name="dream_lucid"
+              id="yeslucid"
+              value="normal"
+              class="loghidden"
+            />
+            <label class="dream_type__button" for="yeslucid">yes</label>
+            <input
+              type="radio"
+              name="dream_lucid"
+              id="nolucid"
+              value="lucid"
+              class="loghidden"
+            />
+            <label class="dream_type__button" for="nolucid">no</label>
+          </div>
+          <!-- commenting our additional tags header for now, need to find out how to accept user input OR just make premade tags
+              <label for="dream_tags">additional tags</label>-->
+          <button type="submit" formmethod="post" class="log_btn">
+            <span class="log_btn__text">save dream</span>
+          </button>
+        </form>
+      </section>
+    </section>
+    <div class="footer">
+      <footer>
+        <hr />
+        <h5 class="footer__title">somniary</h5>
+        <small>©2023 cat-scratch feev | © somniary</small>
+      </footer>
+    </div>
+  </div>
+</div>
+<!--fontawesome import-->
+<script
+  src="https://kit.fontawesome.com/d14b0991e4.js"
+  crossorigin="anonymous"
+></script>
+<script src="./js/exit.js"></script>
