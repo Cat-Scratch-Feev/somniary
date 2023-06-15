@@ -1,7 +1,7 @@
 function initThemeSelector() {
     let themeSelect = document.getElementById("darkmode_btn");
     const themeStylesheetLink = document.getElementById("theme-link");
-    const currentTheme = localStorage.getItem("theme"); //|| "light";
+    const currentTheme = localStorage.getItem("theme") || "light";
     /*const themeName = document.getElementById("theme-select__option");*/
     const darkIcon='<i class="fa-regular fa-moon" style="color:5D38A0;"></i> dark mode';
     const lightIcon='<i class="fa-regular fa-sun" style="color:5D38A0;"></i> light mode';
