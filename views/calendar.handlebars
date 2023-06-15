@@ -48,86 +48,480 @@
         </header>
       </div>
       <!-- empty div to be filled with handlebars templates -->
-<div id="calendar">
-	<section class="ftco-section">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-md-6 text-center mb-5">
-					<h2 class="heading-section">Calendar #04</h2>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12">
-					<div class="content w-100">
-				    <div class="calendar-container">
-				      <div class="calendar"> 
-				        <div class="year-header"> 
-				          <span class="left-button fa fa-chevron-left" id="prev"> </span> 
-				          <span class="year" id="label">2023</span> 
-				          <span class="right-button fa fa-chevron-right" id="next"> </span>
-				        </div> 
-				        <table class="months-table w-100"> 
-				          <tbody>
-				            <tr class="months-row">
-				              <td class="month">Jan</td> 
-				              <td class="month">Feb</td> 
-				              <td class="month">Mar</td> 
-				              <td class="month">Apr</td> 
-				              <td class="month">May</td> 
-				              <td class="month active-month">Jun</td> 
-				              <td class="month">Jul</td>
-				              <td class="month">Aug</td> 
-				              <td class="month">Sep</td> 
-				              <td class="month">Oct</td>          
-				              <td class="month">Nov</td>
-				              <td class="month">Dec</td>
-				            </tr>
-				          </tbody>
-				        </table> 
-				        
-				        <table class="days-table w-100"> 
-				          <tbody><tr><td class="day">Sun</td> 
-				          <td class="day">Mon</td> 
-				          <td class="day">Tue</td> 
-				          <td class="day">Wed</td> 
-				          <td class="day">Thu</td> 
-				          <td class="day">Fri</td> 
-				          <td class="day">Sat</td>
-				        </tr></tbody></table> 
-				        <div class="frame"> 
-				          <table class="dates-table w-100"> 
-			              <tbody class="tbody"><tr class="table-row"></tr><tr class="table-row"><td class="table-date nil"></td><td class="table-date nil"></td><td class="table-date nil"></td><td class="table-date nil"></td><td class="table-date">1</td><td class="table-date">2</td><td class="table-date">3</td></tr><tr class="table-row"><td class="table-date">4</td><td class="table-date">5</td><td class="table-date">6</td><td class="table-date">7</td><td class="table-date">8</td><td class="table-date">9</td><td class="table-date">10</td></tr><tr class="table-row"><td class="table-date">11</td><td class="table-date">12</td><td class="table-date">13</td><td class="table-date active-date">14</td><td class="table-date">15</td><td class="table-date">16</td><td class="table-date">17</td></tr><tr class="table-row"><td class="table-date">18</td><td class="table-date">19</td><td class="table-date">20</td><td class="table-date">21</td><td class="table-date">22</td><td class="table-date">23</td><td class="table-date">24</td></tr><tr class="table-row"><td class="table-date">25</td><td class="table-date">26</td><td class="table-date">27</td><td class="table-date">28</td><td class="table-date">29</td><td class="table-date">30</td><td class="table-date nil"></td></tr><tr class="table-row"><td class="table-date nil"></td><td class="table-date nil"></td><td class="table-date nil"></td><td class="table-date nil"></td></tr></tbody> 
-				          </table>
-				        </div> 
-				        <button class="button" id="add-button">Add Event</button>
-				      </div>
-				    </div>
-				    <div class="events-container"><div class="event-card" style="border-left: 10px solid rgb(255, 23, 68);"><div class="event-name">There are no events planned for June 14.</div></div></div>
-				    <div class="dialog" id="dialog">
-				        <h2 class="dialog-header"> Add New Event </h2>
-				        <form class="form" id="form">
-				          <div class="form-container" align="center">
-				            <label class="form-label" id="valueFromMyButton" for="name">Event name</label>
-				            <input class="input" type="text" id="name" maxlength="36">
-				            <label class="form-label" id="valueFromMyButton" for="count">Number of people to invite</label>
-				            <input class="input" type="number" id="count" min="0" max="1000000" maxlength="7">
-				            <input type="button" value="Cancel" class="button" id="cancel-button">
-				            <input type="button" value="OK" class="button button-white" id="ok-button">
-				          </div>
-				        </form>
-				      </div>
-				  </div>
-				</div>
-			</div>
-		</div>
-	</section>
+<div class="container">
+ <div class="row">
+  <div class="twelve columns">
+    <h1>Calendar of Events</h1>
 
-	<script src="js/jquery.min.js"></script>
-  <script src="js/popper.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/main.js"></script>
+    <div id="calendar">
+
+      <div class="text-center">
+        <a class="month-selector" href=
+        "/Community/Calendar-of-Events/(meta_path_si)/261/(from_date)/2015-4-1">April</a>
+
+        <h2 class="month-header">May 2015</h2><a class="month-selector" href=
+        "/Community/Calendar-of-Events/(meta_path_si)/261/(from_date)/2015-6-1">June </a>
+      </div>
+
+      <hr />
+
+      <div id="cal-wrapper">
+        <div class="date yesterday col-xs-12 col-sm-6 col-md-3 sevencols col-lg-2">
+          <div class="date-header">
+            <h4>26 Sun</h4>
+          </div>
+
+          <div class="date-item none">
+            <b data="no-items" class="no-items">Currently No Events Scheduled</b>
+          </div>
+        </div>
+
+        <div class="date yesterday col-xs-12 col-sm-6 col-md-3 sevencols col-lg-2">
+          <div class="date-header">
+            <h4>27 Mon</h4>
+          </div>
+
+          <div class="date-item none">
+            <b data="no-items" class="no-items">Currently No Events Scheduled</b>
+          </div>
+        </div>
+
+        <div class="clearfix clearfix-sm"></div>
+
+        <div class="date yesterday col-xs-12 col-sm-6 col-md-3 sevencols col-lg-2">
+          <div class="date-header">
+            <h4>28 Tue</h4>
+          </div>
+
+          <div class="date-item none">
+            <b data="no-items" class="no-items">Currently No Events Scheduled</b>
+          </div>
+        </div>
+
+        <div class="date yesterday col-xs-12 col-sm-6 col-md-3 sevencols col-lg-2">
+          <div class="date-header">
+            <h4>29 Wed</h4>
+          </div>
+
+          <div class="date-item none">
+            <b data="no-items" class="no-items">Currently No Events Scheduled</b>
+          </div>
+        </div>
+
+        <div class="clearfix clearfix-sm"></div>
+
+        <div class="clearfix clearfix-md"></div>
+
+        <div class="date yesterday col-xs-12 col-sm-6 col-md-3 sevencols col-lg-2">
+          <div class="date-header">
+            <h4>30 Thu</h4>
+          </div>
+
+          <div class="date-item none">
+            <b data="no-items" class="no-items">Currently No Events Scheduled</b>
+          </div>
+        </div>
+
+        <div class="date future col-xs-12 col-sm-6 col-md-3 sevencols col-lg-2">
+          <div class="date-header">
+            <h4>1 Fri</h4>
+          </div>
+
+          <div class="date-item">
+            <b>8:30 am</b><br />
+            <a href="/Community/Calendar-of-Events/Golfing-Event">Golfing Event</a>
+          </div>
+        </div>
+
+        <div class="clearfix clearfix-sm"></div>
+
+        <div class="date future col-xs-12 col-sm-6 col-md-3 sevencols col-lg-2">
+          <div class="date-header">
+            <h4>2 Sat</h4>
+          </div>
+
+          <div class="date-item none">
+            <b data="no-items" class="no-items">Currently No Events Scheduled</b>
+          </div>
+        </div>
+
+        <div class="clearfix clearfix-lg"></div>
+
+        <div class="date future col-xs-12 col-sm-6 col-md-3 sevencols col-lg-2">
+          <div class="date-header">
+            <h4>3 Sun</h4>
+          </div>
+
+          <div class="date-item none">
+            <b data="no-items" class="no-items">Currently No Events Scheduled</b>
+          </div>
+        </div>
+
+        <div class="clearfix clearfix-sm"></div>
+
+        <div class="clearfix clearfix-md"></div>
+
+        <div class="date future col-xs-12 col-sm-6 col-md-3 sevencols col-lg-2">
+          <div class="date-header">
+            <h4>4 Mon</h4>
+          </div>
+
+          <div class="date-item none">
+            <b data="no-items" class="no-items">Currently No Events Scheduled</b>
+          </div>
+        </div>
+
+        <div class="date future col-xs-12 col-sm-6 col-md-3 sevencols col-lg-2">
+          <div class="date-header">
+            <h4>5 Tue</h4>
+          </div>
+
+          <div class="date-item none">
+            <b data="no-items" class="no-items">Currently No Events Scheduled</b>
+          </div>
+        </div>
+
+        <div class="clearfix clearfix-sm"></div>
+
+        <div class="date future col-xs-12 col-sm-6 col-md-3 sevencols col-lg-2">
+          <div class="date-header">
+            <h4>6 Wed</h4>
+          </div>
+
+          <div class="date-item none">
+            <b data="no-items" class="no-items">Currently No Events Scheduled</b>
+          </div>
+        </div>
+
+        <div class="date future col-xs-12 col-sm-6 col-md-3 sevencols col-lg-2">
+          <div class="date-header">
+            <h4>7 Thu</h4>
+          </div>
+
+          <div class="date-item">
+            <b>7:30 am</b><br />
+            <a href=
+            "/Community/Calendar-of-Events/Leadership-Breakfast2">
+            Leadership Breakfast</a>
+          </div>
+        </div>
+
+        <div class="clearfix clearfix-sm"></div>
+
+        <div class="clearfix clearfix-md"></div>
+
+        <div class="date future col-xs-12 col-sm-6 col-md-3 sevencols col-lg-2">
+          <div class="date-header">
+            <h4>8 Fri</h4>
+          </div>
+
+          <div class="date-item none">
+            <b data="no-items" class="no-items">Currently No Events Scheduled</b>
+          </div>
+        </div>
+
+        <div class="date future col-xs-12 col-sm-6 col-md-3 sevencols col-lg-2">
+          <div class="date-header">
+            <h4>9 Sat</h4>
+          </div>
+
+          <div class="date-item">
+            <b>7:00 pm</b><br />
+            <a href="/Community/Calendar-of-Events/Night-on-the-Town">
+            Night on the Town</a>
+          </div>
+        </div>
+
+        <div class="clearfix clearfix-sm"></div>
+
+        <div class="clearfix clearfix-lg"></div>
+
+        <div class="date future col-xs-12 col-sm-6 col-md-3 sevencols col-lg-2">
+          <div class="date-header">
+            <h4>10 Sun</h4>
+          </div>
+
+          <div class="date-item none">
+            <b data="no-items" class="no-items">Currently No Events Scheduled</b>
+          </div>
+        </div>
+
+        <div class="date future col-xs-12 col-sm-6 col-md-3 sevencols col-lg-2">
+          <div class="date-header">
+            <h4>11 Mon</h4>
+          </div>
+
+          <div class="date-item">
+            <b>6:00 pm</b><br />
+            <a href="/Community/Calendar-of-Events/Orientation-Meeting">Orientation Meeting</a>
+          </div>
+        </div>
+
+        <div class="clearfix clearfix-sm"></div>
+
+        <div class="clearfix clearfix-md"></div>
+
+        <div class="date future col-xs-12 col-sm-6 col-md-3 sevencols col-lg-2">
+          <div class="date-header">
+            <h4>12 Tue</h4>
+          </div>
+
+          <div class="date-item none">
+            <b data="no-items" class="no-items">Currently No Events Scheduled</b>
+          </div>
+        </div>
+
+        <div class="date today col-xs-12 col-sm-6 col-md-3 sevencols col-lg-2">
+          <div class="date-header">
+            <h4>13 Wed</h4>
+          </div>
+
+          <div class="date-item">
+            <b>12:00 am</b><br />
+            <a href="/Community/Calendar-of-Events/Voting-Ends">Voting Ends</a>
+          </div>
+
+          <div class="date-item">
+            <b>12:00 am</b><br />
+            <a href=
+            "/Community/Calendar-of-Events/Video-Submission-Deadline">Video Submission Deadline</a>
+          </div>
+        </div>
+
+        <div class="clearfix clearfix-sm"></div>
+
+        <div class="date future col-xs-12 col-sm-6 col-md-3 sevencols col-lg-2">
+          <div class="date-header">
+            <h4>14 Thu</h4>
+          </div>
+
+          <div class="date-item none">
+            <b data="no-items" class="no-items">Currently No Events Scheduled</b>
+          </div>
+        </div>
+
+        <div class="date future col-xs-12 col-sm-6 col-md-3 sevencols col-lg-2">
+          <div class="date-header">
+            <h4>15 Fri</h4>
+          </div>
+
+          <div class="date-item">
+            <b>12:00 am</b><br />
+            <a href="/Community/Calendar-of-Events/Conference">Conference</a>
+          </div>
+        </div>
+
+        <div class="clearfix clearfix-sm"></div>
+
+        <div class="clearfix clearfix-md"></div>
+
+        <div class="date future col-xs-12 col-sm-6 col-md-3 sevencols col-lg-2">
+          <div class="date-header">
+            <h4>16 Sat</h4>
+          </div>
+
+          <div class="date-item none">
+            <b data="no-items" class="no-items">Currently No Events Scheduled</b>
+          </div>
+        </div>
+
+        <div class="clearfix clearfix-lg"></div>
+
+        <div class="date future col-xs-12 col-sm-6 col-md-3 sevencols col-lg-2">
+          <div class="date-header">
+            <h4>17 Sun</h4>
+          </div>
+
+          <div class="date-item none">
+            <b data="no-items" class="no-items">Currently No Events Scheduled</b>
+          </div>
+        </div>
+
+        <div class="clearfix clearfix-sm"></div>
+
+        <div class="date future col-xs-12 col-sm-6 col-md-3 sevencols col-lg-2">
+          <div class="date-header">
+            <h4>18 Mon</h4>
+          </div>
+
+          <div class="date-item none">
+            <b data="no-items" class="no-items">Currently No Events Scheduled</b>
+          </div>
+        </div>
+
+        <div class="date future col-xs-12 col-sm-6 col-md-3 sevencols col-lg-2">
+          <div class="date-header">
+            <h4>19 Tue</h4>
+          </div>
+
+          <div class="date-item none">
+            <b data="no-items" class="no-items">Currently No Events Scheduled</b>
+          </div>
+        </div>
+
+        <div class="clearfix clearfix-sm"></div>
+
+        <div class="clearfix clearfix-md"></div>
+
+        <div class="date future col-xs-12 col-sm-6 col-md-3 sevencols col-lg-2">
+          <div class="date-header">
+            <h4>20 Wed</h4>
+          </div>
+
+          <div class="date-item none">
+            <b data="no-items" class="no-items">Currently No Events Scheduled</b>
+          </div>
+        </div>
+
+        <div class="date future col-xs-12 col-sm-6 col-md-3 sevencols col-lg-2">
+          <div class="date-header">
+            <h4>21 Thu</h4>
+          </div>
+
+          <div class="date-item none">
+            <b data="no-items" class="no-items">Currently No Events Scheduled</b>
+          </div>
+        </div>
+
+        <div class="clearfix clearfix-sm"></div>
+
+        <div class="date future col-xs-12 col-sm-6 col-md-3 sevencols col-lg-2">
+          <div class="date-header">
+            <h4>22 Fri</h4>
+          </div>
+
+          <div class="date-item none">
+            <b data="no-items" class="no-items">Currently No Events Scheduled</b>
+          </div>
+        </div>
+
+        <div class="date future col-xs-12 col-sm-6 col-md-3 sevencols col-lg-2">
+          <div class="date-header">
+            <h4>23 Sat</h4>
+          </div>
+
+          <div class="date-item none">
+            <b data="no-items" class="no-items">Currently No Events Scheduled</b>
+          </div>
+        </div>
+
+        <div class="clearfix clearfix-sm"></div>
+
+        <div class="clearfix clearfix-md"></div>
+
+        <div class="clearfix clearfix-lg"></div>
+
+        <div class="date future col-xs-12 col-sm-6 col-md-3 sevencols col-lg-2">
+          <div class="date-header">
+            <h4>24 Sun</h4>
+          </div>
+
+          <div class="date-item none">
+            <b data="no-items" class="no-items">Currently No Events Scheduled</b>
+          </div>
+        </div>
+
+        <div class="date future col-xs-12 col-sm-6 col-md-3 sevencols col-lg-2">
+          <div class="date-header">
+            <h4>25 Mon</h4>
+          </div>
+
+          <div class="date-item">
+            <b>9:00 am</b><br />
+            <a href="/Community/Calendar-of-Events/Holiday-Closing-Memorial-Day2">Holiday
+            Closing - Memorial Day</a>
+          </div>
+        </div>
+
+        <div class="clearfix clearfix-sm"></div>
+
+        <div class="date future col-xs-12 col-sm-6 col-md-3 sevencols col-lg-2">
+          <div class="date-header">
+            <h4>26 Tue</h4>
+          </div>
+
+          <div class="date-item none">
+            <b data="no-items" class="no-items">Currently No Events Scheduled</b>
+          </div>
+        </div>
+
+        <div class="date future col-xs-12 col-sm-6 col-md-3 sevencols col-lg-2">
+          <div class="date-header">
+            <h4>27 Wed</h4>
+          </div>
+
+          <div class="date-item none">
+            <b data="no-items" class="no-items">Currently No Events Scheduled</b>
+          </div>
+        </div>
+
+        <div class="clearfix clearfix-sm"></div>
+
+        <div class="clearfix clearfix-md"></div>
+
+        <div class="date future col-xs-12 col-sm-6 col-md-3 sevencols col-lg-2">
+          <div class="date-header">
+            <h4>28 Thu</h4>
+          </div>
+
+          <div class="date-item none">
+            <b data="no-items" class="no-items">Currently No Events Scheduled</b>
+          </div>
+        </div>
+
+        <div class="date future col-xs-12 col-sm-6 col-md-3 sevencols col-lg-2">
+          <div class="date-header">
+            <h4>29 Fri</h4>
+          </div>
+
+          <div class="date-item none">
+            <b data="no-items" class="no-items">Currently No Events Scheduled</b>
+          </div>
+        </div>
+
+        <div class="clearfix clearfix-sm"></div>
+
+        <div class="date future col-xs-12 col-sm-6 col-md-3 sevencols col-lg-2">
+          <div class="date-header">
+            <h4>30 Sat</h4>
+          </div>
+
+          <div class="date-item none">
+            <b data="no-items" class="no-items">Currently No Events Scheduled</b>
+          </div>
+        </div>
+
+        <div class="clearfix clearfix-lg"></div>
+
+        <div class="date future col-xs-12 col-sm-6 col-md-3 sevencols col-lg-2">
+          <div class="date-header">
+            <h4>31 Sun</h4>
+          </div>
+
+          <div class="date-item none">
+            <b data="no-items" class="no-items">Currently No Events Scheduled</b>
+          </div>
+        </div>
+
+        <div class="clearfix clearfix-sm"></div>
+
+        <div class="clearfix clearfix-md"></div>
+
+        <div class="date nextmonth col-xs-12 col-sm-6 col-md-3 sevencols col-lg-2">
+          <div class="date-header text-center">
+            <a href=
+            "/Community/Calendar-of-Events/(meta_path_si)/261/(from_date)/2015-6-1"></a>
+
+            <h4><a href=
+            "/Community/Calendar-of-Events/(meta_path_si)/261/(from_date)/2015-6-1">View
+            June</a></h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
 </div>
-
 
         <div class="footer">
           <footer>
@@ -146,6 +540,7 @@
     ></script>
     <script src="./js/home.js"></script>
     <script src="./js/theme.js"></script>
-    <!--
-    <script src="/controllers/api/calendarWork.js"></script>
-    -->
+ 
+    <script src="./controllers/api/calendarWork.js"></script>
+   
+    
