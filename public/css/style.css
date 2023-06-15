@@ -57,6 +57,20 @@ footer {
   font-weight: 800;
 }
 
+/* LOG IN and SIGN UP PAGE */
+header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-title, .bold{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* WHOLE PAGE CONTAINER -- THE LIGHTER DARKER PURPLE AREA */
+
 .page__container {
   background-color: var(--primary-lav);
   display: flex;
@@ -65,15 +79,17 @@ footer {
   min-height: 100vh;
 }
 
-.intro__container {
+/* THIS IS NOT AFFECTING NOTHING */
+/* .intro__container {
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   width: 100%;
   height: auto;
-}
+} */
 
-.intro {
+/* .intro {
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -81,8 +97,9 @@ footer {
   margin-bottom: 0;
   justify-content: center;
   padding-top: 10vh;
-}
+} */
 
+/* LOGIN CREDITS CONTAINER */
 .panel__title {
   padding-top: 10vh;
 }
@@ -93,34 +110,113 @@ footer {
   background-color: var(--primary-lightlav);
   border-radius: 40% 40% 0% 0% / 100% 100% 65% 65%;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   flex-grow: 1;
-  overflow: hidden;
-  margin-top: 2rem;
+  /* overflow: hidden;  */
+  margin-top: 2rem; 
 }
 
-.btn_text {
-  color: white;
-}
-
-.signup,
-.login {
+.credit_form{
+  font-size: large;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  width: 50%;
-  padding-top: 10vh;
+  padding: 1px 10px;
+  margin: 10px;
+}
+label{
+  padding: 20px;
+  color: #5d38a0;
+
+   
+}
+input{
+  border-radius: 20px;
+  padding: 5px 20px;
+  margin: 5px;
+  
+  
 }
 
-.signup_btn, .login_btn {
-  background-color: var(--primary-purple);
-  width: 10rem;
-  height: 3rem;
-  border-radius: 50px;
-  border-color: transparent;
-  margin-top: 2rem;
+
+
+/* SIGN UP FORM */
+/* PASSWORD REQUIREMENT */
+#pass-require{
+  margin: 2px;
+  color: silver;
+
+  
+  
+  
 }
+
+
+/* LOGIN BUTTON TEXT COLOR ONLY  */
+#btn_text {
+  color: white;
+  
+}
+
+/* THIS IS NOT AFFECTING NOTHING */
+/* .signup, 
+.login {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  flex-direction: column;
+  width: 50%; 
+  padding-top: 10vh;
+} */
+
+/* THE LOGIN and SIGNUP  BUTTON */
+button{
+  background-color: var(--primary-purple);
+  /* width: 10rem; */
+  /* height: 3rem; */
+  border: 2px;
+  border-radius: 40px;
+  border-color: transparent;
+  margin: 10px;
+  width: 8rem;
+ 
+  /* margin-top: 2rem; */
+}
+button:hover{
+  transition: .5s all ease-in-out 0s;
+  padding: 5px 5px;
+  padding: 10px 15px;
+  width: 8rem ;
+  
+  
+
+  
+}
+
+/* REGISTER LINK */
+a, .signup-link{
+  text-decoration: none;
+  color: #ae8cf2;
+}
+
+.signup-link:hover, a:hover{
+  color: #c4b2e8;
+  text-decoration: none;
+}
+h5{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#reg-request{
+  color: #ae8cf2;
+}
+
+/* END OF LOGIN PAGE AND SIGN UP CSS */
 
 /* MAIN NAV STYLING*/
 header {
@@ -274,6 +370,9 @@ width: 100%;
   flex-wrap:wrap;
 }
 .welcome__header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color:var(--primary-purple);
   margin:auto;
   text-align:center;
@@ -418,6 +517,8 @@ width: 100%;
 }
 .log_form {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-flow: column wrap;
   /*align-content:center;*/
   /*width:80%;*/

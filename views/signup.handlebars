@@ -2,19 +2,19 @@
   <div class="intro__container main__intro">
     <header>
       <!--navigation to be rendered in from handlebars templates conditionally based upon login status -->
-      <h1>welcome to
-        <span class="bold">somniary</span>, your dreamspace</h1>
+      <h1 class="header-title">welcome to
+        <span class="bold">somniary !</span>your dreamspace</h1>
     </header>
   </div>
   <!-- empty div to be filled with handlebars templates -->
   <div class="panel">
     <h2 class="panel__title">sign up!</h2>
     <!-- two form fields, one with username, one with pass -->
-    <form action="submit" method="post" class="signup_form">
+    <form action="submit" method="post" class="credit_form">
       <label for="username">email *</label>
-      <input type="text" name="email" id="email_signup" required />
-      <h6>passwords must be 8-16 characters in length</h6>
+      <input type="text" name="email" id="email_signup" placeholder="enter email" required />
       <label for="password">password *</label>
+      <h6 id="pass-require">passwords must be 8-16 characters in length</h6>
       <input
         type="text"
         name="password"
@@ -32,7 +32,7 @@
       />
 
       <button type="submit" formmethod="post" id="submit">
-        <span id="login">log in</span>
+        <span id="btn_text">Submit</span>
       </button>
     </form>
   </div>
