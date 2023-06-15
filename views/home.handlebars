@@ -58,22 +58,30 @@
           </section>
           <section class="reflection__container">
             <h3 class="reflection__title">a reflection for you today..</h3>
+            {{#if randomDream}}
             <section class="dream__card">
               <div class="dream__card-body">
-                <p>{{dream.date}}</p>
-                <p>{{dream.title}}</p>
-                <p>{{dream.description}}</p>
+                <p>{{randomDream.date}}</p>
+                <p>{{randomDream.title}}</p>
+                <p>{{randomDream.description}}</p>
                 <!--tags, rendered with iteration-->
                 <div class="dream__card-tags">
-                    {{#each dream.tags}}
-                  <p class="dream__tag">{{tags.name}}</p>
+                    {{#each randomDream.tags}}
+                  <p class="dream__tag">{{name}}</p>
                   {{/each}}
                 </div>
               </div>
-              
+            </section>
+            {{else}}
+            <section class="dream__card">
+              <div class="dream__card-body">
+                <p>Begin logging dreams to receive dream reflections!</p>
+              </div>
             </section>
           </section>
-          <button class="viewall__button col-sm-2 col-lg-2">view all</button>
+            {{/if}}
+          </section>
+          <button class="viewall__button col-sm-2 col-lg-2 journal_btn">view all</button>
         </section>
         <div class="footer">
           <footer>
