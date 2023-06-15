@@ -16,6 +16,11 @@ const loginFormHandler = async (event) => {
     });
 
     if (response.ok) {
+      const data = await response.json();
+      const userID = data.user.id;
+
+      localStorage.setItem("userID", JSON.stringify(userID));
+
       document.location.replace("/");
     } else {
       alert("Failed to log in");

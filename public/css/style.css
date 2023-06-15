@@ -5,8 +5,8 @@
   --off-white: #fdf8ff;
   --bs-btn-active-border-color: #efe0ff;
   --bs-btn-active-bg: #efe0ff;
-  --bs-btn-active-border-color: #EFE0FF;
-  --bs-btn-active-bg: #EFE0FF;
+  --bs-btn-active-border-color: #efe0ff;
+  --bs-btn-active-bg: #efe0ff;
   --my-animation: 1s ease-in-out all 0s;
 }
 /* BASIC HOMEPAGE TEMPLATE STYLING*/
@@ -45,9 +45,9 @@ footer {
   width: 65%;
   margin-top: 3rem;
 }
-.footer__title{
-  color:var(--primary-purple);
-  font-weight:bold;
+.footer__title {
+  color: var(--primary-purple);
+  font-weight: bold;
 }
 .subheading {
   font-size: 32px;
@@ -172,8 +172,12 @@ input{
   padding-top: 10vh;
 } */
 
+
 /* THE LOGIN and SIGNUP  BUTTON */
 button{
+.signup_btn,
+.login_btn {
+
   background-color: var(--primary-purple);
   /* width: 10rem; */
   /* height: 3rem; */
@@ -195,6 +199,7 @@ button:hover{
 
   
 }
+
 
 /* REGISTER LINK */
 a, .signup-link{
@@ -218,6 +223,12 @@ h5{
 
 /* END OF LOGIN PAGE AND SIGN UP CSS */
 
+
+.return_btn {
+  cursor: pointer;
+}
+
+
 /* MAIN NAV STYLING*/
 header {
   width: 100%;
@@ -232,16 +243,17 @@ header {
   justify-content: center;
   align-items: center;
 }
-.mobile-nav__button, .btn-secondary{
-  width:3rem;
-  height:3rem;
-  border-radius:50%;
-  border-style:none;
-  background-color:var(--primary-lightlav);
-  margin:2rem;
+.mobile-nav__button,
+.btn-secondary {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border-style: none;
+  background-color: var(--primary-lightlav);
+  margin: 2rem;
 }
-.btn.btn-primary{
-  background-color:var(--primary-lightlav);
+.btn.btn-primary {
+  background-color: var(--primary-lightlav);
 }
 .profile__button {
   align-self: flex-end;
@@ -263,19 +275,20 @@ header {
   margin: 0.5rem;
 }
 
-.btn-secondary{
-  width:3rem;
-  height:3rem;
-  border-radius:50%;
-  border-style:none;
-  background-color:var(--primary-lightlav);
-  margin:2rem;
+.btn-secondary {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border-style: none;
+  background-color: var(--primary-lightlav);
+  margin: 2rem;
 }
 .btn-secondary:hover {
-  background-color:var(--primary-lightlav);
+  background-color: var(--primary-lightlav);
 }
-.dropdown-toggle{--bs-offcanvas-width: 300px;
-  color:var(--primary-purple);
+.dropdown-toggle {
+  --bs-offcanvas-width: 300px;
+  color: var(--primary-purple);
 }
 
 .icon__nav {
@@ -284,11 +297,10 @@ header {
   justify-content: flex-end;
 }
 
-.offcanvas-title{
-  color:var(--primary-purple);
-
+.offcanvas-title {
+  color: var(--primary-purple);
 }
-.offcanvas-lg{
+.offcanvas-lg {
   background-color: var(--primary-lav);
 
   border-radius: 0 7% 7% 0;
@@ -302,7 +314,7 @@ header {
 }
 
 /*profile settings styling*/
-.profileSettings_body{
+.profileSettings_body {
   margin-top: 1.5rem;
   width: 60%;
   display: flex;
@@ -315,31 +327,36 @@ header {
 .profileSettings_header {
   color: var(--primary-purple);
   font-size: 2rem;
-  text-align:center;
-  margin:1rem;
+  text-align: center;
+  margin: 1rem;
 }
 
 .profileSettings_label {
-  margin-top:0.5rem;
+  margin-top: 0.5rem;
   font-size: 1em;
 }
 
-.profileSettings_username, .profileSettings_email{
-height: 35px;
-width: 100%;
+.profileSettings_username,
+.profileSettings_email {
+  height: 35px;
+  width: 100%;
 }
 
-.profileSettings_username, .profileSettings_email, #dreamgoal{
+.profileSettings_username,
+.profileSettings_email,
+#dreamgoal {
   border-radius: 33px;
-  background-color:var(--primary-light);
-  border-color:transparent;
+  background-color: var(--primary-light);
+  border-color: transparent;
 }
-.profileSettings_username::placeholder, .profileSettings_email::placeholder , #dreamgoal::placeholder {
-  color:var(--primary-purple);
+.profileSettings_username::placeholder,
+.profileSettings_email::placeholder,
+#dreamgoal::placeholder {
+  color: var(--primary-purple);
 }
 #dreamgoal {
   height: 100px;
-  width:100%;
+  width: 100%;
 }
 #ps_Save {
   background-color: var(--primary-purple);
@@ -349,26 +366,27 @@ width: 100%;
   border-radius: 50px;
   border-color: transparent;
   margin-top: 2rem;
-  justify-self:center;
-  align-self:center;
+  justify-self: center;
+  align-self: center;
 }
-.profile_form{
-  display:flex;
-  flex-flow:column wrap;
-  align-content:center;
-  justify-content:center;
+.profile_form {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+  justify-content: center;
 }
 /* HOME PAGE STYLING*/
 
-.homepage__container{
-  margin-top:1.5rem;
-  width:90%;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-content:center;
-  flex-wrap:wrap;
+.homepage__container {
+  margin-top: 1.5rem;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
 }
+/* WELCOME ADD ONS*/
 .welcome__header{
   display: flex;
   justify-content: center;
@@ -377,6 +395,13 @@ width: 100%;
   margin:auto;
   text-align:center;
   margin:1rem;
+
+.welcome__header {
+  color: var(--primary-purple);
+  margin: auto;
+  text-align: center;
+  margin: 1rem;
+
 }
 
 .dashboard__container,
@@ -385,22 +410,21 @@ width: 100%;
   margin: 1rem;
 }
 
-.dashboard__card{
-  background-color:var(--primary-light);
-  display:flex;
+.dashboard__card {
+  background-color: var(--primary-light);
+  display: flex;
   flex-flow: row wrap;
-  justify-content:space-around;
-  align-content:center;
-  height:7rem;
-  border-radius:35px;
+  justify-content: space-around;
+  align-content: center;
+  height: 7rem;
+  border-radius: 35px;
 }
-.dashboard__prof{
-  width:4rem;
-  height:4rem;
-  border-radius:50%;
-  background-color:var(--primary-lightlav);
-  border-color:transparent;
-  
+.dashboard__prof {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: var(--primary-lightlav);
+  border-color: transparent;
 }
 
 .goal__text {
@@ -408,12 +432,12 @@ width: 100%;
 }
 /*cards have styles that can be consolidated*/
 
-.reflection__title{
-  color:var(--primary-purple);
+.reflection__title {
+  color: var(--primary-purple);
 }
-.dream__card{
-  border-radius:35px;
-  background-color:var(--primary-light);
+.dream__card {
+  border-radius: 35px;
+  background-color: var(--primary-light);
 
   margin-bottom: 1rem;
   display: flex;
@@ -428,21 +452,21 @@ width: 100%;
   flex-flow: row wrap;
 }
 
-.dream__tag{
-  border-radius:15px;
-  width:20%;
-  background-color:var(--primary-lightlav);
-  margin:1rem;
-  height:2rem;
-  text-align:center;
+.dream__tag {
+  border-radius: 15px;
+  width: 20%;
+  background-color: var(--primary-lightlav);
+  margin: 1rem;
+  height: 2rem;
+  text-align: center;
 }
-.viewall__button{
-  border-radius:35px;
-  height:3rem;
-  background-color:var(--primary-purple);
-  color:var(--primary-light);
-  border-color:transparent;
-  margin:auto;
+.viewall__button {
+  border-radius: 35px;
+  height: 3rem;
+  background-color: var(--primary-purple);
+  color: var(--primary-light);
+  border-color: transparent;
+  margin: auto;
 }
 /*JOURNAL STYLING*/
 .journal__container {
@@ -461,19 +485,18 @@ width: 100%;
   align-content: center;
 }
 
-.journal-header{
-  color:var(--primary-purple);
-  margin:auto;
+.journal-header {
+  color: var(--primary-purple);
+  margin: auto;
   text-align: center;
   margin: 1rem;
   font-weight: bold;
 }
 
-.journal-subheader{
-  width:75%;
-  text-align:center;
-  color:var(--primary-purple);
-
+.journal-subheader {
+  width: 75%;
+  text-align: center;
+  color: var(--primary-purple);
 }
 .journal-dreams__container {
   width: 80%;
@@ -524,25 +547,25 @@ width: 100%;
   /*width:80%;*/
 }
 
-.log_input__container{
-  border-radius:35px;
-  height:2rem;
-  border-color:transparent;
-  background-color:var(--primary-light);
+.log_input__container {
+  border-radius: 35px;
+  height: 2rem;
+  border-color: transparent;
+  background-color: var(--primary-light);
 }
-.log_btn{
-  width:30%;
-  margin:2rem;
-  background-color:var(--primary-purple);
-  border-radius:35px;
-  color:var(--primary-light);
-  border-color:transparent;
-  height:2rem;
-  justify-self:center;
-  align-self:center;
+.log_btn {
+  width: 30%;
+  margin: 2rem;
+  background-color: var(--primary-purple);
+  border-radius: 35px;
+  color: var(--primary-light);
+  border-color: transparent;
+  height: 2rem;
+  justify-self: center;
+  align-self: center;
 }
-input::placeholder, textarea::placeholder{
-
+input::placeholder,
+textarea::placeholder {
   text-indent: 1rem;
 }
 .loghidden {
@@ -551,32 +574,32 @@ input::placeholder, textarea::placeholder{
   opacity: 0;
 }
 .dream_type__button {
-  width:30%;
-  height:2rem;
-  border-radius:35px;
-  background-color:var(--primary-light);
-  color:black;
-  text-align:center;
-  margin-bottom:1rem;
+  width: 30%;
+  height: 2rem;
+  border-radius: 35px;
+  background-color: var(--primary-light);
+  color: black;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 /* edit of checkbox and default styles*/
-input[type=checkbox]+label {
+input[type="checkbox"] + label {
   color: var(--primary-purple);
 }
 
-input[type=checkbox]:checked+label {
+input[type="checkbox"]:checked + label {
   color: var(--primary-light);
-  background-color:var(--primary-lav);
-  font-weight:bold;
+  background-color: var(--primary-lav);
+  font-weight: bold;
 }
-input[type=radio]+label {
+input[type="radio"] + label {
   color: var(--primary-purple);
 }
 
-input[type=radio]:checked+label {
+input[type="radio"]:checked + label {
   color: var(--primary-light);
-  background-color:var(--primary-lav);
-  font-weight:bold;
+  background-color: var(--primary-lav);
+  font-weight: bold;
 }
 
 /* MEDIA QUERIES FOR RESPONSIVE DESIGN*/
@@ -623,7 +646,7 @@ input[type=radio]:checked+label {
   .dream_type__button {
     width: 45%;
   }
-  .profileSettings_header{
-    font-size:1.7rem;
+  .profileSettings_header {
+    font-size: 1.7rem;
   }
 }
