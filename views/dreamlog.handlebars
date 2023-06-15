@@ -23,7 +23,7 @@
         <h2 log_header__title>fill in your dream details!</h2>
       </section>
       <section class="log_form__container">
-        <form action="submit" method="post" class="log_form">
+        <form action="/api/dreams" method="post" class="log_form">
           <label for="dream_date"> date</label>
           <input
             type="text"
@@ -53,26 +53,26 @@
           <label for="dream_type">what type of dream did you have?</label>
           <div class="dream_type__selection">
             <input
-              type="checkbox"
+              type="radio"
               name="dream_type"
               id="nightmare"
-              value="nightmare"
+              value="3"
               class="loghidden"
             />
             <label class="dream_type__button" for="nightmare">nightmare</label>
             <input
-              type="checkbox"
+              type="radio"
               name="dream_type"
-              id="normal"
-              value="normal"
+              id="in-between"
+              value="2"
               class="loghidden"
             />
             <label class="dream_type__button" for="normal">normal</label>
             <input
-              type="checkbox"
+              type="radio"
               name="dream_type"
-              id="daydream"
-              value="daydream"
+              id="dream"
+              value="1"
               class="loghidden"
             />
             <label class="dream_type__button" for="daydream">daydream</label>
@@ -120,3 +120,4 @@
 ></script>
 <script src="./js/exit.js"></script>
 <script src="./js/theme.js"></script>
+<script src="./js/dreamlog.js"></script>
