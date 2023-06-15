@@ -1,5 +1,5 @@
 function initThemeSelector() {
-    let themeSelect = document.getElementById("theme-select");
+    let themeSelect = document.getElementById("darkmode_btn");
     const themeStylesheetLink = document.getElementById("theme-link");
     const currentTheme = localStorage.getItem("theme"); //|| "light";
     /*const themeName = document.getElementById("theme-select__option");*/
@@ -12,6 +12,7 @@ function initThemeSelector() {
       );
     }
   console.log('test init');
+  if(themeSelect){
     themeSelect.addEventListener("click", () => {
       console.log('button working');
       //activateTheme(themeSelect.value);
@@ -28,12 +29,15 @@ function initThemeSelector() {
     initThemeSelector();
 
     });
+    
     console.log(currentTheme);
     if(currentTheme==='light'){
         themeSelect.innerHTML = darkIcon;
     } else {
         themeSelect.innerHTML = lightIcon;
     }
+    
+  }
     
     
     //themeSelect.value = currentTheme;

@@ -206,43 +206,62 @@ header {
 }
 
 /*profile settings styling*/
-/*
-h3 {
-  color: var(--primary-purple);
-  font-size: 2em;
+.profileSettings_body{
+  margin-top: 1.5rem;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
 }
 
-h4 {
+.profileSettings_header {
   color: var(--primary-purple);
+  font-size: 2rem;
+  text-align:center;
+  margin:1rem;
+}
+
+.profileSettings_label {
+  margin-top:0.5rem;
   font-size: 1em;
 }
 
-#username {
+.profileSettings_username, .profileSettings_email{
 height: 35px;
-width: 250px;
-border-radius: 33px;
+width: 100%;
 }
 
-#email {
-  height: 5px;
-  width: 250px;
+.profileSettings_username, .profileSettings_email, #dreamgoal{
   border-radius: 33px;
+  background-color:var(--primary-light);
+  border-color:transparent;
 }
-
-#dream {
+.profileSettings_username::placeholder, .profileSettings_email::placeholder , #dreamgoal::placeholder {
+  color:var(--primary-purple);
+}
+#dreamgoal {
   height: 100px;
-  width: 250px;
-  border-radius: 33px;
+  width:100%;
 }
 #ps_Save {
-  background-color: #5d38a0;
-  color: #877cdc;
+  background-color: var(--primary-purple);
+  color: var(--primary-light);
   width: 10rem;
   height: 3rem;
   border-radius: 50px;
   border-color: transparent;
   margin-top: 2rem;
-}*/
+  justify-self:center;
+  align-self:center;
+}
+.profile_form{
+  display:flex;
+  flex-flow:column wrap;
+  align-content:center;
+  justify-content:center;
+}
 /* HOME PAGE STYLING*/
 
 .homepage__container{
@@ -408,6 +427,7 @@ border-radius: 33px;
   border-radius:35px;
   height:2rem;
   border-color:transparent;
+  background-color:var(--primary-light);
 }
 .log_btn{
   width:30%;
@@ -501,5 +521,8 @@ input[type=radio]:checked+label {
   }
   .dream_type__button {
     width: 45%;
+  }
+  .profileSettings_header{
+    font-size:1.7rem;
   }
 }
