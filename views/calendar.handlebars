@@ -48,18 +48,85 @@
         </header>
       </div>
       <!-- empty div to be filled with handlebars templates -->
-    <div class="panel">
-   
-        <div id="calendar">
+<div id="calendar">
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">Calendar #04</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="content w-100">
+				    <div class="calendar-container">
+				      <div class="calendar"> 
+				        <div class="year-header"> 
+				          <span class="left-button fa fa-chevron-left" id="prev"> </span> 
+				          <span class="year" id="label">2023</span> 
+				          <span class="right-button fa fa-chevron-right" id="next"> </span>
+				        </div> 
+				        <table class="months-table w-100"> 
+				          <tbody>
+				            <tr class="months-row">
+				              <td class="month">Jan</td> 
+				              <td class="month">Feb</td> 
+				              <td class="month">Mar</td> 
+				              <td class="month">Apr</td> 
+				              <td class="month">May</td> 
+				              <td class="month active-month">Jun</td> 
+				              <td class="month">Jul</td>
+				              <td class="month">Aug</td> 
+				              <td class="month">Sep</td> 
+				              <td class="month">Oct</td>          
+				              <td class="month">Nov</td>
+				              <td class="month">Dec</td>
+				            </tr>
+				          </tbody>
+				        </table> 
+				        
+				        <table class="days-table w-100"> 
+				          <tbody><tr><td class="day">Sun</td> 
+				          <td class="day">Mon</td> 
+				          <td class="day">Tue</td> 
+				          <td class="day">Wed</td> 
+				          <td class="day">Thu</td> 
+				          <td class="day">Fri</td> 
+				          <td class="day">Sat</td>
+				        </tr></tbody></table> 
+				        <div class="frame"> 
+				          <table class="dates-table w-100"> 
+			              <tbody class="tbody"><tr class="table-row"></tr><tr class="table-row"><td class="table-date nil"></td><td class="table-date nil"></td><td class="table-date nil"></td><td class="table-date nil"></td><td class="table-date">1</td><td class="table-date">2</td><td class="table-date">3</td></tr><tr class="table-row"><td class="table-date">4</td><td class="table-date">5</td><td class="table-date">6</td><td class="table-date">7</td><td class="table-date">8</td><td class="table-date">9</td><td class="table-date">10</td></tr><tr class="table-row"><td class="table-date">11</td><td class="table-date">12</td><td class="table-date">13</td><td class="table-date active-date">14</td><td class="table-date">15</td><td class="table-date">16</td><td class="table-date">17</td></tr><tr class="table-row"><td class="table-date">18</td><td class="table-date">19</td><td class="table-date">20</td><td class="table-date">21</td><td class="table-date">22</td><td class="table-date">23</td><td class="table-date">24</td></tr><tr class="table-row"><td class="table-date">25</td><td class="table-date">26</td><td class="table-date">27</td><td class="table-date">28</td><td class="table-date">29</td><td class="table-date">30</td><td class="table-date nil"></td></tr><tr class="table-row"><td class="table-date nil"></td><td class="table-date nil"></td><td class="table-date nil"></td><td class="table-date nil"></td></tr></tbody> 
+				          </table>
+				        </div> 
+				        <button class="button" id="add-button">Add Event</button>
+				      </div>
+				    </div>
+				    <div class="events-container"><div class="event-card" style="border-left: 10px solid rgb(255, 23, 68);"><div class="event-name">There are no events planned for June 14.</div></div></div>
+				    <div class="dialog" id="dialog">
+				        <h2 class="dialog-header"> Add New Event </h2>
+				        <form class="form" id="form">
+				          <div class="form-container" align="center">
+				            <label class="form-label" id="valueFromMyButton" for="name">Event name</label>
+				            <input class="input" type="text" id="name" maxlength="36">
+				            <label class="form-label" id="valueFromMyButton" for="count">Number of people to invite</label>
+				            <input class="input" type="number" id="count" min="0" max="1000000" maxlength="7">
+				            <input type="button" value="Cancel" class="button" id="cancel-button">
+				            <input type="button" value="OK" class="button button-white" id="ok-button">
+				          </div>
+				        </form>
+				      </div>
+				  </div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-         </div>
-
-         <script>
-         document.addEventListener('DOMContentLoaded', () => {
-         const calendar = new VanillaCalendar('#calendar');
-            calendar.init();
-            });
-        </script>
+	<script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+</div>
 
 
         <div class="footer">
@@ -79,3 +146,6 @@
     ></script>
     <script src="./js/home.js"></script>
     <script src="./js/theme.js"></script>
+    <!--
+    <script src="/controllers/api/calendarWork.js"></script>
+    -->

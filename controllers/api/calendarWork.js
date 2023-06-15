@@ -1,14 +1,18 @@
 const router = require("express").Router();
 
 // JS Script
-import VanillaCalendar from '@uvarov.frontend/vanilla-calendar';
+
+const VanillaCalendar = require("@uvarov.frontend/vanilla-calendar");
 
 // Basic styles
-import '@uvarov.frontend/vanilla-calendar/build/vanilla-calendar.min.css';
+
+require("@uvarov.frontend/vanilla-calendar/build/vanilla-calendar.min.css");
 
 // Additional styles
-import '@uvarov.frontend/vanilla-calendar/build/themes/light.min.css';
-import '@uvarov.frontend/vanilla-calendar/build/themes/dark.min.css';
 
-const calendar = new VanillaCalendar('#calendar');
+require("@uvarov.frontend/vanilla-calendar/build/themes/light.min.css");
+
+require("@uvarov.frontend/vanilla-calendar/build/themes/dark.min.css");
+
+const calendar = new VanillaCalendar(element, params);
 calendar.init();

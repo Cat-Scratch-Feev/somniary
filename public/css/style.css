@@ -478,6 +478,12 @@ input[type=radio]:checked+label {
   font-weight:bold;
 }
 
+#calendar {
+  display: block;
+  height: 100px;
+  width: 100px;
+}
+
 /* MEDIA QUERIES FOR RESPONSIVE DESIGN*/
 @media (max-width: 991.98px) {
   .icon__nav {
