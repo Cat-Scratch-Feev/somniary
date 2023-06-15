@@ -20,13 +20,15 @@ router.get("/", withAuth, async (req, res) => {
   try {
     const userData = await User.findAll({
       attributes: { exclude: ["password"] },
+      where:{username: req.session.username},
       // order: [["name", "ASC"]],
     });
-
-    const users = userData.map((project) => project.get({ plain: true }));
-
+    
+    const user = userData.map((project) => project.get({ plain: true }));
+    console.log(userData);
+    console.log(user);
     res.render("home", {
-      users,
+      user,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
