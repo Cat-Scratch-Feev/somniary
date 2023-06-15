@@ -1,7 +1,8 @@
 const router = require("express").Router();
 const { Op } = require("sequelize");
 const bcrypt = require("bcrypt");
-const { User } = require("../models");
+const { User, Dream, DreamTags, Tags} = require("../models");
+
 const withAuth = require("../utils/auth");
 
 // Get request /login
@@ -23,12 +24,31 @@ router.get("/", withAuth, async (req, res) => {
       where:{username: req.session.username},
       // order: [["name", "ASC"]],
     });
-    
+    console.log(req.session.user_id);
+    const dreamData = await Dream.findAll({
+      where: { user_id: req.session.user_id },
+      include: {
+        model: Tags,
+        //through: { DreamTags } 
+        through: { attributes: [] }
+      }
+    });
     const user = userData.map((project) => project.get({ plain: true }));
+    //const dreams = dreamData.get({ plain: true });
+    console.log(dreamData);
+    const dreams = dreamData.map((dream) => dream.toJSON());
+    let randomIndex= Math.floor(Math.random() * dreamData.length);
+    let randomDream = dreams[randomIndex];
+    console.log(randomIndex);
     console.log(userData);
     console.log(user);
+    console.log(dreams);
+    //console.log(dreams.tags);
     res.render("home", {
       user,
+      dreams,
+      randomIndex,
+      randomDream,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -52,8 +72,38 @@ router.get("/about", function (req, res) {
 });
 
 // GET request /journal brings user to all their dreams
-router.get("/journal", function (req, res) {
-  res.render("journal");
+router.get("/journal", async (req, res) => {
+  try {
+    const userData = await User.findAll({
+      attributes: { exclude: ["password"] },
+      where:{username: req.session.username},
+      // order: [["name", "ASC"]],
+    });
+    console.log(req.session.user_id);
+    const dreamData = await Dream.findAll({
+      where: { user_id: req.session.user_id },
+      include: {
+        model: Tags,
+        //through: { DreamTags } 
+        through: { attributes: [] }
+      }
+    });
+    const user = userData.map((project) => project.get({ plain: true }));
+    //const dreams = dreamData.get({ plain: true });
+    console.log(dreamData);
+    const dreams = dreamData.map((dream) => dream.toJSON());
+    console.log(userData);
+    console.log(user);
+    console.log(dreams);
+    //console.log(dreams.tags);
+    res.render("journal", {
+      user,
+      dreams,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 // GET request /dreamlog create a new dream
