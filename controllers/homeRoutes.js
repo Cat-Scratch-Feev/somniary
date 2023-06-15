@@ -34,6 +34,11 @@ router.get("/", withAuth, async (req, res) => {
   }
 });
 
+// GET request /signup brings user to signup
+router.get("/signup", (req, res) => {
+  res.render("signup");
+});
+
 // GET request /settings navigates to profile settings page
 router.get("/profilesettings", function (req, res) {
   res.render("profilesettings");
