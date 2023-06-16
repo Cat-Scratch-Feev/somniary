@@ -21,6 +21,36 @@ const userData = [
     password: 'zimwhimzimmim',
     username: 'Zim',
   },
+  {
+    email: 'Phil@gmail.com',
+    password: 'philbilljillwill',
+    username: 'Philberrydoughboy',
+  },
+  {
+    email: 'Wibbly@gmail.com',
+    password: '635283768',
+    username: 'WibblyWobbly',
+  },
+  {
+    email: 'PlorpBlorp@gmail.com',
+    password: 'plorpblorp',
+    username: 'PB',
+  },
+  {
+    email: 'Bill@gmail.com',
+    password: 'zimwhimzimmim',
+    username: 'Zim',
+  },
+  {
+    email: 'ZimGeoff@gmail.com',
+    password: 'zimwhimzimmim',
+    username: 'Zim',
+  },
+  {
+    email: 'NatetheGreat@gmail.com',
+    password: 'greatNate',
+    username: 'NateTheGreat',
+  },
 ];
 
 const seedUsers = () => User.bulkCreate(userData);
