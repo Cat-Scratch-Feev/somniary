@@ -11,17 +11,12 @@ form.addEventListener("submit", async (event) => {
       'input[name="dream_type"]:checked'
     ).value;
 
-    console.log(title, description, selected);
-
     const formData = {
       title: `${title}`,
       description: `${description}`,
       user_id: parseInt(localStorage.getItem("userID")),
-      tagIds: [selected],
+      tagIds: pasrseInt([selected]),
     };
-
-    console.log(formData);
-    console.log(JSON.stringify(formData));
 
     const response = await fetch("/api/dreams/", {
       method: "POST",

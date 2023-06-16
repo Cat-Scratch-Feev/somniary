@@ -2,7 +2,8 @@
   <div class="intro__container main__intro">
     <header>
       <!--navigation to be rendered in from handlebars templates conditionally based upon login status -->
-      <h1 class="header-title">welcome to<span class="bold">somniary !</span> your dreamspace
+      <h1 class="header-title">welcome to<span class="bold">somniary !</span>
+        your dreamspace
       </h1>
     </header>
   </div>
@@ -12,7 +13,7 @@
     <h2 class="panel__title">log in!</h2>
     <!-- two form fields, one with username, one with pass -->
 
-    <form class="credit_form">
+    <form class="credit_form login_form">
       <label for="username">username</label>
       <input type="text" name="username" id="username_login" required />
       <label for="password">password</label>
@@ -25,10 +26,9 @@
 
     <!-- sign up link -->
 
-    <h2 id="reg-request">Need A Dreamspace ?</h2>
-    
-    <a class="singup-link" href="/views/signup.handlebars">
-      <h5 class="signup-link">Register today !</h5>
+    <a href="/signup">
+      <h2 id="reg-request">Need A Dreamspace ?</h2>
+      <h5>Register today !</h5>
     </a>
   </div>
 </div>

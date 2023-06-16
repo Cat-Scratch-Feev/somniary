@@ -4,6 +4,7 @@ const bcrypt = require("bcrypt");
 const { User, Dream, DreamTags, Tags} = require("../models");
 
 const withAuth = require("../utils/auth");
+const path = require("path");
 
 // Get request /login
 router.get("/login", (req, res) => {
@@ -56,23 +57,27 @@ router.get("/", withAuth, async (req, res) => {
   }
 });
 
+router.get("/landing", (req, res) => {
+  res.sendFile(path.join(__dirname, "../public/html/home.html"));
+});
+
 // GET request /signup brings user to signup
 router.get("/signup", (req, res) => {
   res.render("signup");
 });
 
 // GET request /settings navigates to profile settings page
-router.get("/profilesettings", function (req, res) {
+router.get("/profilesettings", withAuth, function (req, res) {
   res.render("profilesettings");
 });
 
 // GET request /about
-router.get("/about", function (req, res) {
+router.get("/about", withAuth, function (req, res) {
   res.render("about");
 });
 
 // GET request /journal brings user to all their dreams
-router.get("/journal", async (req, res) => {
+router.get("/journal", withAuth, async (req, res) => {
   try {
     //Pull user data to use in templating
     const userData = await User.findAll({
@@ -105,13 +110,12 @@ router.get("/journal", async (req, res) => {
 });
 
 // GET request /dreamlog create a new dream
-router.get("/dreamlog", function (req, res) {
+router.get("/dreamlog", withAuth, function (req, res) {
   res.render("dreamlog");
 });
 
-// GET request /calendar shows dreams sorted by date
-router.get("/calendar", function (req, res) {
-  res.render("calendar");
+router.get("/collective", withAuth, function (req, res) {
+  res.render("collective");
 });
 
 // GET request /collective shows dream collective, all dreams made sharable by users
