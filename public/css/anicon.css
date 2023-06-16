@@ -1,0 +1,5 @@
+.nav-item:hover{
+    padding: 10px 5px;
+    transition: .5s all ease-in-out 0s;
+    background-color: rgb(207, 168, 245);
+}
