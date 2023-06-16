@@ -174,7 +174,7 @@ input{
 
 
 /* THE LOGIN and SIGNUP  BUTTON */
-button{
+
 .signup_btn,
 .login_btn {
 
@@ -396,7 +396,7 @@ header {
   margin:auto;
   text-align:center;
   margin:1rem;
-
+}
 .welcome__header {
   color: var(--primary-purple);
   margin: auto;
