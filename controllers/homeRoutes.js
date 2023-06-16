@@ -114,4 +114,42 @@ router.get("/calendar", function (req, res) {
   res.render("calendar");
 });
 
+// GET request /collective shows dream collective, all dreams made sharable by users
+router.get("/collective", async (req, res) => {
+  try {
+    //Pull user data to use in templating
+    const userData = await User.findAll({
+      attributes: { exclude: ["password"] },
+      where:{username: req.session.username},
+      // order: [["name", "ASC"]],
+    }); 
+    //Pull all dream data matching user id
+    const dreamData = await Dream.findAll({
+      where: { is_shared : false },
+      include: [
+        {
+          model: User,
+          attributes: ["username"],
+        },
+       {
+        model: Tags,
+        //through: { DreamTags } 
+        through: { attributes: [] }
+      },
+    ],
+    });
+    const user = userData.map((project) => project.get({ plain: true }));
+    
+    const dreams = dreamData.map((dream) => dream.toJSON());
+    
+    //
+    res.render("collective", {
+      user,
+      dreams,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 module.exports = router;
