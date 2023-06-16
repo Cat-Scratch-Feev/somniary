@@ -209,7 +209,8 @@ h5 {
 
 /* END OF LOGIN PAGE AND SIGN UP CSS */
 
-.return_btn {
+
+.return_btn, .collective_btn, .journal_btn, .dreamlog_btn {
   cursor: pointer;
 }
 
@@ -370,7 +371,7 @@ header {
   justify-content:center;
   align-content:center;
   flex-wrap:wrap;
-
+}
 /* WELCOME ADD ONS*/
 .welcome__header {
   display: flex;
@@ -587,6 +588,14 @@ input[type="radio"]:checked + label {
   color: var(--primary-light);
   background-color: var(--primary-lav);
   font-weight: bold;
+}
+
+/* ABOUT PAGE STYLES */
+#about_us_space {
+  width: 60%;
+}
+#about_us_text {
+  font-size: 20px;
 }
 
 /* MEDIA QUERIES FOR RESPONSIVE DESIGN*/
