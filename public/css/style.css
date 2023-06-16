@@ -58,12 +58,13 @@ footer {
 }
 
 /* LOG IN and SIGN UP PAGE */
-header{
+header {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.header-title, .bold{
+.header-title,
+.bold {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -115,10 +116,10 @@ header{
   align-items: center;
   flex-grow: 1;
   /* overflow: hidden;  */
-  margin-top: 2rem; 
+  margin-top: 2rem;
 }
 
-.credit_form{
+.credit_form {
   font-size: large;
   display: flex;
   flex-direction: column;
@@ -127,38 +128,26 @@ header{
   padding: 1px 10px;
   margin: 10px;
 }
-label{
+label {
   padding: 20px;
   color: #5d38a0;
-
-   
 }
-input{
+input {
   border-radius: 20px;
   padding: 5px 20px;
   margin: 5px;
-  
-  
 }
-
-
 
 /* SIGN UP FORM */
 /* PASSWORD REQUIREMENT */
-#pass-require{
+#pass-require {
   margin: 2px;
   color: silver;
-
-  
-  
-  
 }
-
 
 /* LOGIN BUTTON TEXT COLOR ONLY  */
 #btn_text {
   color: white;
-  
 }
 
 /* THIS IS NOT AFFECTING NOTHING */
@@ -172,62 +161,57 @@ input{
   padding-top: 10vh;
 } */
 
-
 /* THE LOGIN and SIGNUP  BUTTON */
-button{
-.signup_btn,
-.login_btn {
+button {
+  .signup_btn,
+  .login_btn {
+    background-color: var(--primary-purple);
+    /* width: 10rem; */
+    /* height: 3rem; */
+    border: 2px;
+    border-radius: 40px;
+    border-color: transparent;
+    margin: 10px;
+    width: 8rem;
 
-  background-color: var(--primary-purple);
-  /* width: 10rem; */
-  /* height: 3rem; */
-  border: 2px;
-  border-radius: 40px;
-  border-color: transparent;
-  margin: 10px;
-  width: 8rem;
- 
-  /* margin-top: 2rem; */
+    /* margin-top: 2rem; */
+  }
 }
-button:hover{
-  transition: .5s all ease-in-out 0s;
+
+button:hover {
+  transition: 0.5s all ease-in-out 0s;
   padding: 5px 5px;
   padding: 10px 15px;
-  width: 8rem ;
-  
-  
-
-  
+  width: 8rem;
 }
 
-
 /* REGISTER LINK */
-a, .signup-link{
+a,
+.signup-link {
   text-decoration: none;
   color: #ae8cf2;
 }
 
-.signup-link:hover, a:hover{
+.signup-link:hover,
+a:hover {
   color: #c4b2e8;
   text-decoration: none;
 }
-h5{
+h5 {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#reg-request{
+#reg-request {
   color: #ae8cf2;
 }
 
 /* END OF LOGIN PAGE AND SIGN UP CSS */
 
-
 .return_btn {
   cursor: pointer;
 }
-
 
 /* MAIN NAV STYLING*/
 header {
@@ -387,21 +371,21 @@ header {
   flex-wrap: wrap;
 }
 /* WELCOME ADD ONS*/
-.welcome__header{
+.welcome__header {
   display: flex;
   justify-content: center;
   align-items: center;
-  color:var(--primary-purple);
-  margin:auto;
-  text-align:center;
-  margin:1rem;
+  color: var(--primary-purple);
+  margin: auto;
+  text-align: center;
+  margin: 1rem;
+}
 
 .welcome__header {
   color: var(--primary-purple);
   margin: auto;
   text-align: center;
   margin: 1rem;
-
 }
 
 .dashboard__container,
@@ -430,6 +414,7 @@ header {
 .goal__text {
   margin: auto 0;
 }
+
 /*cards have styles that can be consolidated*/
 
 .reflection__title {

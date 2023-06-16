@@ -97,7 +97,7 @@ router.get("/:id", async (req, res) => {
 });
 
 // PUT /api/users/:id Updating user
-router.put("/:id", async (req, res) => {
+router.patch("/:id", async (req, res) => {
   // update a user by its `id` value
   try {
     const userData = await User.update(req.body, {

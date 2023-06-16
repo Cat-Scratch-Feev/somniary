@@ -10,13 +10,19 @@
   <div class="panel">
     <h2 class="panel__title">sign up!</h2>
     <!-- two form fields, one with username, one with pass -->
-    <form action="submit" method="post" class="credit_form">
-      <label for="username">email *</label>
-      <input type="text" name="email" id="email_signup" placeholder="enter email" required />
+    <form action="/api/users" method="post" class="credit_form signup_form">
+      <label for="email">email *</label>
+      <input
+        type="email"
+        name="email"
+        id="email_signup"
+        placeholder="enter email"
+        required
+      />
       <label for="password">password *</label>
       <h6 id="pass-require">passwords must be 8-16 characters in length</h6>
       <input
-        type="text"
+        type="password"
         name="password"
         id="password_signup"
         placeholder="create password"
@@ -43,3 +49,4 @@
   crossorigin="anonymous"
 ></script>
 <script src="./js/theme.js"></script>
+<script src="./js/signup.js"></script>

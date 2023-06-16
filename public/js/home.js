@@ -52,12 +52,12 @@ for (i = 0; i < dreamlogBtn.length; i++) {
   });
 }
 // Calendar button
-const calendarBtn = document.querySelectorAll(".calendar_btn");
-for (i = 0; i < calendarBtn.length; i++) {
-  calendarBtn[i].addEventListener("click", () => {
+const collectiveBtn = document.querySelectorAll(".collective_btn");
+for (i = 0; i < collectiveBtn.length; i++) {
+  collectiveBtn[i].addEventListener("click", () => {
     console.log("test");
     console.log(calendarBtn[i]);
-    window.location.href = "/calendar";
+    window.location.href = "/collective";
   });
 }
 document.querySelector("#logout_btn").addEventListener("click", logout);
