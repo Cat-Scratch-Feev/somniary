@@ -47,7 +47,7 @@
         </header>
       </div>
       <!-- empty div to be filled with handlebars templates -->
-      <div class="panel">
+       <div class="panel">
         <section class="journal__container">
           <section class="journal-header__container">
             <h2 class="journal-header">your journal</h2>
@@ -59,6 +59,7 @@
               <div class="dream__card-body">
                 <p>{{date}}</p>
                 <p>{{title}}</p>
+                <p>from {{user.username}}</p>
                 <p>{{description}}</p>
                 <!--tags, rendered with iteration-->
                 <div class="dream__card-tags">
@@ -78,7 +79,6 @@
                       <h5 class="footer__title">somniary</h5>
                       <small>©2023 cat-scratch feev | © somniary</small>
                   </footer>
-        </div>
       </div>
   </div>
   <!--fontawesome import-->
