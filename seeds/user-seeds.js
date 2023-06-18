@@ -14,12 +14,42 @@ const userData = [
   {
     email: 'JenBridge@yahoo.com',
     password: 'bridgetown4455',
-    username: 'JenBridge',
+    username: 'JenBridge92',
   },
   {
     email: 'ZimGeoff@gmail.com',
     password: 'zimwhimzimmim',
-    username: 'Zim',
+    username: 'xXZimXx',
+  },
+  {
+    email: 'Phil@gmail.com',
+    password: 'philbilljillwill',
+    username: 'Philberrydoughboy',
+  },
+  {
+    email: 'Wibbly@gmail.com',
+    password: '635283768',
+    username: 'WibblyWobbly',
+  },
+  {
+    email: 'PlorpBlorp@gmail.com',
+    password: 'plorpblorp',
+    username: 'PB',
+  },
+  {
+    email: 'BillGill@gmail.com',
+    password: 'gboff123',
+    username: 'GillyBill',
+  },
+  {
+    email: 'FellowWellow@gmail.com',
+    password: 'lightswitch',
+    username: 'DimBlim2001',
+  },
+  {
+    email: 'NatetheGreat@gmail.com',
+    password: 'greatNate',
+    username: 'NateTheGreat',
   },
 ];
 
