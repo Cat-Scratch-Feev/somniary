@@ -14,12 +14,12 @@ const userData = [
   {
     email: 'JenBridge@yahoo.com',
     password: 'bridgetown4455',
-    username: 'JenBridge',
+    username: 'JenBridge92',
   },
   {
     email: 'ZimGeoff@gmail.com',
     password: 'zimwhimzimmim',
-    username: 'Zim',
+    username: 'xXZimXx',
   },
   {
     email: 'Phil@gmail.com',
@@ -37,14 +37,14 @@ const userData = [
     username: 'PB',
   },
   {
-    email: 'Bill@gmail.com',
-    password: 'zimwhimzimmim',
-    username: 'Zim',
+    email: 'BillGill@gmail.com',
+    password: 'gboff123',
+    username: 'GillyBill',
   },
   {
-    email: 'ZimGeoff@gmail.com',
-    password: 'zimwhimzimmim',
-    username: 'Zim',
+    email: 'FellowWellow@gmail.com',
+    password: 'lightswitch',
+    username: 'DimBlim2001',
   },
   {
     email: 'NatetheGreat@gmail.com',

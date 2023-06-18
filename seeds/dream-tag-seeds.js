@@ -33,6 +33,54 @@ const dreamTagData = [
         dream_id: 8,
         tag_id: 3
     },
+    {
+        dream_id: 9,
+        tag_id: 3
+    },
+    {
+        dream_id: 10,
+        tag_id: 2
+    },
+    {
+        dream_id: 11,
+        tag_id: 3
+    },
+    {
+        dream_id: 12,
+        tag_id: 1
+    },
+    {
+        dream_id: 13,
+        tag_id: 1
+    },
+    {
+        dream_id: 14,
+        tag_id: 2
+    },
+    {
+        dream_id: 15,
+        tag_id: 1
+    },
+    {
+        dream_id: 16,
+        tag_id: 3
+    },
+    {
+        dream_id: 17,
+        tag_id: 3
+    },
+    {
+        dream_id: 18,
+        tag_id: 3
+    },
+    {
+        dream_id: 19,
+        tag_id: 3
+    },
+    {
+        dream_id: 20,
+        tag_id: 3
+    },
     
 ];
 
