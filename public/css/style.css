@@ -102,6 +102,44 @@ footer {
   color: white;
 }
 
+/*LOGIN AND SIGNUP STYLING*/
+.login_page__title, .login_form{
+  display:flex;
+  justify-content:center;
+  
+}
+.login_span{
+  white-space:pre;
+  font-weight:bold;
+  color:var(--primary-purple);
+  display:inline-block;
+}
+.login_span:hover, .login_span:hover span{
+  font-weight:bolder;
+}
+.login_page__title {
+  padding-top: 10vh;
+  flex-flow:row wrap;
+}
+.panel__title, .login_switch__link {
+  margin:0 auto;
+  color:var(--primary-purple);
+  margin-bottom:1rem;
+  text-decoration: none;
+  text-align:center;
+}
+.login_switch__link:hover{
+  text-decoration:none;
+  color:var(--primary-purple);
+  font-weight:bolder;
+}
+/*OVERRIDE BROWSER CHANGING STYLING ON AUTOFILLED INPUTS*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
 
 .login_form{
   width:100%;
