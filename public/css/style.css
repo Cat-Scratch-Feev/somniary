@@ -145,7 +145,10 @@ input:-webkit-autofill:active {
   width:100%;
   flex-flow: column wrap;
 }
-
+#pass-require{
+  text-align:center;
+  margin:1rem;
+}
 /* MAIN NAV STYLING*/
 header {
   width: 100%;
