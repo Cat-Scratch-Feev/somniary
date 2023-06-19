@@ -149,6 +149,10 @@ input:-webkit-autofill:active {
   text-align:center;
   margin:1rem;
 }
+.return_btn, .collective_btn, .journal_btn, .dreamlog_btn {
+  cursor: pointer;
+}
+
 /* MAIN NAV STYLING*/
 header {
   width: 100%;
@@ -467,6 +471,13 @@ input[type=radio]:checked+label {
   color: var(--primary-light);
   background-color:var(--primary-lav);
   font-weight:bold;
+}
+/* ABOUT PAGE STYLES */
+#about_us_space {
+  width: 60%;
+}
+#about_us_text {
+  font-size: 20px;
 }
 
 /* MEDIA QUERIES FOR RESPONSIVE DESIGN*/
