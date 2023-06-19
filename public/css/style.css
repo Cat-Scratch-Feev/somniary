@@ -1,12 +1,8 @@
 :root {
-  --light-lavender: #c4b2e8;
-  --dark-purple: #5d38a0;
-  --lightest-lavender: #efe0ff;
-  --off-white: #fdf8ff;
   --bs-btn-active-border-color: #efe0ff;
   --bs-btn-active-bg: #efe0ff;
-  --bs-btn-active-border-color: #efe0ff;
-  --bs-btn-active-bg: #efe0ff;
+  --bs-btn-active-border-color: #EFE0FF;
+  --bs-btn-active-bg: #EFE0FF;
   --my-animation: 1s ease-in-out all 0s;
 }
 /* BASIC HOMEPAGE TEMPLATE STYLING*/
@@ -25,52 +21,38 @@ body {
   font-family: "Jost", sans-serif;
 }
 
-h1 {
-  color: var(--primary-purple);
-  font-size: 3em;
-  font-weight: 500;
-}
-
-h2 {
-  font-size: 2em;
-}
-
 footer {
   padding: 30px 0px;
   font-family: "Jost", sans-serif;
   text-align: center;
 }
-
+/* page stylings*/
+/*page title*/
+.page__title{
+  font-size:4.5rem;
+  color:var(--primary-purple);
+}
+/* page body title*/
+.page_body__title{
+  font-size:2rem;
+}
+/*page body subtitle*/
+.page_body__subtitle{
+  font-size:1.25em;
+}
+/*page body text*/
 .footer {
   width: 65%;
   margin-top: 3rem;
 }
-.footer__title {
-  color: var(--primary-purple);
-  font-weight: bold;
+.footer__title{
+  color:var(--primary-purple);
+  font-weight:bold;
 }
 .subheading {
   font-size: 32px;
 }
 
-.bold {
-  font-weight: 800;
-}
-
-/* LOG IN and SIGN UP PAGE */
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.header-title,
-.bold {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-/* WHOLE PAGE CONTAINER -- THE LIGHTER DARKER PURPLE AREA */
 
 .page__container {
   background-color: var(--primary-lav);
@@ -80,17 +62,15 @@ header {
   min-height: 100vh;
 }
 
-/* THIS IS NOT AFFECTING NOTHING */
-/* .intro__container {
+.intro__container {
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
   width: 100%;
   height: auto;
-} */
+}
 
-/* .intro {
+.intro {
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -98,9 +78,8 @@ header {
   margin-bottom: 0;
   justify-content: center;
   padding-top: 10vh;
-} */
+}
 
-/* LOGIN CREDITS CONTAINER */
 .panel__title {
   padding-top: 10vh;
 }
@@ -109,107 +88,67 @@ header {
   width: 100%;
   min-height: 65vh;
   background-color: var(--primary-lightlav);
-  border-radius: 40% 40% 0% 0% / 100% 100% 65% 65%;
+  border-top-left-radius: 300px;
+  border-top-right-radius:300px;
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
   flex-grow: 1;
-  /* overflow: hidden;  */
+  overflow: hidden;
   margin-top: 2rem;
 }
 
-.credit_form {
-  font-size: large;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 1px 10px;
-  margin: 10px;
-}
-label {
-  padding: 20px;
-  color: #5d38a0;
-}
-input {
-  border-radius: 20px;
-  padding: 5px 20px;
-  margin: 5px;
-}
-
-/* SIGN UP FORM */
-/* PASSWORD REQUIREMENT */
-#pass-require {
-  margin: 2px;
-  color: silver;
-}
-
-/* LOGIN BUTTON TEXT COLOR ONLY  */
-#btn_text {
+.btn_text {
   color: white;
 }
 
-/* THIS IS NOT AFFECTING NOTHING */
-/* .signup, 
-.login {
-  display: flex;
-  justify-content: center; 
-  align-items: center;
-  flex-direction: column;
-  width: 50%; 
+/*LOGIN AND SIGNUP STYLING*/
+.login_page__title, .login_form{
+  display:flex;
+  justify-content:center;
+  
+}
+.login_span{
+  white-space:pre;
+  font-weight:bold;
+  color:var(--primary-purple);
+  display:inline-block;
+}
+.login_span:hover, .login_span:hover span{
+  font-weight:bolder;
+}
+.login_page__title {
   padding-top: 10vh;
-} */
-
-/* THE LOGIN and SIGNUP  BUTTON */
-
-.signup_btn,
-.login_btn {
-
-  background-color: var(--primary-purple);
-  /* width: 10rem; */
-  /* height: 3rem; */
-  border: 2px;
-  border-radius: 40px;
-  border-color: transparent;
-  margin: 10px;
-  width: 8rem;
- 
-  /* margin-top: 2rem; */
+  flex-flow:row wrap;
 }
-
-button:hover {
-  transition: 0.5s all ease-in-out 0s;
-  padding: 5px 5px;
-  padding: 10px 15px;
-  width: 8rem;
-}
-
-/* REGISTER LINK */
-a,
-.signup-link {
+.panel__title, .login_switch__link {
+  margin:0 auto;
+  color:var(--primary-purple);
+  margin-bottom:1rem;
   text-decoration: none;
-  color: #ae8cf2;
+  text-align:center;
+}
+.login_switch__link:hover{
+  text-decoration:none;
+  color:var(--primary-purple);
+  font-weight:bolder;
+}
+/*OVERRIDE BROWSER CHANGING STYLING ON AUTOFILLED INPUTS*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
 }
 
-.signup-link:hover,
-a:hover {
-  color: #c4b2e8;
-  text-decoration: none;
+.login_form{
+  width:100%;
+  flex-flow: column wrap;
 }
-h5 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#pass-require{
+  text-align:center;
+  margin:1rem;
 }
-
-#reg-request {
-  color: #ae8cf2;
-}
-
-/* END OF LOGIN PAGE AND SIGN UP CSS */
-
-
 .return_btn, .collective_btn, .journal_btn, .dreamlog_btn {
   cursor: pointer;
 }
@@ -218,9 +157,13 @@ h5 {
 header {
   width: 100%;
 }
+
 .page__title,
 .offcanvas-title {
   font-weight: bolder;
+}
+.offcanvas-title{
+  font-size:3rem;
 }
 .main__intro {
   display: flex;
@@ -228,17 +171,16 @@ header {
   justify-content: center;
   align-items: center;
 }
-.mobile-nav__button,
-.btn-secondary {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  border-style: none;
-  background-color: var(--primary-lightlav);
-  margin: 2rem;
+.mobile-nav__button, .btn-secondary{
+  width:3rem;
+  height:3rem;
+  border-radius:50%;
+  border-style:none;
+  background-color:var(--primary-lightlav);
+  margin:2rem;
 }
-.btn.btn-primary {
-  background-color: var(--primary-lightlav);
+.btn.btn-primary{
+  background-color:var(--primary-lightlav);
 }
 .profile__button {
   align-self: flex-end;
@@ -252,28 +194,28 @@ header {
   cursor: pointer;
 }
 
-.nav__item {
+.nav__item, .mnav_item{
   margin: 2rem;
   font-weight: bold;
+  font-size:1.5rem;
 }
 .nav__icon {
   margin: 0.5rem;
 }
 
-.btn-secondary {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  border-style: none;
-  background-color: var(--primary-lightlav);
-  margin: 2rem;
+.btn-secondary{
+  width:3rem;
+  height:3rem;
+  border-radius:50%;
+  border-style:none;
+  background-color:var(--primary-lightlav);
+  margin:2rem;
 }
 .btn-secondary:hover {
-  background-color: var(--primary-lightlav);
+  background-color:var(--primary-lightlav);
 }
-.dropdown-toggle {
-  --bs-offcanvas-width: 300px;
-  color: var(--primary-purple);
+.dropdown-toggle{--bs-offcanvas-width: 300px;
+  color:var(--primary-purple);
 }
 
 .icon__nav {
@@ -282,10 +224,11 @@ header {
   justify-content: flex-end;
 }
 
-.offcanvas-title {
-  color: var(--primary-purple);
+.offcanvas-title{
+  color:var(--primary-purple);
+
 }
-.offcanvas-lg {
+.offcanvas-lg{
   background-color: var(--primary-lav);
 
   border-radius: 0 7% 7% 0;
@@ -299,7 +242,46 @@ header {
 }
 
 /*profile settings styling*/
-.profileSettings_body {
+
+.profileSettings_header {
+  color: var(--primary-purple);
+  font-size: 2rem;
+  text-align:center;
+  margin-bottom:1rem;
+  margin-top:2rem;
+}
+
+.profileSettings_label {
+  margin-top:0.5rem;
+  font-size: 1em;
+}
+
+.profileSettings_username, .profileSettings_email{
+height: 35px;
+width: 100%;
+}
+
+.profileSettings_username, .profileSettings_email, #dreamgoal{
+  border-radius: 33px;
+  background-color:var(--primary-light);
+  border-color:transparent;
+}
+.profileSettings_username::placeholder, .profileSettings_email::placeholder , #dreamgoal::placeholder, .log_input__container::placeholder{
+  color:var(--primary-purple);
+}
+#dreamgoal {
+  height: 100px;
+  width:100%;
+}
+.profile_form{
+  display:flex;
+  flex-flow:column wrap;
+  align-content:center;
+  justify-content:center;
+}
+/* HOME PAGE STYLING*/
+
+.homepage__container{
   margin-top: 1.5rem;
   width: 60%;
   display: flex;
@@ -308,87 +290,11 @@ header {
   align-content: center;
   flex-wrap: wrap;
 }
-
-.profileSettings_header {
-  color: var(--primary-purple);
-  font-size: 2rem;
-  text-align: center;
-  margin: 1rem;
-}
-
-.profileSettings_label {
-  margin-top: 0.5rem;
-  font-size: 1em;
-}
-
-.profileSettings_username,
-.profileSettings_email {
-  height: 35px;
-  width: 100%;
-}
-
-.profileSettings_username,
-.profileSettings_email,
-#dreamgoal {
-  border-radius: 33px;
-  background-color: var(--primary-light);
-  border-color: transparent;
-}
-.profileSettings_username::placeholder,
-.profileSettings_email::placeholder,
-#dreamgoal::placeholder {
-  color: var(--primary-purple);
-}
-#dreamgoal {
-  height: 100px;
-  width: 100%;
-}
-#ps_Save {
-  background-color: var(--primary-purple);
-  color: var(--primary-light);
-  width: 10rem;
-  height: 3rem;
-  border-radius: 50px;
-  border-color: transparent;
-  margin-top: 2rem;
-  justify-self: center;
-  align-self: center;
-}
-.profile_form {
-  display: flex;
-  flex-flow: column wrap;
-  align-content: center;
-  justify-content: center;
-}
-/* HOME PAGE STYLING*/
-
-
-.homepage__container{
-  margin-top:1.5rem;
-  width:80%;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-content:center;
-  flex-wrap:wrap;
-}
-/* WELCOME ADD ONS*/
-.welcome__header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+.welcome__header, .reflection__title{
   color:var(--primary-purple);
   margin:auto;
   text-align:center;
   margin:1rem;
-}
-  
-.welcome__header {
-  color: var(--primary-purple);
-  margin: auto;
-  text-align: center;
-  margin: 1rem;
 }
 
 .dashboard__container,
@@ -397,35 +303,35 @@ header {
   margin: 1rem;
 }
 
-.dashboard__card {
-  background-color: var(--primary-light);
-  display: flex;
+.dashboard__card{
+  background-color:var(--primary-light);
+  display:flex;
   flex-flow: row wrap;
-  justify-content: space-around;
-  align-content: center;
-  height: 7rem;
-  border-radius: 35px;
+  justify-content:space-around;
+  align-content:center;
+  height:7rem;
+  border-radius:35px;
 }
-.dashboard__prof {
-  width: 4rem;
-  height: 4rem;
-  border-radius: 50%;
-  background-color: var(--primary-lightlav);
-  border-color: transparent;
+.dashboard__prof{
+  width:4rem;
+  height:4rem;
+  border-radius:50%;
+  background-color:var(--primary-lightlav);
+  border-color:transparent;
+  
 }
 
 .goal__text {
   margin: auto 0;
 }
-
 /*cards have styles that can be consolidated*/
 
-.reflection__title {
-  color: var(--primary-purple);
+.reflection__title{
+  color:var(--primary-purple);
 }
-.dream__card {
-  border-radius: 35px;
-  background-color: var(--primary-light);
+.dream__card{
+  border-radius:35px;
+  background-color:var(--primary-light);
 
   margin-bottom: 1rem;
   display: flex;
@@ -440,55 +346,41 @@ header {
   flex-flow: row wrap;
 }
 
-.dream__tag {
-  border-radius: 15px;
-  width: 20%;
-  background-color: var(--primary-lightlav);
-  margin: 1rem;
-  height: 2rem;
-  text-align: center;
-}
-.viewall__button {
-  border-radius: 35px;
-  height: 3rem;
-  background-color: var(--primary-purple);
-  color: var(--primary-light);
-  border-color: transparent;
-  margin: auto;
+.dream__tag{
+  border-radius:15px;
+  width:20%;
+  background-color:var(--primary-lightlav);
+  margin:1rem;
+  height:2rem;
+  text-align:center;
+  flex-grow: inherit;
 }
 /*JOURNAL STYLING*/
-.journal__container {
-  margin-top: 1.5rem;
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  flex-wrap: wrap;
-}
-.journal-header__container {
+
+.journal-header__container, .log_header__container {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
   align-content: center;
+  margin:1rem;
 }
 
-.journal-header {
-  color: var(--primary-purple);
-  margin: auto;
+.journal-header{
+  color:var(--primary-purple);
+  margin:auto;
   text-align: center;
   margin: 1rem;
   font-weight: bold;
 }
+.dream_title{
+  color:var(--primary-purple);
+}
+.journal-subheader{
+  text-align:center;
+  color:var(--primary-purple);
 
-.journal-subheader {
-  width: 75%;
-  text-align: center;
-  color: var(--primary-purple);
 }
-.journal-dreams__container {
-  width: 80%;
-}
+
 .dream-j__card {
   width: 100%;
 }
@@ -507,53 +399,44 @@ header {
   align-self: flex-start;
   margin: 2rem;
 }
-.logpage__container {
-  margin-top: 1.5rem;
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  flex-wrap: wrap;
-}
+
 .log_form__container {
   width: 100%;
 }
 .log_header__container {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-content: center;
   text-align: center;
+  margin:2rem;
 }
 .log_form {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-flow: column wrap;
   /*align-content:center;*/
   /*width:80%;*/
 }
 
-.log_input__container {
-  border-radius: 35px;
-  height: 2rem;
-  border-color: transparent;
-  background-color: var(--primary-light);
+.log_input__container{
+  border-radius:35px;
+  height:2rem;
+  border-color:transparent;
+  background-color:var(--primary-light);
 }
-.log_btn {
-  width: 30%;
-  margin: 2rem;
-  background-color: var(--primary-purple);
-  border-radius: 35px;
-  color: var(--primary-light);
-  border-color: transparent;
-  height: 2rem;
-  justify-self: center;
-  align-self: center;
+.log_btn{
+  width:30%;
+  margin:2rem;
+  background-color:var(--primary-purple);
+  border-radius:35px;
+  color:var(--primary-light);
+  border-color:transparent;
+  height:3rem;
+  justify-self:center;
+  align-self:center;
+  padding:.25rem;
 }
-input::placeholder,
-textarea::placeholder {
+.dream__author{
+  float:right;
+}
+input::placeholder, textarea::placeholder{
+
   text-indent: 1rem;
 }
 .loghidden {
@@ -562,34 +445,33 @@ textarea::placeholder {
   opacity: 0;
 }
 .dream_type__button {
-  width: 30%;
-  height: 2rem;
-  border-radius: 35px;
-  background-color: var(--primary-light);
-  color: black;
-  text-align: center;
-  margin-bottom: 1rem;
+  width:30%;
+  height:2rem;
+  border-radius:35px;
+  background-color:var(--primary-light);
+  color:black;
+  text-align:center;
+  margin-bottom:1rem;
 }
 /* edit of checkbox and default styles*/
-input[type="checkbox"] + label {
+input[type=checkbox]+label {
   color: var(--primary-purple);
 }
 
-input[type="checkbox"]:checked + label {
+input[type=checkbox]:checked+label {
   color: var(--primary-light);
-  background-color: var(--primary-lav);
-  font-weight: bold;
+  background-color:var(--primary-lav);
+  font-weight:bold;
 }
-input[type="radio"] + label {
+input[type=radio]+label {
   color: var(--primary-purple);
 }
 
-input[type="radio"]:checked + label {
+input[type=radio]:checked+label {
   color: var(--primary-light);
-  background-color: var(--primary-lav);
-  font-weight: bold;
+  background-color:var(--primary-lav);
+  font-weight:bold;
 }
-
 /* ABOUT PAGE STYLES */
 #about_us_space {
   width: 60%;
@@ -606,9 +488,6 @@ input[type="radio"]:checked + label {
   .hidden {
     display: none;
   }
-  .panel {
-    border-radius: 60% 60% 0% 0% / 100% 100% 65% 65%;
-  }
   .offcanvas-lg.offcanvas-start {
     width: 65%;
   }
@@ -616,12 +495,12 @@ input[type="radio"]:checked + label {
     align-content: center;
     justify-content: center;
   }
+  .dream__tag {
+    width: 60%;
+  }
 }
 
 @media (max-width: 600px) {
-  .panel {
-    border-radius: 70% 70% 0% 0% / 100% 100% 65% 65%;
-  }
   .dream__tag {
     width: 60%;
   }
@@ -642,7 +521,7 @@ input[type="radio"]:checked + label {
   .dream_type__button {
     width: 45%;
   }
-  .profileSettings_header {
-    font-size: 1.7rem;
+  .profileSettings_header{
+    font-size:1.7rem;
   }
 }
