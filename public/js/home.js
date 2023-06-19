@@ -55,8 +55,6 @@ for (i = 0; i < dreamlogBtn.length; i++) {
 const collectiveBtn = document.querySelectorAll(".collective_btn");
 for (i = 0; i < collectiveBtn.length; i++) {
   collectiveBtn[i].addEventListener("click", () => {
-    console.log("test");
-    console.log(calendarBtn[i]);
     window.location.href = "/collective";
   });
 }

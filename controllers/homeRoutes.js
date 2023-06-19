@@ -123,7 +123,7 @@ router.get("/collective", async (req, res) => {
     });
     //Pull all dream data matching user id
     const dreamData = await Dream.findAll({
-      where: { is_shared: false },
+      where: { is_shared: true },
       include: [
         {
           model: User,
