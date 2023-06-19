@@ -1,8 +1,4 @@
 :root {
-  --light-lavender: #c4b2e8;
-  --dark-purple: #5d38a0;
-  --lightest-lavender: #efe0ff;
-  --off-white: #fdf8ff;
   --bs-btn-active-border-color: #efe0ff;
   --bs-btn-active-bg: #efe0ff;
   --bs-btn-active-border-color: #EFE0FF;
@@ -25,16 +21,6 @@ body {
   font-family: "Jost", sans-serif;
 }
 
-h1 {
-  color: var(--primary-purple);
-  font-size: 3em;
-  font-weight: 500;
-}
-
-h2 {
-  font-size: 2em;
-}
-
 footer {
   padding: 30px 0px;
   font-family: "Jost", sans-serif;
@@ -42,8 +28,18 @@ footer {
 }
 /* page stylings*/
 /*page title*/
+.page__title{
+  font-size:4.5rem;
+  color:var(--primary-purple);
+}
 /* page body title*/
+.page_body__title{
+  font-size:2rem;
+}
 /*page body subtitle*/
+.page_body__subtitle{
+  font-size:1.25em;
+}
 /*page body text*/
 .footer {
   width: 65%;
@@ -57,9 +53,6 @@ footer {
   font-size: 32px;
 }
 
-.bold {
-  font-weight: 800;
-}
 
 .page__container {
   background-color: var(--primary-lav);
@@ -95,7 +88,8 @@ footer {
   width: 100%;
   min-height: 65vh;
   background-color: var(--primary-lightlav);
-  border-radius: 40% 40% 0% 0% / 100% 100% 65% 65%;
+  border-top-left-radius: 300px;
+  border-top-right-radius:300px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -108,34 +102,23 @@ footer {
   color: white;
 }
 
-.signup,
-.login {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 50%;
-  padding-top: 10vh;
+
+.login_form{
+  width:100%;
+  flex-flow: column wrap;
 }
 
-.signup_btn, .login_btn {
-  background-color: var(--primary-purple);
-  width: 10rem;
-  height: 3rem;
-  border-radius: 50px;
-  border-color: transparent;
-  margin-top: 2rem;
-}
-/**/
 /* MAIN NAV STYLING*/
 header {
   width: 100%;
 }
-.page__title{
-  font-size:4.5rem;
-}
+
 .page__title,
 .offcanvas-title {
   font-weight: bolder;
+}
+.offcanvas-title{
+  font-size:3rem;
 }
 .main__intro {
   display: flex;
@@ -214,21 +197,13 @@ header {
 }
 
 /*profile settings styling*/
-.profileSettings_body{
-  margin-top: 1.5rem;
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  flex-wrap: wrap;
-}
 
 .profileSettings_header {
   color: var(--primary-purple);
   font-size: 2rem;
   text-align:center;
-  margin:1rem;
+  margin-bottom:1rem;
+  margin-top:2rem;
 }
 
 .profileSettings_label {
@@ -246,23 +221,12 @@ width: 100%;
   background-color:var(--primary-light);
   border-color:transparent;
 }
-.profileSettings_username::placeholder, .profileSettings_email::placeholder , #dreamgoal::placeholder {
+.profileSettings_username::placeholder, .profileSettings_email::placeholder , #dreamgoal::placeholder, .log_input__container::placeholder{
   color:var(--primary-purple);
 }
 #dreamgoal {
   height: 100px;
   width:100%;
-}
-#ps_Save {
-  background-color: var(--primary-purple);
-  color: var(--primary-light);
-  width: 10rem;
-  height: 3rem;
-  border-radius: 50px;
-  border-color: transparent;
-  margin-top: 2rem;
-  justify-self:center;
-  align-self:center;
 }
 .profile_form{
   display:flex;
@@ -281,7 +245,7 @@ width: 100%;
   align-content: center;
   flex-wrap: wrap;
 }
-.welcome__header{
+.welcome__header, .reflection__title{
   color:var(--primary-purple);
   margin:auto;
   text-align:center;
@@ -344,14 +308,16 @@ width: 100%;
   margin:1rem;
   height:2rem;
   text-align:center;
+  flex-grow: inherit;
 }
 /*JOURNAL STYLING*/
 
-.journal-header__container {
+.journal-header__container, .log_header__container {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
   align-content: center;
+  margin:1rem;
 }
 
 .journal-header{
@@ -361,16 +327,15 @@ width: 100%;
   margin: 1rem;
   font-weight: bold;
 }
-
+.dream_title{
+  color:var(--primary-purple);
+}
 .journal-subheader{
-  width:75%;
   text-align:center;
   color:var(--primary-purple);
 
 }
-.journal-dreams__container {
-  width: 80%;
-}
+
 .dream-j__card {
   width: 100%;
 }
@@ -394,11 +359,8 @@ width: 100%;
   width: 100%;
 }
 .log_header__container {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-content: center;
   text-align: center;
+  margin:2rem;
 }
 .log_form {
   display: flex;
@@ -423,6 +385,10 @@ width: 100%;
   height:3rem;
   justify-self:center;
   align-self:center;
+  padding:.25rem;
+}
+.dream__author{
+  float:right;
 }
 input::placeholder, textarea::placeholder{
 
@@ -470,9 +436,6 @@ input[type=radio]:checked+label {
   .hidden {
     display: none;
   }
-  .panel {
-    border-radius: 60% 60% 0% 0% / 100% 100% 65% 65%;
-  }
   .offcanvas-lg.offcanvas-start {
     width: 65%;
   }
@@ -480,12 +443,12 @@ input[type=radio]:checked+label {
     align-content: center;
     justify-content: center;
   }
+  .dream__tag {
+    width: 60%;
+  }
 }
 
 @media (max-width: 600px) {
-  .panel {
-    border-radius: 70% 70% 0% 0% / 100% 100% 65% 65%;
-  }
   .dream__tag {
     width: 60%;
   }
