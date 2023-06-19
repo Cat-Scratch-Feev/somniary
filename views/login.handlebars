@@ -2,22 +2,24 @@
   <div class="intro__container main__intro">
     <header>
       <!--navigation to be rendered in from handlebars templates conditionally based upon login status -->
-      <h1 class="header-title">welcome to<span class="bold">somniary !</span> your dreamspace
+      <h1 class="header-title login_page__title">welcome to <span class="login_span"> somniary, </span> your dreamspace
       </h1>
     </header>
   </div>
   <!-- empty div to be filled with handlebars templates -->
   <div class="panel">
     <!-- "log in! h3?" -->
-    <h2 class="panel__title">log in!</h2>
+    <section class="homepage__container">
+    
+    <h2 class="panel__title page_body__title">log in!</h2>
     <!-- two form fields, one with username, one with pass -->
 
-    <form class="credit_form">
+    <form class="credit_form login_form">
       <label for="username">username</label>
-      <input type="text" name="username" id="username_login" required />
+      <input class="log_input__container" type="text" name="username" id="username_login" required />
       <label for="password">password</label>
-      <input type="password" name="password" id="password_login" required />
-      <button type="submit" id="login_btn">
+      <input class="log_input__container" type="password" name="password" id="password_login" required />
+      <button class="log_btn" type="submit" id="login_btn">
         <span id="btn_text">log in</span>
 
       </button>
@@ -25,16 +27,11 @@
 
     <!-- sign up link -->
 
-    <h2 id="reg-request">Need A Dreamspace ?</h2>
-    <a class="singup-link" href="/signup">
-
-      <h5 class="signup-link">Register today !</h5>
-
-    <a href="/signup">
-      <h2 id="reg-request">Need A Dreamspace ?</h2>
-      <h5>Register today !</h5>
-
+    <a class="page_body__subtitle login_switch__link" href="/signup">
+      <p class="" id="reg-request">don't have an account? sign up<span class="login_span"> here</span></p>
     </a>
+
+    </section>
   </div>
 </div>
 
