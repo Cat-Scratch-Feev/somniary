@@ -48,7 +48,7 @@
       </div>
       <!-- empty div to be filled with handlebars templates -->
        <div class="panel">
-        <section class="journal__container">
+        <section class="homepage__container">
           <section class="journal-header__container">
             <h2 class="journal-header">your journal</h2>
             <h3 class="journal-subheader">view all of your dreams, laid out for you!</h3>
@@ -59,7 +59,6 @@
               <div class="dream__card-body">
                 <p>{{date}}</p>
                 <p>{{title}}</p>
-                <p>from {{user.username}}</p>
                 <p>{{description}}</p>
                 <!--tags, rendered with iteration-->
                 <div class="dream__card-tags">
@@ -67,6 +66,8 @@
                   <p class="dream__tag">{{name}}</p>
                   {{/each}}
                 </div>
+                <p class="dream__author">from {{user.username}}</p>
+
               </div>
               
             </section>

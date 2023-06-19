@@ -53,12 +53,13 @@
       </div>
       <!-- empty div to be filled with handlebars templates -->
       <div class="panel">
-        <section class="journal__container">
+        <section class="homepage__container">
           <section class="journal-header__container">
             <h2 class="journal-header">your journal</h2>
             <h3 class="journal-subheader">view all of your dreams, laid out for you!</h3>
           </section>
           <section class="journal-dreams__container">
+            {{#if dreams}}
             {{#each dreams}}
             <section class="dream__card dream-j_card">
               <div class="dream__card-body">
@@ -75,6 +76,16 @@
               
             </section>
             {{/each}}
+            {{else}}
+            <section class="dream__card">
+              <div class="dream__card-body">
+                <p>Begin logging dreams to receive dream reflections!</p>
+              </div>
+
+            </section>
+          </section>
+                <button class="log_btn dreamlog_btn">log a dream now!</button>
+            {{/if}}
           </section>
         </section>
         <div class="footer">

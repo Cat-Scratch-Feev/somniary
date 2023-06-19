@@ -47,14 +47,14 @@
       </div>
       <!-- empty div to be filled with handlebars templates -->
       <div class="panel">
-          <div class="profileSettings_body">
+          <div class="homepage__container">
             {{! Profile Settings Title}}
             <h2 class="profileSettings_header">profile settings</h2>
             {{! Username Title with a form underneath}}
             <section class="log_form__container">
 
             <form class="profile_form">
-            <h3 class="profileSettings_label">username</h3>
+            <h3 class="profileSettings_label page-body__title">username</h3>
 
               <input class="profileSettings_username"type="text" id="username" placeholder="username" />
             
@@ -75,7 +75,7 @@
                 placeholder="I am tracking my dreams to..."
               />
             {{! Save Button}}
-            <button type="button" id="ps_Save">save</button>
+            <button class="log_btn" type="button" id="ps_Save">save</button>
 
             </form>
             </section>
