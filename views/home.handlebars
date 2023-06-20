@@ -51,7 +51,7 @@
       <div class="panel">
         <section class="homepage__container">
           <section class="dashboard__container">
-            <h2 class="page_body__title welcome__header">welcome back, {{user.0.username}}!</h2>
+            <h2 class="page_body__title welcome__header">welcome back{{#if user.0.username}}, {{user.0.username}}{{/if}}!</h2>
             <div class="dashboard__card">
               <button class="dashboard__prof"><i class="fa-regular fa-user fa-2xl" style="color:5D38A0;"></i></button>
               <p class="page_body__subtitle goal__text">what is your goal?</p>
