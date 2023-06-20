@@ -10,7 +10,7 @@ Your Dreamspace is the home for all your dreams, both public and private. Here, 
 <br>
 The Dreamspace Collective is a gathering of wandering dreams from all around the world, inspiring and entertaining our Dreamers. It is a realm of chaos and beauty, offering unfiltered and unregulated input. Enter at your own risk.
 
-![Screenshot](./assets/images/)
+![Screenshot](./public/images/landing.png)
 
 ## Credits
 ---
