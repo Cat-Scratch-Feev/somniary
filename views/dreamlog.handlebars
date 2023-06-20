@@ -24,14 +24,14 @@
       </section>
       <section class="log_form__container">
         <form action="/api/dreams" method="post" class="log_form">
-          {{!-- <label for="dream_date"> date</label>
+          {{! <label for="dream_date"> date</label>
           <input
             type="text"
             name="dream_date"
             id="dream_date__input"
             class="log_input__container"
             required
-          /> --}}
+          /> }}
           <label for="dream_title">title</label>
           <input
             type="text"
@@ -67,7 +67,7 @@
               value="2"
               class="loghidden"
             />
-            <label class="dream_type__button" for="normal">normal</label>
+            <label class="dream_type__button" for="in-between">normal</label>
             <input
               type="radio"
               name="dream_type"
@@ -75,26 +75,26 @@
               value="1"
               class="loghidden"
             />
-            <label class="dream_type__button" for="daydream">daydream</label>
+            <label class="dream_type__button" for="dream">daydream</label>
           </div>
-          <label for="dream_lucid">was your dream lucid?</label>
-          <div class="dream_lucid__selection">
+          <label for="dream_share">would you like to share your dream?</label>
+          <div class="dream_share__selection">
             <input
               type="radio"
-              name="dream_lucid"
-              id="yeslucid"
-              value="normal"
+              name="dream_share"
+              id="shared"
+              value="true"
               class="loghidden"
             />
-            <label class="dream_type__button" for="yeslucid">yes</label>
+            <label class="dream_type__button" for="shared">yes</label>
             <input
               type="radio"
-              name="dream_lucid"
-              id="nolucid"
-              value="lucid"
+              name="dream_share"
+              id="notshared"
+              value="false"
               class="loghidden"
             />
-            <label class="dream_type__button" for="nolucid">no</label>
+            <label class="dream_type__button" for="notshared">no</label>
           </div>
           <!-- commenting our additional tags header for now, need to find out how to accept user input OR just make premade tags
               <label for="dream_tags">additional tags</label>-->

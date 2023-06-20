@@ -292,7 +292,9 @@ width: 100%;
   flex-direction: column;
   justify-content: center;
 
-  text: center;
+
+  align-content: center;
+
   flex-wrap: wrap;
 }
 
