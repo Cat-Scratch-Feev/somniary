@@ -119,6 +119,7 @@
     <div class="homepage__container">
       {{! Profile Settings Title}}
       <h2 class="profileSettings_header">profile settings</h2>
+      <h3 class="profileSettings_label dream-goal__sub">your new username will show on your next login!</h3>
       {{! Username Title with a form underneath}}
       <section class="log_form__container">
 
@@ -142,11 +143,13 @@
             placeholder="email"
           />
 
+          {{! Save Button}}
+          <button class="log_btn" type="button" id="ps_Save">save profile</button>
           {{! Dream Tracking Goal Title
               "your goal will be displayed on your home page"
               form underneath}}
           <h3 class="profileSettings_header">dream tracking goal</h3>
-          <h4 class="profileSettings_label">your goal will be displayed on your
+          <h4 class="profileSettings_label dream-goal__sub">your goal will be displayed on your
             home page!</h4>
 
           <input
@@ -154,9 +157,7 @@
             id="dreamgoal"
             placeholder="I am tracking my dreams to..."
           />
-          {{! Save Button}}
-          <button class="log_btn" type="button" id="ps_Save">save</button>
-
+          <button class="log_btn" type="button" id="goal_Save"> save goal</button>
         </form>
       </section>
     </div>

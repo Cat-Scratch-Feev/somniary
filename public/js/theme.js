@@ -38,3 +38,12 @@ function initThemeSelector() {
 
 initThemeSelector();
 
+function initGoal(){
+  let currentGoal= localStorage.getItem("dreamgoal") || ("what is your goal?");
+  let goalText = document.querySelector('.goal__text');
+
+  if(goalText){
+    goalText.innerHTML = currentGoal;
+  }
+}
+initGoal();
