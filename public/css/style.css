@@ -480,6 +480,19 @@ input[type=radio]:checked+label {
   background-color:var(--primary-lav);
   font-weight:bold;
 }
+
+input[type=text] {
+  padding-left: 20px;
+}
+
+input[type=password] {
+  padding-left: 20px;
+}
+
+textarea[type=text] {
+  padding-left: 20px;
+}
+
 /* ABOUT PAGE STYLES */
 #about_us_space{
   display: flex;
