@@ -47,20 +47,13 @@
         </header>
       </div>
       <!-- empty div to be filled with handlebars templates -->
-    <div class="panel">
-   
-        <div id="calendar">
-
-         </div>
-
-         <script>
-         document.addEventListener('DOMContentLoaded', () => {
-         const calendar = new VanillaCalendar('#calendar');
-            calendar.init();
-            });
-        </script>
-
-
+<div class="app">
+    <div class="app__main">
+			<div class="calendar">
+					<div id="calendar"></div>
+        </div>
+    </div>
+</div>
         <div class="footer">
           <footer>
                       <hr>
@@ -78,3 +71,7 @@
     ></script>
     <script src="./js/home.js"></script>
     <script src="./js/theme.js"></script>
+ 
+    <script src="./controllers/api/calendarWork.js"></script>
+   
+    

@@ -1,12 +1,8 @@
 :root {
-  --light-lavender: #c4b2e8;
-  --dark-purple: #5d38a0;
-  --lightest-lavender: #efe0ff;
-  --off-white: #fdf8ff;
   --bs-btn-active-border-color: #efe0ff;
   --bs-btn-active-bg: #efe0ff;
-  --bs-btn-active-border-color: #efe0ff;
-  --bs-btn-active-bg: #efe0ff;
+  --bs-btn-active-border-color: #EFE0FF;
+  --bs-btn-active-bg: #EFE0FF;
   --my-animation: 1s ease-in-out all 0s;
 }
 /* BASIC HOMEPAGE TEMPLATE STYLING*/
@@ -25,52 +21,38 @@ body {
   font-family: "Jost", sans-serif;
 }
 
-h1 {
-  color: var(--primary-purple);
-  font-size: 3em;
-  font-weight: 500;
-}
-
-h2 {
-  font-size: 2em;
-}
-
 footer {
   padding: 30px 0px;
   font-family: "Jost", sans-serif;
   text-align: center;
 }
-
+/* page stylings*/
+/*page title*/
+.page__title{
+  font-size:4.5rem;
+  color:var(--primary-purple);
+}
+/* page body title*/
+.page_body__title{
+  font-size:2rem;
+}
+/*page body subtitle*/
+.page_body__subtitle{
+  font-size:1.25em;
+}
+/*page body text*/
 .footer {
   width: 65%;
   margin-top: 3rem;
 }
-.footer__title {
-  color: var(--primary-purple);
-  font-weight: bold;
+.footer__title{
+  color:var(--primary-purple);
+  font-weight:bold;
 }
 .subheading {
   font-size: 32px;
 }
 
-.bold {
-  font-weight: 800;
-}
-
-/* LOG IN and SIGN UP PAGE */
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.header-title,
-.bold {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-/* WHOLE PAGE CONTAINER -- THE LIGHTER DARKER PURPLE AREA */
 
 .page__container {
   background-color: var(--primary-lav);
@@ -80,17 +62,15 @@ header {
   min-height: 100vh;
 }
 
-/* THIS IS NOT AFFECTING NOTHING */
-/* .intro__container {
+.intro__container {
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
   width: 100%;
   height: auto;
-} */
+}
 
-/* .intro {
+.intro {
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -98,9 +78,8 @@ header {
   margin-bottom: 0;
   justify-content: center;
   padding-top: 10vh;
-} */
+}
 
-/* LOGIN CREDITS CONTAINER */
 .panel__title {
   padding-top: 10vh;
 }
@@ -109,109 +88,72 @@ header {
   width: 100%;
   min-height: 65vh;
   background-color: var(--primary-lightlav);
-  border-radius: 40% 40% 0% 0% / 100% 100% 65% 65%;
+  border-top-left-radius: 300px;
+  border-top-right-radius:300px;
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
   flex-grow: 1;
-  /* overflow: hidden;  */
+  overflow: hidden;
   margin-top: 2rem;
 }
 
-.credit_form {
-  font-size: large;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 1px 10px;
-  margin: 10px;
-}
-label {
-  padding: 20px;
-  color: #5d38a0;
-}
-input {
-  border-radius: 20px;
-  padding: 5px 20px;
-  margin: 5px;
-}
-
-/* SIGN UP FORM */
-/* PASSWORD REQUIREMENT */
-#pass-require {
-  margin: 2px;
-  color: silver;
-}
-
-/* LOGIN BUTTON TEXT COLOR ONLY  */
-#btn_text {
+.btn_text {
   color: white;
 }
 
-/* THIS IS NOT AFFECTING NOTHING */
-/* .signup, 
-.login {
-  display: flex;
-  justify-content: center; 
-  align-items: center;
-  flex-direction: column;
-  width: 50%; 
+/*LOGIN AND SIGNUP STYLING*/
+.login_page__title, .login_form{
+  display:flex;
+  justify-content:center;
+  
+}
+.login_span{
+  white-space:pre;
+  font-weight:bold;
+  color:var(--primary-purple);
+  display:inline-block;
+}
+
+.login_span:hover, .login_span:hover span{
+  font-weight:bolder;
+}
+
+.login_page__title {
   padding-top: 10vh;
-} */
-
-/* THE LOGIN and SIGNUP  BUTTON */
-
-.signup_btn,
-.login_btn {
-  background-color: var(--primary-purple);
-  /* width: 10rem; */
-  /* height: 3rem; */
-  border: 2px;
-  border-radius: 40px;
-  border-color: transparent;
-  margin: 10px;
-  width: 8rem;
-
-  /* margin-top: 2rem; */
+  flex-flow:row wrap;
 }
-
-button:hover {
-  transition: 0.5s all ease-in-out 0s;
-  padding: 5px 5px;
-  padding: 10px 15px;
-  width: 8rem;
-}
-
-/* REGISTER LINK */
-a,
-.signup-link {
+.panel__title, .login_switch__link {
+  margin:0 auto;
+  color:var(--primary-purple);
+  margin-bottom:1rem;
   text-decoration: none;
-  color: #ae8cf2;
+  text-align:center;
+}
+.login_switch__link:hover{
+  text-decoration:none;
+  color:var(--primary-purple);
+  font-weight:bolder;
+}
+/*OVERRIDE BROWSER CHANGING STYLING ON AUTOFILLED INPUTS*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
 }
 
-.signup-link:hover,
-a:hover {
-  color: #c4b2e8;
-  text-decoration: none;
+.login_form{
+  width:100%;
+  flex-flow: column wrap;
 }
-h5 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#pass-require{
+  text-align:center;
+  margin:1rem;
 }
+  
+.return_btn, .collective_btn, .journal_btn, .dreamlog_btn {
 
-#reg-request {
-  color: #ae8cf2;
-}
-
-/* END OF LOGIN PAGE AND SIGN UP CSS */
-
-.return_btn,
-.collective_btn,
-.journal_btn,
-.dreamlog_btn {
   cursor: pointer;
 }
 
@@ -219,9 +161,13 @@ h5 {
 header {
   width: 100%;
 }
+
 .page__title,
 .offcanvas-title {
   font-weight: bolder;
+}
+.offcanvas-title{
+  font-size:3rem;
 }
 .main__intro {
   display: flex;
@@ -229,17 +175,16 @@ header {
   justify-content: center;
   align-items: center;
 }
-.mobile-nav__button,
-.btn-secondary {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  border-style: none;
-  background-color: var(--primary-lightlav);
-  margin: 2rem;
+.mobile-nav__button, .btn-secondary{
+  width:3rem;
+  height:3rem;
+  border-radius:50%;
+  border-style:none;
+  background-color:var(--primary-lightlav);
+  margin:2rem;
 }
-.btn.btn-primary {
-  background-color: var(--primary-lightlav);
+.btn.btn-primary{
+  background-color:var(--primary-lightlav);
 }
 .profile__button {
   align-self: flex-end;
@@ -253,28 +198,28 @@ header {
   cursor: pointer;
 }
 
-.nav__item {
+.nav__item, .mnav_item{
   margin: 2rem;
   font-weight: bold;
+  font-size:1.5rem;
 }
 .nav__icon {
   margin: 0.5rem;
 }
 
-.btn-secondary {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  border-style: none;
-  background-color: var(--primary-lightlav);
-  margin: 2rem;
+.btn-secondary{
+  width:3rem;
+  height:3rem;
+  border-radius:50%;
+  border-style:none;
+  background-color:var(--primary-lightlav);
+  margin:2rem;
 }
 .btn-secondary:hover {
-  background-color: var(--primary-lightlav);
+  background-color:var(--primary-lightlav);
 }
-.dropdown-toggle {
-  --bs-offcanvas-width: 300px;
-  color: var(--primary-purple);
+.dropdown-toggle{--bs-offcanvas-width: 300px;
+  color:var(--primary-purple);
 }
 
 .icon__nav {
@@ -283,10 +228,11 @@ header {
   justify-content: flex-end;
 }
 
-.offcanvas-title {
-  color: var(--primary-purple);
+.offcanvas-title{
+  color:var(--primary-purple);
+
 }
-.offcanvas-lg {
+.offcanvas-lg{
   background-color: var(--primary-lav);
 
   border-radius: 0 7% 7% 0;
@@ -300,95 +246,60 @@ header {
 }
 
 /*profile settings styling*/
-.profileSettings_body {
+
+.profileSettings_header {
+  color: var(--primary-purple);
+  font-size: 2rem;
+  text-align:center;
+  margin-bottom:1rem;
+  margin-top:2rem;
+}
+
+.profileSettings_label {
+  margin-top:0.5rem;
+  font-size: 1em;
+}
+
+.profileSettings_username, .profileSettings_email{
+height: 35px;
+width: 100%;
+}
+
+.profileSettings_username, .profileSettings_email, #dreamgoal{
+  border-radius: 33px;
+  background-color:var(--primary-light);
+  border-color:transparent;
+}
+.profileSettings_username::placeholder, .profileSettings_email::placeholder , #dreamgoal::placeholder, .log_input__container::placeholder{
+  color:var(--primary-purple);
+}
+#dreamgoal {
+  height: 100px;
+  width:100%;
+}
+.profile_form{
+  display:flex;
+  flex-flow:column wrap;
+  align-content:center;
+  justify-content:center;
+}
+/* HOME PAGE STYLING*/
+
+.homepage__container{
   margin-top: 1.5rem;
   width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
+
+  tent: center;
   flex-wrap: wrap;
 }
-
-.profileSettings_header {
-  color: var(--primary-purple);
-  font-size: 2rem;
-  text-align: center;
-  margin: 1rem;
-}
-
-.profileSettings_label {
-  margin-top: 0.5rem;
-  font-size: 1em;
-}
-
-.profileSettings_username,
-.profileSettings_email {
-  height: 35px;
-  width: 100%;
-}
-
-.profileSettings_username,
-.profileSettings_email,
-#dreamgoal {
-  border-radius: 33px;
-  background-color: var(--primary-light);
-  border-color: transparent;
-}
-.profileSettings_username::placeholder,
-.profileSettings_email::placeholder,
-#dreamgoal::placeholder {
-  color: var(--primary-purple);
-}
-#dreamgoal {
-  height: 100px;
-  width: 100%;
-}
-#ps_Save {
-  background-color: var(--primary-purple);
-  color: var(--primary-light);
-  width: 10rem;
-  height: 3rem;
-  border-radius: 50px;
-  border-color: transparent;
-  margin-top: 2rem;
-  justify-self: center;
-  align-self: center;
-}
-.profile_form {
-  display: flex;
-  flex-flow: column wrap;
-  align-content: center;
-  justify-content: center;
-}
-/* HOME PAGE STYLING*/
-
-.homepage__container {
-  margin-top: 1.5rem;
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  flex-wrap: wrap;
-}
-/* WELCOME ADD ONS*/
-.welcome__header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  color: var(--primary-purple);
-  margin: auto;
-  text-align: center;
-  margin: 1rem;
-}
-
-.welcome__header {
-  color: var(--primary-purple);
-  margin: auto;
-  text-align: center;
-  margin: 1rem;
+.welcome__header, .reflection__title{
+  color:var(--primary-purple);
+  margin:auto;
+  text-align:center;
+  margin:1rem;
 }
 
 .dashboard__container,
@@ -397,35 +308,35 @@ header {
   margin: 1rem;
 }
 
-.dashboard__card {
-  background-color: var(--primary-light);
-  display: flex;
+.dashboard__card{
+  background-color:var(--primary-light);
+  display:flex;
   flex-flow: row wrap;
-  justify-content: space-around;
-  align-content: center;
-  height: 7rem;
-  border-radius: 35px;
+  justify-content:space-around;
+  align-content:center;
+  height:7rem;
+  border-radius:35px;
 }
-.dashboard__prof {
-  width: 4rem;
-  height: 4rem;
-  border-radius: 50%;
-  background-color: var(--primary-lightlav);
-  border-color: transparent;
+.dashboard__prof{
+  width:4rem;
+  height:4rem;
+  border-radius:50%;
+  background-color:var(--primary-lightlav);
+  border-color:transparent;
+  
 }
 
 .goal__text {
   margin: auto 0;
 }
-
 /*cards have styles that can be consolidated*/
 
-.reflection__title {
-  color: var(--primary-purple);
+.reflection__title{
+  color:var(--primary-purple);
 }
-.dream__card {
-  border-radius: 35px;
-  background-color: var(--primary-light);
+.dream__card{
+  border-radius:35px;
+  background-color:var(--primary-light);
 
   margin-bottom: 1rem;
   display: flex;
@@ -440,55 +351,41 @@ header {
   flex-flow: row wrap;
 }
 
-.dream__tag {
-  border-radius: 15px;
-  width: 20%;
-  background-color: var(--primary-lightlav);
-  margin: 1rem;
-  height: 2rem;
-  text-align: center;
-}
-.viewall__button {
-  border-radius: 35px;
-  height: 3rem;
-  background-color: var(--primary-purple);
-  color: var(--primary-light);
-  border-color: transparent;
-  margin: auto;
+.dream__tag{
+  border-radius:15px;
+  width:20%;
+  background-color:var(--primary-lightlav);
+  margin:1rem;
+  height:2rem;
+  text-align:center;
+  flex-grow: inherit;
 }
 /*JOURNAL STYLING*/
-.journal__container {
-  margin-top: 1.5rem;
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  flex-wrap: wrap;
-}
-.journal-header__container {
+
+.journal-header__container, .log_header__container {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
   align-content: center;
+  margin:1rem;
 }
 
-.journal-header {
-  color: var(--primary-purple);
-  margin: auto;
+.journal-header{
+  color:var(--primary-purple);
+  margin:auto;
   text-align: center;
   margin: 1rem;
   font-weight: bold;
 }
+.dream_title{
+  color:var(--primary-purple);
+}
+.journal-subheader{
+  text-align:center;
+  color:var(--primary-purple);
 
-.journal-subheader {
-  width: 75%;
-  text-align: center;
-  color: var(--primary-purple);
 }
-.journal-dreams__container {
-  width: 80%;
-}
+
 .dream-j__card {
   width: 100%;
 }
@@ -507,53 +404,44 @@ header {
   align-self: flex-start;
   margin: 2rem;
 }
-.logpage__container {
-  margin-top: 1.5rem;
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  flex-wrap: wrap;
-}
+
 .log_form__container {
   width: 100%;
 }
 .log_header__container {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-content: center;
   text-align: center;
+  margin:2rem;
 }
 .log_form {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-flow: column wrap;
   /*align-content:center;*/
   /*width:80%;*/
 }
 
-.log_input__container {
-  border-radius: 35px;
-  height: 2rem;
-  border-color: transparent;
-  background-color: var(--primary-light);
+.log_input__container{
+  border-radius:35px;
+  height:2rem;
+  border-color:transparent;
+  background-color:var(--primary-light);
 }
-.log_btn {
-  width: 30%;
-  margin: 2rem;
-  background-color: var(--primary-purple);
-  border-radius: 35px;
-  color: var(--primary-light);
-  border-color: transparent;
-  height: 2rem;
-  justify-self: center;
-  align-self: center;
+.log_btn{
+  width:30%;
+  margin:2rem;
+  background-color:var(--primary-purple);
+  border-radius:35px;
+  color:var(--primary-light);
+  border-color:transparent;
+  height:3rem;
+  justify-self:center;
+  align-self:center;
+  padding:.25rem;
 }
-input::placeholder,
-textarea::placeholder {
+.dream__author{
+  float:right;
+}
+input::placeholder, textarea::placeholder{
+
   text-indent: 1rem;
 }
 .loghidden {
@@ -562,40 +450,45 @@ textarea::placeholder {
   opacity: 0;
 }
 .dream_type__button {
-  width: 30%;
-  height: 2rem;
-  border-radius: 35px;
-  background-color: var(--primary-light);
-  color: black;
-  text-align: center;
-  margin-bottom: 1rem;
+  width:30%;
+  height:2rem;
+  border-radius:35px;
+  background-color:var(--primary-light);
+  color:black;
+  text-align:center;
+  margin-bottom:1rem;
 }
 /* edit of checkbox and default styles*/
-input[type="checkbox"] + label {
+input[type=checkbox]+label {
   color: var(--primary-purple);
 }
 
-input[type="checkbox"]:checked + label {
+input[type=checkbox]:checked+label {
   color: var(--primary-light);
-  background-color: var(--primary-lav);
-  font-weight: bold;
+  background-color:var(--primary-lav);
+  font-weight:bold;
 }
-input[type="radio"] + label {
+input[type=radio]+label {
   color: var(--primary-purple);
 }
 
-input[type="radio"]:checked + label {
+input[type=radio]:checked+label {
   color: var(--primary-light);
-  background-color: var(--primary-lav);
-  font-weight: bold;
+  background-color:var(--primary-lav);
+  font-weight:bold;
 }
-
 /* ABOUT PAGE STYLES */
 #about_us_space {
   width: 60%;
 }
 #about_us_text {
   font-size: 20px;
+}
+
+#calendar {
+  display: block;
+  height: 100px;
+  width: 100px;
 }
 
 /* MEDIA QUERIES FOR RESPONSIVE DESIGN*/
@@ -606,9 +499,6 @@ input[type="radio"]:checked + label {
   .hidden {
     display: none;
   }
-  .panel {
-    border-radius: 60% 60% 0% 0% / 100% 100% 65% 65%;
-  }
   .offcanvas-lg.offcanvas-start {
     width: 65%;
   }
@@ -616,12 +506,12 @@ input[type="radio"]:checked + label {
     align-content: center;
     justify-content: center;
   }
+  .dream__tag {
+    width: 60%;
+  }
 }
 
 @media (max-width: 600px) {
-  .panel {
-    border-radius: 70% 70% 0% 0% / 100% 100% 65% 65%;
-  }
   .dream__tag {
     width: 60%;
   }
@@ -642,7 +532,966 @@ input[type="radio"]:checked + label {
   .dream_type__button {
     width: 45%;
   }
-  .profileSettings_header {
-    font-size: 1.7rem;
+  .profileSettings_header{
+    font-size:1.7rem;
   }
 }
+
+
+/*calendar test*/
+/*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+
+ * {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: sans-serif; /* 1 */
+	-ms-text-size-adjust: 100%; /* 2 */
+	-webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+
+body {
+	margin: 0;
+}
+
+/* HTML5 display definitions
+	 ========================================================================== */
+
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+	display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+
+audio,
+canvas,
+progress,
+video {
+	display: inline-block; /* 1 */
+	vertical-align: baseline; /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9.
+ * Hide the `template` element in IE, Safari, and Firefox < 22.
+ */
+
+[hidden],
+template {
+	display: none;
+}
+
+/* Links
+	 ========================================================================== */
+
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+
+a {
+	background: transparent;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover {
+	outline: 0;
+}
+
+/* Text-level semantics
+	 ========================================================================== */
+
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+
+b,
+strong {
+	font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+
+dfn {
+	font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+
+mark {
+	background: #ff0;
+	color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+
+small {
+	font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -0.5em;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+/* Embedded content
+	 ========================================================================== */
+
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+
+img {
+	border: 0;
+}
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+
+svg:not(:root) {
+	overflow: hidden;
+}
+
+/* Grouping content
+	 ========================================================================== */
+
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+
+figure {
+	margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+
+hr {
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+
+pre {
+	overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+
+code,
+kbd,
+pre,
+samp {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+
+/* Forms
+	 ========================================================================== */
+
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	color: inherit; /* 1 */
+	font: inherit; /* 2 */
+	margin: 0; /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10.
+ */
+
+button {
+	overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8+, and Opera
+ * Correct `select` style inheritance in Firefox.
+ */
+
+button,
+select {
+	text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+
+	cursor: pointer; /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+html input[disabled] {
+	cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+input {
+	line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing: border-box; /* 1 */
+	padding: 0; /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+
+input[type="search"] {
+	
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box; /* 2 */
+	box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+	border: 1px solid #c0c0c0;
+	margin: 0 2px;
+	padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+
+legend {
+	border: 0; /* 1 */
+	padding: 0; /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9.
+ */
+
+textarea {
+	overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+
+optgroup {
+	font-weight: bold;
+}
+
+/* Tables
+	 ========================================================================== */
+
+/**
+ * Remove most spacing between table cells.
+ */
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+td,
+th {
+	padding: 0;
+}
+/*!
+ * Datepicker for Bootstrap
+ *
+ * Copyright 2012 Stefan Petre
+ * Improvements by Andrew Rowls
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ */
+.datepicker {
+  padding: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  direction: ltr;
+  /*.dow {
+    border-top: 1px solid #ddd !important;
+  }*/
+}
+.datepicker-inline {
+  width: 220px;
+}
+.datepicker.datepicker-rtl {
+  direction: rtl;
+}
+.datepicker.datepicker-rtl table tr td span {
+  float: right;
+}
+.datepicker-dropdown {
+  top: 0;
+  left: 0;
+}
+.datepicker-dropdown:before {
+  content: '';
+  display: inline-block;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #ccc;
+  border-top: 0;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+}
+.datepicker-dropdown:after {
+  content: '';
+  display: inline-block;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #ffffff;
+  border-top: 0;
+  position: absolute;
+}
+.datepicker-dropdown.datepicker-orient-left:before {
+  left: 6px;
+}
+.datepicker-dropdown.datepicker-orient-left:after {
+  left: 7px;
+}
+.datepicker-dropdown.datepicker-orient-right:before {
+  right: 6px;
+}
+.datepicker-dropdown.datepicker-orient-right:after {
+  right: 7px;
+}
+.datepicker-dropdown.datepicker-orient-top:before {
+  top: -7px;
+}
+.datepicker-dropdown.datepicker-orient-top:after {
+  top: -6px;
+}
+.datepicker-dropdown.datepicker-orient-bottom:before {
+  bottom: -7px;
+  border-bottom: 0;
+  border-top: 7px solid #999;
+}
+.datepicker-dropdown.datepicker-orient-bottom:after {
+  bottom: -6px;
+  border-bottom: 0;
+  border-top: 6px solid #ffffff;
+}
+.datepicker > div {
+  display: none;
+}
+.datepicker.days div.datepicker-days {
+  display: block;
+}
+.datepicker.months div.datepicker-months {
+  display: block;
+}
+.datepicker.years div.datepicker-years {
+  display: block;
+}
+.datepicker table {
+  margin: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.datepicker td,
+.datepicker th {
+  text-align: center;
+  width: 20px;
+  height: 40px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border: none;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+.table-striped .datepicker table tr td,
+.table-striped .datepicker table tr th {
+  background-color: transparent;
+}
+.datepicker table tr td.day:hover,
+.datepicker table tr td.day.focused {
+  background: #eeeeee;
+  cursor: pointer;
+}
+.datepicker table tr td.old,
+.datepicker table tr td.new {
+  color: #999999;
+}
+.datepicker table tr td.disabled,
+.datepicker table tr td.disabled:hover {
+  background: none;
+  color: #999999;
+  cursor: default;
+}
+.datepicker table tr td.today,
+.datepicker table tr td.today:hover,
+.datepicker table tr td.today.disabled,
+.datepicker table tr td.today.disabled:hover {
+  background-color: #fde19a;
+
+  color: #000 !important;
+}
+.datepicker table tr td.today:hover,
+.datepicker table tr td.today:hover:hover,
+.datepicker table tr td.today.disabled:hover,
+.datepicker table tr td.today.disabled:hover:hover,
+.datepicker table tr td.today:active,
+.datepicker table tr td.today:hover:active,
+.datepicker table tr td.today.disabled:active,
+.datepicker table tr td.today.disabled:hover:active,
+.datepicker table tr td.today.active,
+.datepicker table tr td.today:hover.active,
+.datepicker table tr td.today.disabled.active,
+.datepicker table tr td.today.disabled:hover.active,
+.datepicker table tr td.today.disabled,
+.datepicker table tr td.today:hover.disabled,
+.datepicker table tr td.today.disabled.disabled,
+.datepicker table tr td.today.disabled:hover.disabled,
+.datepicker table tr td.today[disabled],
+.datepicker table tr td.today:hover[disabled],
+.datepicker table tr td.today.disabled[disabled],
+.datepicker table tr td.today.disabled:hover[disabled] {
+  background-color: #ff8c00;
+}
+.datepicker table tr td.today:active,
+.datepicker table tr td.today:hover:active,
+.datepicker table tr td.today.disabled:active,
+.datepicker table tr td.today.disabled:hover:active,
+.datepicker table tr td.today.active,
+.datepicker table tr td.today:hover.active,
+.datepicker table tr td.today.disabled.active,
+.datepicker table tr td.today.disabled:hover.active {
+  background-color: #fbf069 \9;
+}
+.datepicker table tr td.today:hover:hover {
+  color: #000;
+}
+.datepicker table tr td.today.active:hover {
+  color: #fff;
+}
+.datepicker table tr td.range,
+.datepicker table tr td.range:hover,
+.datepicker table tr td.range.disabled,
+.datepicker table tr td.range.disabled:hover {
+  background: #eeeeee;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.datepicker table tr td.range.today,
+.datepicker table tr td.range.today:hover,
+.datepicker table tr td.range.today.disabled,
+.datepicker table tr td.range.today.disabled:hover {
+  background-color: #ff8c00;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.datepicker table tr td.range.today:hover,
+.datepicker table tr td.range.today:hover:hover,
+.datepicker table tr td.range.today.disabled:hover,
+.datepicker table tr td.range.today.disabled:hover:hover,
+.datepicker table tr td.range.today:active,
+.datepicker table tr td.range.today:hover:active,
+.datepicker table tr td.range.today.disabled:active,
+.datepicker table tr td.range.today.disabled:hover:active,
+.datepicker table tr td.range.today.active,
+.datepicker table tr td.range.today:hover.active,
+.datepicker table tr td.range.today.disabled.active,
+.datepicker table tr td.range.today.disabled:hover.active,
+.datepicker table tr td.range.today.disabled,
+.datepicker table tr td.range.today:hover.disabled,
+.datepicker table tr td.range.today.disabled.disabled,
+.datepicker table tr td.range.today.disabled:hover.disabled,
+.datepicker table tr td.range.today[disabled],
+.datepicker table tr td.range.today:hover[disabled],
+.datepicker table tr td.range.today.disabled[disabled],
+.datepicker table tr td.range.today.disabled:hover[disabled] {
+  background-color: #f3e97a;
+}
+.datepicker table tr td.range.today:active,
+.datepicker table tr td.range.today:hover:active,
+.datepicker table tr td.range.today.disabled:active,
+.datepicker table tr td.range.today.disabled:hover:active,
+.datepicker table tr td.range.today.active,
+.datepicker table tr td.range.today:hover.active,
+.datepicker table tr td.range.today.disabled.active,
+.datepicker table tr td.range.today.disabled:hover.active {
+  background-color: #efe24b \9;
+}
+.datepicker table tr td.selected,
+.datepicker table tr td.selected:hover,
+.datepicker table tr td.selected.disabled,
+.datepicker table tr td.selected.disabled:hover {
+  background-color: #ff8c00;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+.datepicker table tr td.selected:hover,
+.datepicker table tr td.selected:hover:hover,
+.datepicker table tr td.selected.disabled:hover,
+.datepicker table tr td.selected.disabled:hover:hover,
+.datepicker table tr td.selected:active,
+.datepicker table tr td.selected:hover:active,
+.datepicker table tr td.selected.disabled:active,
+.datepicker table tr td.selected.disabled:hover:active,
+.datepicker table tr td.selected.active,
+.datepicker table tr td.selected:hover.active,
+.datepicker table tr td.selected.disabled.active,
+.datepicker table tr td.selected.disabled:hover.active,
+.datepicker table tr td.selected.disabled,
+.datepicker table tr td.selected:hover.disabled,
+.datepicker table tr td.selected.disabled.disabled,
+.datepicker table tr td.selected.disabled:hover.disabled,
+.datepicker table tr td.selected[disabled],
+.datepicker table tr td.selected:hover[disabled],
+.datepicker table tr td.selected.disabled[disabled],
+.datepicker table tr td.selected.disabled:hover[disabled] {
+  background-color: #808080;
+}
+.datepicker table tr td.selected:active,
+.datepicker table tr td.selected:hover:active,
+.datepicker table tr td.selected.disabled:active,
+.datepicker table tr td.selected.disabled:hover:active,
+.datepicker table tr td.selected.active,
+.datepicker table tr td.selected:hover.active,
+.datepicker table tr td.selected.disabled.active,
+.datepicker table tr td.selected.disabled:hover.active {
+  background-color: #666666 \9;
+}
+
+.datepicker table tr td.active:hover,
+.datepicker table tr td.active:hover:hover,
+.datepicker table tr td.active.disabled:hover,
+.datepicker table tr td.active.disabled:hover:hover,
+.datepicker table tr td.active:active,
+.datepicker table tr td.active:hover:active,
+.datepicker table tr td.active.disabled:active,
+.datepicker table tr td.active.disabled:hover:active,
+.datepicker table tr td.active.active,
+.datepicker table tr td.active:hover.active,
+.datepicker table tr td.active.disabled.active,
+.datepicker table tr td.active.disabled:hover.active,
+.datepicker table tr td.active.disabled,
+.datepicker table tr td.active:hover.disabled,
+.datepicker table tr td.active.disabled.disabled,
+.datepicker table tr td.active.disabled:hover.disabled,
+.datepicker table tr td.active[disabled],
+.datepicker table tr td.active:hover[disabled],
+.datepicker table tr td.active.disabled[disabled],
+.datepicker table tr td.active.disabled:hover[disabled] {
+  background-color: #ff8c00;
+
+  color: #fff !important;
+}
+.datepicker table tr td.active:active,
+.datepicker table tr td.active:hover:active,
+.datepicker table tr td.active.disabled:active,
+.datepicker table tr td.active.disabled:hover:active,
+.datepicker table tr td.active.active,
+.datepicker table tr td.active:hover.active,
+.datepicker table tr td.active.disabled.active,
+.datepicker table tr td.active.disabled:hover.active {
+  background-color: #003399 \9;
+}
+.datepicker table tr td span {
+  display: block;
+  width: 23%;
+  height: 54px;
+  line-height: 54px;
+  float: left;
+  margin: 1%;
+  cursor: pointer;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.datepicker table tr td span:hover {
+  background: #eeeeee;
+}
+.datepicker table tr td span.disabled,
+.datepicker table tr td span.disabled:hover {
+  background: none;
+  color: #999999;
+  cursor: default;
+}
+.datepicker table tr td span.active,
+.datepicker table tr td span.active:hover,
+.datepicker table tr td span.active.disabled,
+.datepicker table tr td span.active.disabled:hover {
+  background-color: #ff8c00;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+.datepicker table tr td span.active:hover,
+.datepicker table tr td span.active:hover:hover,
+.datepicker table tr td span.active.disabled:hover,
+.datepicker table tr td span.active.disabled:hover:hover,
+.datepicker table tr td span.active:active,
+.datepicker table tr td span.active:hover:active,
+.datepicker table tr td span.active.disabled:active,
+.datepicker table tr td span.active.disabled:hover:active,
+.datepicker table tr td span.active.active,
+.datepicker table tr td span.active:hover.active,
+.datepicker table tr td span.active.disabled.active,
+.datepicker table tr td span.active.disabled:hover.active,
+.datepicker table tr td span.active.disabled,
+.datepicker table tr td span.active:hover.disabled,
+.datepicker table tr td span.active.disabled.disabled,
+.datepicker table tr td span.active.disabled:hover.disabled,
+.datepicker table tr td span.active[disabled],
+.datepicker table tr td span.active:hover[disabled],
+.datepicker table tr td span.active.disabled[disabled],
+.datepicker table tr td span.active.disabled:hover[disabled] {
+  background-color: #ff8c00;
+}
+.datepicker table tr td span.active:active,
+.datepicker table tr td span.active:hover:active,
+.datepicker table tr td span.active.disabled:active,
+.datepicker table tr td span.active.disabled:hover:active,
+.datepicker table tr td span.active.active,
+.datepicker table tr td span.active:hover.active,
+.datepicker table tr td span.active.disabled.active,
+.datepicker table tr td span.active.disabled:hover.active {
+  background-color: #003399 \9;
+}
+.datepicker table tr td span.old,
+.datepicker table tr td span.new {
+  color: #999999;
+}
+.datepicker th.datepicker-switch {
+  width: 145px;
+}
+.datepicker thead tr:first-child th,
+.datepicker tfoot tr th {
+  cursor: pointer;
+
+  color: #ff8c00;
+}
+.datepicker thead tr:first-child th:hover,
+.datepicker tfoot tr th:hover {
+  background: #eeeeee;
+}
+.datepicker .cw {
+  font-size: 10px;
+  width: 12px;
+  padding: 0 2px 0 5px;
+  vertical-align: middle;
+}
+.datepicker thead tr:first-child th.cw {
+  cursor: default;
+  background-color: transparent;
+}
+.input-append.date .add-on i,
+.input-prepend.date .add-on i {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+}
+.input-daterange input {
+  text-align: center;
+}
+.input-daterange input:first-child {
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+}
+.input-daterange input:last-child {
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+}
+.input-daterange .add-on {
+  display: inline-block;
+  width: auto;
+  min-width: 16px;
+  height: 20px;
+  padding: 4px 5px;
+  font-weight: normal;
+  line-height: 20px;
+  text-align: center;
+  text-shadow: 0 1px 0 #ffffff;
+  vertical-align: middle;
+  background-color: #eeeeee;
+  border: 1px solid #ccc;
+  margin-left: -5px;
+  margin-right: -5px;
+}
+.datepicker.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  float: left;
+  display: none;
+  min-width: 160px;
+  list-style: none;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  *border-right-width: 2px;
+  *border-bottom-width: 2px;
+  color: #333333;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+}
+.datepicker.dropdown-menu th,
+.datepicker.datepicker-inline th,
+.datepicker.dropdown-menu td,
+.datepicker.datepicker-inline td {
+  padding: 4px 5px;
+}
+
+.datepicker .dow {
+
+  border-bottom: 1px solid #e7e7e7;
+
+  color: #9b8079;
+  font-size: 13px;
+}
+
+.datepicker-months .prev,
+.datapicker-months .next,
+.datepicker-years .prev,
+.datepicker-years .next {
+  width: 58px;
+}
+
+.datepicker-days tbody td:nth-child(6),
+.datepicker-days tbody td:nth-child(7) {
+  color: #D44;
+}
+
+@import url("normalize.css");
+@import url("datepicker.css");
+
+body {background: #eeeae9;}
+
+/* app */
+.charset {
+	box-shadow: 1px 1px 10px #000;
+}
+
+.app {
+	width: 969px; height: 580px;
+	margin: 100px auto;
+}
+.app:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+	.app__side {
+		background: #333;
+		width: 35%; height: 100%;
+		padding: 40px;
+		float: left;
+
+		color: #ff8c00;
+	}
+	.app__main {
+		background: #fbf9fa;
+		width: 65%; height: 100%;
+		float: left;
+		padding: 40px;
+	}
+
+
+
+/* b-calendar */
+.calendar {
+	padding: 60px;
+}
+	.calendar .datepicker {
+		width: 100%;
+	}
+		.calendar .datepicker table {
+			width: 100%;
+		}

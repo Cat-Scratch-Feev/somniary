@@ -2,45 +2,47 @@
   <div class="intro__container main__intro">
     <header>
       <!--navigation to be rendered in from handlebars templates conditionally based upon login status -->
-      <h1 class="header-title">welcome to
-        <span class="bold">somniary !</span>your dreamspace</h1>
+      <h1 class="header-title login_page__title">welcome to <span class="login_span"> somniary, </span> your dreamspace
+      </h1>
     </header>
   </div>
   <!-- empty div to be filled with handlebars templates -->
   <div class="panel">
-    <h2 class="panel__title">sign up!</h2>
+    <section class="homepage__container">
+    <h2 class="panel__title page_body__title">sign up!</h2>
     <!-- two form fields, one with username, one with pass -->
-    <form action="/api/users" method="post" class="credit_form signup_form">
-      <label for="email">email *</label>
-      <input
+    <form action="/api/users" method="post" class="credit_form login_form signup_form">
+      <label for="email">email</label>
+      <input class="log_input__container"
         type="email"
         name="email"
         id="email_signup"
         placeholder="enter email"
         required
       />
-      <label for="password">password *</label>
-      <h6 id="pass-require">passwords must be 8-16 characters in length</h6>
-      <input
-        type="password"
-        name="password"
-        id="password_signup"
-        placeholder="create password"
-        required
-      />
       <label for="username">username</label>
-      <input
+      <input class="log_input__container"
         type="text"
         name="username"
         id="username_signup"
         placeholder="create username"
         required
       />
+      <label for="password">password</label>
+      <input class="log_input__container"
+        type="password"
+        name="password"
+        id="password_signup"
+        placeholder="create password"
+        required
+      />
+      <h6 id="pass-require">passwords must be 8-16 characters in length</h6>
 
-      <button id="signup_btn" type="submit" formmethod="post">
+      <button class="log_btn" id="signup_btn" type="submit" formmethod="post">
         <span id="btn_text">Submit</span>
       </button>
     </form>
+    </section>
   </div>
 </div>
 <!--fontawesome import-->
