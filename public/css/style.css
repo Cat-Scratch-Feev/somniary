@@ -292,7 +292,7 @@ width: 100%;
   flex-direction: column;
   justify-content: center;
 
-  tent: center;
+  align-content: center;
   flex-wrap: wrap;
 }
 .welcome__header, .reflection__title{
