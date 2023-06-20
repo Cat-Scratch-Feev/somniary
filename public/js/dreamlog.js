@@ -15,7 +15,7 @@ form.addEventListener("submit", async (event) => {
       title: `${title}`,
       description: `${description}`,
       user_id: parseInt(localStorage.getItem("userID")),
-      tagIds: pasrseInt([selected]),
+      tagIds: parseInt([selected]),
     };
 
     const response = await fetch("/api/dreams/", {

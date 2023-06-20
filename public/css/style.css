@@ -165,7 +165,6 @@ input {
 
 .signup_btn,
 .login_btn {
-
   background-color: var(--primary-purple);
   /* width: 10rem; */
   /* height: 3rem; */
@@ -174,7 +173,7 @@ input {
   border-color: transparent;
   margin: 10px;
   width: 8rem;
- 
+
   /* margin-top: 2rem; */
 }
 
@@ -209,8 +208,10 @@ h5 {
 
 /* END OF LOGIN PAGE AND SIGN UP CSS */
 
-
-.return_btn, .collective_btn, .journal_btn, .dreamlog_btn {
+.return_btn,
+.collective_btn,
+.journal_btn,
+.dreamlog_btn {
   cursor: pointer;
 }
 
@@ -362,15 +363,14 @@ header {
 }
 /* HOME PAGE STYLING*/
 
-
-.homepage__container{
-  margin-top:1.5rem;
-  width:80%;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-content:center;
-  flex-wrap:wrap;
+.homepage__container {
+  margin-top: 1.5rem;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
 }
 /* WELCOME ADD ONS*/
 .welcome__header {
@@ -378,12 +378,12 @@ header {
   justify-content: center;
   align-items: center;
 
-  color:var(--primary-purple);
-  margin:auto;
-  text-align:center;
-  margin:1rem;
+  color: var(--primary-purple);
+  margin: auto;
+  text-align: center;
+  margin: 1rem;
 }
-  
+
 .welcome__header {
   color: var(--primary-purple);
   margin: auto;
