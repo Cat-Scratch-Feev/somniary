@@ -50,7 +50,7 @@
             required
             placeholder="describe your dream!"
           ></textarea>
-          <label for="dream_type">what type of dream did you have?</label>
+          <label class="dream_type__header" for="dream_type">what type of dream did you have?</label>
           <div class="dream_type__selection">
             <label class="dream_type__button" for="nightmare">nightmare</label>
             <input
@@ -68,7 +68,8 @@
               value="2"
               class="loghidden"
             />
-            <label class="dream_type__button" for="dream">dream</label>
+
+            <label class="dream_type__button" for="in-between">in-between</label>
             <input
               type="radio"
               name="dream_type"
@@ -77,6 +78,7 @@
               class="loghidden"
             />
 
+            <label class="dream_type__button" for="dream">dream</label>
           </div>
           <label for="dream_share">would you like to share your dream?</label>
           <div class="dream_share__selection">
