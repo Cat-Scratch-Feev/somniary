@@ -296,13 +296,6 @@ width: 100%;
   flex-wrap: wrap;
 }
 
-#about_us_space{
-  display: flex;
-  margin: auto;
-  flex-direction: column;
-  justify-content: center;
-}
-
 .welcome__header, .reflection__title{
   color:var(--primary-purple);
   margin:auto;
@@ -486,11 +479,24 @@ input[type=radio]:checked+label {
   font-weight:bold;
 }
 /* ABOUT PAGE STYLES */
-#about_us_space {
+#about_us_space{
+  display: flex;
   width: 60%;
+  margin: auto;
+  flex-direction: column;
+  justify-content: center;
 }
+
 #about_us_text {
   font-size: 20px;
+}
+
+#journal_link_intext{
+  color: var(--primary-purple);
+}
+
+#collective_link_intext{
+  color: var(--primary-purple);
 }
 
 #calendar {
