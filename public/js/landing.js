@@ -5,8 +5,8 @@ const animation = anime.timeline({
 
 animation.add({
   targets: "#start",
-  top: "2500px",
-  duration: 1250,
+  top: "2000px",
+  duration: 2000,
   easing: "easeInOutCirc",
 });
 
