@@ -10,12 +10,16 @@ form.addEventListener("submit", async (event) => {
     const selected = document.querySelector(
       'input[name="dream_type"]:checked'
     ).value;
+    const shared = document.querySelector(
+      'input[name="dream_share"]:checked'
+    ).value;
 
     const formData = {
       title: `${title}`,
       description: `${description}`,
+      is_shared: `${shared}`,
       user_id: parseInt(localStorage.getItem("userID")),
-      tagIds: parseInt([selected]),
+      tagIds: [parseInt(selected)],
     };
 
     const response = await fetch("/api/dreams/", {
@@ -27,6 +31,7 @@ form.addEventListener("submit", async (event) => {
     if (response.ok) {
       const dream = await response.json();
       console.log("Dream submitted!", dream);
+      document.location.replace("/journal");
     } else {
       const errorData = await response.json();
       console.log(errorData);
