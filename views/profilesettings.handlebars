@@ -1,100 +1,179 @@
 <div class="page__container">
-      <div class="intro__container main__intro">
-        <header>
-          <!--navigation to be rendered in from handlebars templates conditionally based upon login status -->
-          <div class="intro main__intro">
-            <!--Bootstrap dropstart component for user menu button-->
-            <section class="icon__nav">
-                <!--mobile navigation menu-->
-                    <button class="btn btn-primary d-lg-none mobile-nav__button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive"><i class="fa-solid fa-bars" style="color:5D38A0;"></i></button>
-                    <div class="offcanvas-lg offcanvas-start" tabindex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasResponsiveLabel">somniary</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-header">
-                        <ul class="mnav__list">
-                            <li class="mnav__item about_btn"><i class="fa-solid fa-cloud nav__icon" style="color:FDF8FF;"></i>about</li>
-                            <li class="mnav__item journal_btn"><i class="fa-solid fa-book nav__icon" style="color:5D38A0;"></i>journal</li>
-                            <li class="mnav__item dreamlog_btn"><i class="fa-solid fa-plus nav__icon" style="color:5D38A0;"></i>new dream</li>
-                            {{!-- <li class="mnav__item calendar_btn"><i class="fa-regular fa-calendar-days nav__icon" style="color:5D38A0;"></i>calendar</li> --}}
-                            <li class="mnav__item collective_btn"><i class="fa-solid fa-star nav__icon" style="color:5D38A0;"></i>collective</li>
-                        </ul>
-                    </div>
-                
-                </div>
-                <div class="btn-group dropstart">
-                    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-regular fa-user" style="color:5D38A0;"></i>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><button class="dropdown-item" type="button" id="settings_btn"><i class="fa-solid fa-gear" style="color:5D38A0;"></i> settings</button></li>
-                        <li><button class="dropdown-item" type="button" id="darkmode_btn"><i class="fa-regular fa-moon" style="color:5D38A0;"></i> dark mode</button></li>
-                        <li><button class="dropdown-item" type="button" id="logout_btn"><i class="fa-solid fa-arrow-right-from-bracket" style="color:5D38A0;"></i> sign out</button></li>
-                    <!-- Dropdown menu links -->
-                    </ul>
-                </div>
-            </section>
-            <h1 class="page__title return_btn">somniary</h1>
-            <nav>
-                <ul class="nav__list hidden">
-                    <li class="nav__item about_btn" id="about_btn"><i class="fa-solid fa-cloud nav__icon" style="color:FDF8FF;"></i> about</li>
-                    <li class="nav__item journal_btn" id="journal_btn"><i class="fa-solid fa-book nav__icon" style="color:5D38A0;"></i> journal</li>
-                    <li class="nav__item dreamlog_btn" id="dreamlog_btn"><i class="fa-solid fa-plus nav__icon" style="color:5D38A0;"></i> new dream</li>
-                    {{!-- <li class="nav__item calendar_btn" id="calendar_btn"><i class="fa-regular fa-calendar-days nav__icon" style="color:5D38A0;"></i> calendar</li> --}}
-                    <li class="nav__item collective_btn" id="collective_btn"><i class="fa-solid fa-star nav__icon" style="color:5D38A0;"></i> collective</li>
-                </ul>
-            </nav>
+  <div class="intro__container main__intro">
+    <header>
+      <!--navigation to be rendered in from handlebars templates conditionally based upon login status -->
+      <div class="intro main__intro">
+        <!--Bootstrap dropstart component for user menu button-->
+        <section class="icon__nav">
+          <!--mobile navigation menu-->
+          <button
+            class="btn btn-primary d-lg-none mobile-nav__button"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasResponsive"
+            aria-controls="offcanvasResponsive"
+          ><i class="fa-solid fa-bars" style="color:5D38A0;"></i></button>
+          <div
+            class="offcanvas-lg offcanvas-start"
+            tabindex="-1"
+            id="offcanvasResponsive"
+            aria-labelledby="offcanvasResponsiveLabel"
+          >
+            <div class="offcanvas-header">
+              <h5
+                class="offcanvas-title"
+                id="offcanvasResponsiveLabel"
+              >somniary</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                data-bs-target="#offcanvasResponsive"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-header">
+              <ul class="mnav__list">
+                <li class="mnav__item about_btn"><i
+                    class="fa-solid fa-cloud nav__icon"
+                    style="color:FDF8FF;"
+                  ></i>about</li>
+                <li class="mnav__item journal_btn"><i
+                    class="fa-solid fa-book nav__icon"
+                    style="color:5D38A0;"
+                  ></i>journal</li>
+                <li class="mnav__item dreamlog_btn"><i
+                    class="fa-solid fa-plus nav__icon"
+                    style="color:5D38A0;"
+                  ></i>new dream</li>
+                {{! <li class="mnav__item calendar_btn"><i class="fa-regular fa-calendar-days nav__icon" style="color:5D38A0;"></i>calendar</li> }}
+                <li class="mnav__item collective_btn"><i
+                    class="fa-solid fa-star nav__icon"
+                    style="color:5D38A0;"
+                  ></i>collective</li>
+              </ul>
+            </div>
+
           </div>
-        </header>
+          <div class="btn-group dropstart">
+            <button
+              type="button"
+              class="btn btn-secondary dropdown-toggle"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            ><i class="fa-regular fa-user" style="color:5D38A0;"></i>
+            </button>
+            <ul class="dropdown-menu">
+              <li><button
+                  class="dropdown-item"
+                  type="button"
+                  id="settings_btn"
+                ><i class="fa-solid fa-gear" style="color:5D38A0;"></i>
+                  settings</button></li>
+              <li><button
+                  class="dropdown-item"
+                  type="button"
+                  id="darkmode_btn"
+                ><i class="fa-regular fa-moon" style="color:5D38A0;"></i>
+                  dark mode</button></li>
+              <li><button class="dropdown-item" type="button" id="logout_btn"><i
+                    class="fa-solid fa-arrow-right-from-bracket"
+                    style="color:5D38A0;"
+                  ></i>
+                  sign out</button></li>
+              <!-- Dropdown menu links -->
+            </ul>
+          </div>
+        </section>
+        <h1 class="page__title return_btn">somniary</h1>
+        <nav>
+          <ul class="nav__list hidden">
+            <li class="nav__item about_btn" id="about_btn"><i
+                class="fa-solid fa-cloud nav__icon"
+                style="color:FDF8FF;"
+              ></i>
+              about</li>
+            <li class="nav__item journal_btn" id="journal_btn"><i
+                class="fa-solid fa-book nav__icon"
+                style="color:5D38A0;"
+              ></i>
+              journal</li>
+            <li class="nav__item dreamlog_btn" id="dreamlog_btn"><i
+                class="fa-solid fa-plus nav__icon"
+                style="color:5D38A0;"
+              ></i>
+              new dream</li>
+            {{! <li class="nav__item calendar_btn" id="calendar_btn"><i class="fa-regular fa-calendar-days nav__icon" style="color:5D38A0;"></i> calendar</li> }}
+            <li class="nav__item collective_btn" id="collective_btn"><i
+                class="fa-solid fa-star nav__icon"
+                style="color:5D38A0;"
+              ></i>
+              collective</li>
+          </ul>
+        </nav>
       </div>
-      <!-- empty div to be filled with handlebars templates -->
-      <div class="panel">
-          <div class="homepage__container">
-            {{! Profile Settings Title}}
-            <h2 class="profileSettings_header">profile settings</h2>
-            {{! Username Title with a form underneath}}
-            <section class="log_form__container">
+    </header>
+  </div>
+  <!-- empty div to be filled with handlebars templates -->
+  <div class="panel">
+    <div class="homepage__container">
+      {{! Profile Settings Title}}
+      <h2 class="profileSettings_header">profile settings</h2>
+      {{! Username Title with a form underneath}}
+      <section class="log_form__container">
 
-            <form class="profile_form">
-            <h3 class="profileSettings_label page-body__title">username</h3>
+        <form class="profile_form">
+          <h3 class="profileSettings_label page-body__title">username</h3>
 
-              <input class="profileSettings_username"type="text" id="username" placeholder="username" />
-            
-            {{! Email Title with a form underneath}}
-            <h3 class="profileSettings_label">email</h3>
-           
-              <input class="profileSettings_email"type="text" id="email" placeholder="email" />
-           
-            {{! Dream Tracking Goal Title
+          <input
+            class="profileSettings_username"
+            type="text"
+            id="username"
+            placeholder="username"
+          />
+
+          {{! Email Title with a form underneath}}
+          <h3 class="profileSettings_label">email</h3>
+
+          <input
+            class="profileSettings_email"
+            type="text"
+            id="email"
+            placeholder="email"
+          />
+
+          {{! Dream Tracking Goal Title
               "your goal will be displayed on your home page"
               form underneath}}
-            <h3 class="profileSettings_header">dream tracking goal</h3>
-            <h4 class="profileSettings_label">your goal will be displayed on your home page!</h4>
-            
-              <input
-                type="text"
-                id="dreamgoal"
-                placeholder="I am tracking my dreams to..."
-              />
-            {{! Save Button}}
-            <button class="log_btn" type="button" id="ps_Save">save</button>
+          <h3 class="profileSettings_header">dream tracking goal</h3>
+          <h4 class="profileSettings_label">your goal will be displayed on your
+            home page!</h4>
 
-            </form>
-            </section>
-          </div>
-        <div class="footer">
-          <footer>
-                      <hr>
-                      <h5 class="footer__title return_btn">somniary</h5>
-                      <small>©2023 cat-scratch feev | © somniary</small>
-                  </footer>
+          <input
+            type="text"
+            id="dreamgoal"
+            placeholder="I am tracking my dreams to..."
+          />
+          {{! Save Button}}
+          <button class="log_btn" type="button" id="ps_Save">save</button>
+
+        </form>
+      </section>
+    </div>
+    <div class="footer">
+      <footer>
+        <hr />
+        <h5 class="footer__title return_btn">somniary</h5>
+        <small>©2023 cat-scratch feev | © somniary</small>
+      </footer>
+    </div>
   </div>
 </div>
-</div>
- <!--fontawesome import-->
- <script
- src="https://kit.fontawesome.com/d14b0991e4.js"
- crossorigin="anonymous"
+<!--fontawesome import-->
+<script
+  src="https://kit.fontawesome.com/d14b0991e4.js"
+  crossorigin="anonymous"
 ></script>
 <script src="./js/home.js"></script>
 <script src="./js/theme.js"></script>
+<script src="./js/update.js"></script>
