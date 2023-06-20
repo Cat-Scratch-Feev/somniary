@@ -283,6 +283,14 @@ width: 100%;
   align-content:center;
   justify-content:center;
 }
+.dream-goal__sub {
+  text-align:center;
+  margin-top:-0.5rem;
+  margin-bottom:1rem;
+}
+#goal_Save{
+  margin-bottom:-2rem;
+}
 /* HOME PAGE STYLING*/
 
 .homepage__container{
