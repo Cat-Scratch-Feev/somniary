@@ -114,9 +114,11 @@ footer {
   color:var(--primary-purple);
   display:inline-block;
 }
+
 .login_span:hover, .login_span:hover span{
   font-weight:bolder;
 }
+
 .login_page__title {
   padding-top: 10vh;
   flex-flow:row wrap;
@@ -149,7 +151,9 @@ input:-webkit-autofill:active {
   text-align:center;
   margin:1rem;
 }
+  
 .return_btn, .collective_btn, .journal_btn, .dreamlog_btn {
+
   cursor: pointer;
 }
 
@@ -287,7 +291,8 @@ width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
+
+  tent: center;
   flex-wrap: wrap;
 }
 .welcome__header, .reflection__title{
