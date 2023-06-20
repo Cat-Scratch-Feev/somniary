@@ -75,6 +75,10 @@ router.get("/about", withAuth, function (req, res) {
   res.render("about");
 });
 
+// GET request /calendar
+router.get("/calendar", withAuth, function (req, res) {
+  res.render("calendar");
+});
 // GET request /journal brings user to all their dreams
 router.get("/journal", async (req, res) => {
   try {
