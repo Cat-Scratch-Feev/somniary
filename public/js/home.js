@@ -1,7 +1,6 @@
 // Handles client side logout functionality
 // POST to api/users/logout
 const logout = async () => {
-  // console.log("yo");
   const response = await fetch("/api/users/logout", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
