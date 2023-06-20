@@ -292,9 +292,17 @@ width: 100%;
   flex-direction: column;
   justify-content: center;
 
-  tent: center;
+  text: center;
   flex-wrap: wrap;
 }
+
+#about_us_space{
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .welcome__header, .reflection__title{
   color:var(--primary-purple);
   margin:auto;
