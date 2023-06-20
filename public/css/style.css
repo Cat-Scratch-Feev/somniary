@@ -459,7 +459,10 @@ input::placeholder, textarea::placeholder{
   background-color:var(--primary-light);
   color:black;
   text-align:center;
-  margin-bottom:1rem;
+  margin-bottom:-1rem;
+}
+.dream_type__header{
+  margin-top:2rem;
 }
 /* edit of checkbox and default styles*/
 input[type=checkbox]+label {
