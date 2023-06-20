@@ -489,6 +489,10 @@ input[type=password] {
   padding-left: 20px;
 }
 
+input[type=email] {
+  padding-left: 20px;
+}
+
 textarea[type=text] {
   padding-left: 20px;
 }
