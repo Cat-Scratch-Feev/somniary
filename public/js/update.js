@@ -3,7 +3,6 @@ const btn = document.querySelector("#ps_Save");
 
 btn.addEventListener("click", async (event) => {
   event.preventDefault();
-  console.log("YO");
   try {
     const userID = parseInt(localStorage.getItem("userID"));
     const username = document.getElementById("username").value;
@@ -15,8 +14,6 @@ btn.addEventListener("click", async (event) => {
       email: email,
     };
 
-    console.log(formData);
-
     if (formData) {
       const response = await fetch(`/api/users/${userID}`, {
         method: "PATCH",
@@ -27,7 +24,7 @@ btn.addEventListener("click", async (event) => {
       if (response.ok) {
         const update = await response.json();
         localStorage.setItem("dreamgoal", goals);
-        console.log("Account updated!", update);
+        document.location.replace("/journal");
       } else {
         const errorData = await response.json();
         console.log(errorData);

@@ -30,7 +30,6 @@ form.addEventListener("submit", async (event) => {
 
     if (response.ok) {
       const dream = await response.json();
-      console.log("Dream submitted!", dream);
       document.location.replace("/journal");
     } else {
       const errorData = await response.json();
