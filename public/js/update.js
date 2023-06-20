@@ -39,7 +39,6 @@ goalBtn.addEventListener("click", async(event) => {
   event.preventDefault();
   try {
     let goals = document.getElementById("dreamgoal").value;
-    console.log(goals);
     localStorage.setItem("dreamgoal", goals);
     document.location.replace("/");
   } catch(error){
