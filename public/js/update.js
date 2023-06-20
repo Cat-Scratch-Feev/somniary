@@ -1,5 +1,5 @@
 const form = document.querySelector(".profile_form");
-const btn = document.querySelector(".submit_btn");
+const btn = document.querySelector("#ps_Save");
 
 btn.addEventListener("click", async (event) => {
   event.preventDefault();
