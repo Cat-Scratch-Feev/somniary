@@ -24,7 +24,7 @@ btn.addEventListener("click", async (event) => {
       if (response.ok) {
         const update = await response.json();
         localStorage.setItem("dreamgoal", goals);
-        document.location.replace("/journal");
+        document.location.replace("/");
       } else {
         const errorData = await response.json();
         console.log(errorData);
