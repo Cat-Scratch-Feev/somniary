@@ -546,11 +546,9 @@ textarea[type="text"] {
   margin: auto;
   flex-direction: column;
   justify-content: center;
-  background-color: white;
-  border-radius: 10px;
+  background-color: var(--primary-light); 
+  border-radius: 35px;
   padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border: 3px double var(--primary-purple);
   align-items: center;
 }
 
@@ -560,18 +558,16 @@ textarea[type="text"] {
 
 #about_us_title {
   text-align: center;
+  color:var(--primary-purple);
+  font-weight: bold;
+  margin:1rem;
 }
 
-#journal_link_intext {
-  text-decoration: none;
-  color: var(--primary-purple);
-  font-weight: 600;
-}
 
-#collective_link_intext {
+#collective_link_intext, #journal_link_intext, .about_us_span, .about_us_span:hover {
   text-decoration: none;
   color: var(--primary-purple);
-  font-weight: 600;
+  font-weight: bold;
 }
 
 #calendar {
@@ -601,15 +597,21 @@ textarea[type="text"] {
 
   .btn-group {
     position: fixed;
-    top: 50px;
-    right: 20px;
+    top: -5px;
+    right: -10px;
   }
 
   .mobile-nav__button {
     position: fixed;
-    top: 50px;
-    left: 20px;
+    top: -5px;
+    left: -10px;
     border: 1px solid var(--primary-purple);
+  }
+  .homepage__container{
+    width:80%;
+  }
+  .dream__card{
+    max-width:100%;
   }
 }
 
@@ -637,28 +639,17 @@ textarea[type="text"] {
   .profileSettings_header {
     font-size: 1.7rem;
   }
-
   .btn-group {
     position: fixed;
-    top: 50px;
-    right: 20px;
+    right: -20px;
   }
 
   .mobile-nav__button {
     position: fixed;
-    top: 50px;
-    left: 20px;
+    left: -20px;
   }
-}
-
-@media (max-width: 600px) {
-  .btn-group {
-    position: fixed;
-    top: 50%;
+  #about_us_space{
+    max-width:100%;
   }
-
-  .mobile-nav__button {
-    position: fixed;
-    top: 50%;
-  }
+  
 }
