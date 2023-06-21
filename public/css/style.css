@@ -598,14 +598,20 @@ textarea[type="text"] {
   .btn-group {
     position: fixed;
     top: -5px;
-    right: 0px;
+    right: -10px;
   }
 
   .mobile-nav__button {
     position: fixed;
     top: -5px;
-    left: 0px;
+    left: -10px;
     border: 1px solid var(--primary-purple);
+  }
+  .homepage__container{
+    width:80%;
+  }
+  .dream__card{
+    max-width:100%;
   }
 }
 
@@ -633,27 +639,17 @@ textarea[type="text"] {
   .profileSettings_header {
     font-size: 1.7rem;
   }
-
   .btn-group {
     position: fixed;
+    right: -20px;
   }
 
   .mobile-nav__button {
     position: fixed;
-  }
-}
-
-@media (max-width: 600px) {
-  .btn-group {
-    position: fixed;
-    right: -10px;
-  }
-
-  .mobile-nav__button {
-    position: fixed;
-    left: -10px;
+    left: -20px;
   }
   #about_us_space{
     max-width:100%;
   }
+  
 }
