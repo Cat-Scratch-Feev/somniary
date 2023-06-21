@@ -598,6 +598,19 @@ textarea[type="text"] {
   .dream__tag {
     width: 60%;
   }
+
+  .btn-group {
+    position: fixed;
+    top: 50px;
+    right: 20px;
+  }
+
+  .mobile-nav__button {
+    position: fixed;
+    top: 50px;
+    left: 20px;
+    border: 1px solid var(--primary-purple);
+  }
 }
 
 @media (max-width: 600px) {
@@ -623,5 +636,29 @@ textarea[type="text"] {
   }
   .profileSettings_header {
     font-size: 1.7rem;
+  }
+
+  .btn-group {
+    position: fixed;
+    top: 50px;
+    right: 20px;
+  }
+
+  .mobile-nav__button {
+    position: fixed;
+    top: 50px;
+    left: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .btn-group {
+    position: fixed;
+    top: 50%;
+  }
+
+  .mobile-nav__button {
+    position: fixed;
+    top: 50%;
   }
 }
