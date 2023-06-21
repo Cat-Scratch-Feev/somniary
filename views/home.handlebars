@@ -64,7 +64,7 @@
             <section class="dream__card">
               <div class="dream__card-body">
                 <p>{{format_date randomDream.date}}</p>
-                <p>{{randomDream.title}}</p>
+                <p class="dream__card-title">{{randomDream.title}}</p>
                 <p>{{randomDream.description}}</p>
                 <!--tags, rendered with iteration-->
                 <div class="dream__card-tags">
@@ -77,7 +77,7 @@
             {{else}}
             <section class="dream__card">
               <div class="dream__card-body">
-                <p class="page_body__subtitle">Begin logging dreams to receive dream reflections!</p>
+                <p class="page_body__subtitle nodreams__text">Begin logging dreams to receive dream reflections!</p>
               </div>
             </section>
           </section>
