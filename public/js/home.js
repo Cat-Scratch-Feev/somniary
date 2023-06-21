@@ -18,6 +18,13 @@ const settingsBtn = document.getElementById("settings_btn");
 settingsBtn.addEventListener("click", () => {
   window.location.href = "/profilesettings";
 });
+//dashboard button functionality
+const profBtn = document.querySelector(".dashboard__prof");
+if(profBtn) {
+  profBtn.addEventListener("click", () => {
+    window.location.href = "/profilesettings";
+  });
+};
 
 // About button
 const aboutBtn = document.querySelectorAll(".about_btn");

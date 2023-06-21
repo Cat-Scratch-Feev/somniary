@@ -37,21 +37,13 @@ function initThemeSelector() {
 }
 
 initThemeSelector();
-/*
-  function initThemeSelector() {
-  const themeSelect = document.getElementById("theme-select");
-  const themeStylesheetLink = document.getElementById("theme-link");
-  const currentTheme = localStorage.getItem("theme") || "berry";
-  /*const themeName = document.getElementById("theme-select__option");
 
-  function activateTheme(themeName) {
-    themeStylesheetLink.setAttribute(
-      "href",
-      `./assets/css/themes/${themeName}.css`
-    );
+function initGoal(){
+  let currentGoal= localStorage.getItem("dreamgoal") || ("what is your goal?");
+  let goalText = document.querySelector('.goal__text');
+
+  if(goalText){
+    goalText.innerHTML = currentGoal;
   }
-
-  themeSelect.addEventListener("change", () => {
-    activateTheme(themeSelect.value);
-    localStorage.setItem("theme", themeSelect.value);
-  });*/
+}
+initGoal();

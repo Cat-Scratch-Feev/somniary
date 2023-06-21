@@ -283,6 +283,14 @@ width: 100%;
   align-content:center;
   justify-content:center;
 }
+.dream-goal__sub {
+  text-align:center;
+  margin-top:-0.5rem;
+  margin-bottom:1rem;
+}
+#goal_Save{
+  margin-bottom:-2rem;
+}
 /* HOME PAGE STYLING*/
 
 .homepage__container{
@@ -317,7 +325,7 @@ width: 100%;
   flex-flow: row wrap;
   justify-content:space-around;
   align-content:center;
-  height:7rem;
+  flex-grow: inherit;
   border-radius:35px;
 }
 .dashboard__prof{
@@ -326,12 +334,16 @@ width: 100%;
   border-radius:50%;
   background-color:var(--primary-lightlav);
   border-color:transparent;
+  margin:1rem;
   
 }
 
-.goal__text {
+.goal__text, .nodreams__text {
   margin: auto 0;
+  text-align:center;
+  padding:1rem;
 }
+
 /*cards have styles that can be consolidated*/
 
 .reflection__title{
@@ -362,6 +374,11 @@ width: 100%;
   height:2rem;
   text-align:center;
   flex-grow: inherit;
+}
+.dream__card-title{
+  color:var(--primary-purple);
+  font-weight: bolder;
+  font-size:1.25rem;
 }
 /*JOURNAL STYLING*/
 
