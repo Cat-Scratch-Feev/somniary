@@ -20,8 +20,12 @@ settingsBtn.addEventListener("click", () => {
 });
 //dashboard button functionality
 const profBtn = document.querySelector(".dashboard__prof");
+const dashGoalBtn = document.querySelector(".goal__text");
 if(profBtn) {
   profBtn.addEventListener("click", () => {
+    window.location.href = "/profilesettings";
+  });
+  dashGoalBtn.addEventListener("click", () => {
     window.location.href = "/profilesettings";
   });
 };

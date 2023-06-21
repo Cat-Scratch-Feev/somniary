@@ -343,7 +343,10 @@ width: 100%;
   text-align:center;
   padding:1rem;
 }
-
+.goal__text:hover {
+  color:var(--primary-purple);
+  
+}
 /*cards have styles that can be consolidated*/
 
 .reflection__title{
