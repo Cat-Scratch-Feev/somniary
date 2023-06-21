@@ -338,11 +338,12 @@ width: 100%;
   
 }
 
-.goal__text {
+.goal__text, .nodreams__text {
   margin: auto 0;
   text-align:center;
   padding:1rem;
 }
+
 /*cards have styles that can be consolidated*/
 
 .reflection__title{
