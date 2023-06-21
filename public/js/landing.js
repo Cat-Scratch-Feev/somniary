@@ -48,18 +48,9 @@ animation.add({
 animation.add({
   targets: "#stars",
   rotate: "360deg",
-  loop: 5000,
+  loop: 25000,
   duration: 100000,
   easing: "linear",
-});
-
-//Start button to begin animations/music
-const start = document.getElementById("start");
-start.addEventListener("click", () => {
-  animation.play();
-  const randomIndex = Math.floor(Math.random() * audio.children.length);
-  audio.src = audio.children[randomIndex].src;
-  audio.play();
 });
 
 // Main login redirect
@@ -97,5 +88,15 @@ document.addEventListener("DOMContentLoaded", function () {
   // Volume slider
   volumeRange.addEventListener("input", function () {
     audio.volume = volumeRange.value;
+  });
+
+  //Start Button
+  const start = document.getElementById("start");
+  start.addEventListener("click", () => {
+    animation.play();
+    const randomIndex = Math.floor(Math.random() * audio.children.length);
+    audio.src = audio.children[randomIndex].src;
+    audio.play();
+    currentSourceIndex = randomIndex;
   });
 });
