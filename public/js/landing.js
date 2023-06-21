@@ -48,7 +48,7 @@ animation.add({
 animation.add({
   targets: "#stars",
   rotate: "360deg",
-  loop: 1000,
+  loop: 5000,
   duration: 100000,
   easing: "linear",
 });
@@ -57,6 +57,8 @@ animation.add({
 const start = document.getElementById("start");
 start.addEventListener("click", () => {
   animation.play();
+  const randomIndex = Math.floor(Math.random() * audio.children.length);
+  audio.src = audio.children[randomIndex].src;
   audio.play();
 });
 
@@ -71,7 +73,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const audio = document.getElementById("audio");
   const playBtn = document.getElementById("play");
   const pauseBtn = document.getElementById("pause");
+  const nextBtn = document.getElementById("next");
   const volumeRange = document.getElementById("volume_range");
+  let currentSourceIndex = 0;
 
   // Play button
   playBtn.addEventListener("click", function () {
@@ -81,6 +85,13 @@ document.addEventListener("DOMContentLoaded", function () {
   // Pause button
   pauseBtn.addEventListener("click", function () {
     audio.pause();
+  });
+
+  // Next button
+  nextBtn.addEventListener("click", function () {
+    currentSourceIndex = (currentSourceIndex + 1) % audio.children.length;
+    audio.src = audio.children[currentSourceIndex].src;
+    audio.play();
   });
 
   // Volume slider
