@@ -69,7 +69,7 @@ To use Somniary, create an account on our sign up page or log in if you have an 
 
 ## Link to Live Page
 ---
-[Somniary]()
+[Somniary](https://somniary-00225b8202c3.herokuapp.com/landing)
 ## License
 ---
  MIT License
