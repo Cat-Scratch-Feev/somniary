@@ -7,10 +7,12 @@ const SequelizeStore = require("connect-session-sequelize")(session.Store);
 const helpers = require("./utils/helpers");
 const sequelize = require("./config/connection.js");
 const routes = require("./controllers");
+const seeds = require("./seeds/tag-seeds");
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+seeds();
 //session and cookies
 const sess = {
   secret: "secret",
